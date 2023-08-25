@@ -1,4 +1,5 @@
 # Learn Python fundamentals through calculating π & writing custom trig functions
+# URL to this lesson: https://bit.ly/45GZxrK
 
 *Lecture number:* 01
 
