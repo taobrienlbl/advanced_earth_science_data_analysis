@@ -32,11 +32,23 @@ This lesson builds toward course goals 1, 6, 7, and 9:
 (20 mins) Introductions, course overview, and helping me understand what you want out of the course
 
 (30 mins) Diving right in: converting data to sound (because why not?)
+<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/01_fundamentals/01a_sound_from_data.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
 
 (5 mins) humanity break
 
 (30 mins) Fundamentals follow-along: calculating π
+<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/01_fundamentals/01b_madhava_pi_calculation.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
 
 (30 mins) Group exercise: calculating e
+<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/01_fundamentals/01c_calculating_e.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
 
 (35 mins) Group exercise: writing trig functions
+<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/01_fundamentals/01d_trig_fucntion.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
