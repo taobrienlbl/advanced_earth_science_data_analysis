@@ -1,3 +1,5 @@
+Course github site: https://github.com/taobrienlbl/advanced_earth_science_data_analysis
+
 ## What is this course?
 "Advanced Data Analysis for Earth Science" is a graduate-level programming and data analysis course aimed at giving students in environment-related disciplines--like Geology, Atmospheric Science, Physical Geography, Environmental Science, etc.--the technical skills necessary to do high-quality science.
 
