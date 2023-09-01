@@ -66,7 +66,7 @@ These goals focus on creating and using modular Python code as a way to improve 
 
  * Goal: examine the relationship between El Nino and minimum winter (Dec-Jan-Feb) temperatures in Bloomington, IN
  * Method:
-    * obtain minimum temperature data from NClimDiv, using the *NCEI Direct Download* method
+    * obtain minimum temperature data from [NOAA NClimDiv](https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.ncdc:C00005), using the *NCEI Direct Download* method
     * read the dataset using `pandas`, filter out data for southern central Indiana
     * convert the data to timeseries format
     * obtain the [ENSO longitude index](https://cascade.lbl.gov/enso-longitude-index-eli/) Excel file and read with `pandas`; convert to timeseries format
