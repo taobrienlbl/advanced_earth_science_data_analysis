@@ -1,4 +1,6 @@
-Course github site: https://github.com/taobrienlbl/advanced_earth_science_data_analysis
+Course github site: [https://github.com/taobrienlbl/advanced_earth_science_data_analysis](https://github.com/taobrienlbl/advanced_earth_science_data_analysis)
+
+Fall 2023 Student Hours (M,W,Th,F): [Book time](https://outlook.office.com/bookwithme/user/720d05499372402eb10295f8a632eee6@iu.edu/meetingtype/SVRwCe7HMUGxuT6WGxi68g2?anonymous&ep=mLinkFromTile)
 
 ## What is this course?
 "Advanced Data Analysis for Earth Science" is a graduate-level programming and data analysis course aimed at giving students in environment-related disciplines--like Geology, Atmospheric Science, Physical Geography, Environmental Science, etc.--the technical skills necessary to do high-quality science.
