@@ -4,7 +4,7 @@
 
 *Target Date:* TBD
 
-*Length:* 75 mins
+*Length:* 150 mins
 
 ## READ | Lecture Objectives:
 
