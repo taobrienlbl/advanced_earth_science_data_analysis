@@ -2,3 +2,4 @@
 lessons/01_fundamentals/air.2m.gauss.1983.nc
 .DS_Store
 lessons/03_data_science_modules/climdiv-tmindv-v1.0.0-20230804
+scratch/*
