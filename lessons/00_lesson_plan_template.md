@@ -21,5 +21,3 @@ TBD
 ## PREVIEW | Class Overview:
 
 (TBD min) TBD
-
-## REVIEW | Lecture Notes:
