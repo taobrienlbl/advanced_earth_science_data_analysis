@@ -34,11 +34,11 @@ This contributes to two goals:
 (5 min) Break
 
 (40 min) Follow-along: lecture on multidimensional arrays
-<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/05_multidimensional_arrays_also_plotting/05_multidimensional_array_lecture_notes.ipynb">
+<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/05_multidimensional_arrays_also_plotting/05_multidimensional_array_lecture_notes.ipynb">
 </a>
 
 (35 min) Multidimensional array exercise 
-<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/05_multidimensional_arrays_also_plotting/05_multidimensional_array_exercise.ipynb">
+<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/05_multidimensional_arrays_also_plotting/05_multidimensional_array_exercise.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
