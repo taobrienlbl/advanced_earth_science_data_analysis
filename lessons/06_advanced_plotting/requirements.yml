@@ -10,6 +10,8 @@ dependencies:
  - geopandas #geospatial data analysis
  - gitpython #python git interface
  - h5netcdf #use the h5netcdf engine in xarray (compression, speed)
+ - ipython # interactive python terminal
+ - ipykernel # for running jupyter notebook kernels in vscode
  - matplotlib #low-level plotting interface
  - mpi4py #python bindings for MPI
  - netcdf4 #low-level handling of netCDF files
