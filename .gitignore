@@ -4,3 +4,6 @@ lessons/01_fundamentals/air.2m.gauss.1983.nc
 lessons/03_data_science_modules/climdiv-tmindv-v1.0.0-20230804
 scratch/*
 lessons/05_multidimensional_arrays_also_plotting/air.2m.gauss.1983.nc
+lessons/06_advanced_plotting/air.2m.gauss.2021.nc
+lessons/06_advanced_plotting/seasonal_max_temp.pdf
+lessons/06_advanced_plotting/seasonal_max_temp.png
