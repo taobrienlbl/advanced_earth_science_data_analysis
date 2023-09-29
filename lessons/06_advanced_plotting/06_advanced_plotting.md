@@ -34,7 +34,7 @@ There is also a somewhat tangential goal of managing python environments: not ex
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
-(10 min) Discussion about python environments, miniconda, conda forge
+(10 min) Discussion about python environments, miniconda, conda forge; see also [instructions](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/06_advanced_plotting/06_python_environments.md)
 
 (15 min) Installing new conda environment using `mamba` + break while waiting for install
 
