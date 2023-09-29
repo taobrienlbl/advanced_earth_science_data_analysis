@@ -30,11 +30,14 @@ There is also a somewhat tangential goal of managing python environments: not ex
 (5 min) Discuss final project
 
 (45 min) Advanced matplotlib workalong
+<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/06_advanced_plotting/06_workalong01_advanced_plotting.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
 
 (10 min) Discussion about python environments, miniconda, conda forge
 
 (15 min) Installing new conda environment using `mamba` + break while waiting for install
 
-(45 min) Mapping workalong
+(45 min) Mapping workalong & exercise
 
 
