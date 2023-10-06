@@ -35,5 +35,8 @@ This works toward the course goal to "apply machine learning libraries to real d
 (20 min) Install `pytorch` (`mamba install -c conda-forge pytorch` or `pip install pytorch`)
 
 (45 min) Basics of machine learning - workalong
+<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/07_machine_learning_intro/07_workalong01_machine_learning_basics.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
 
 
