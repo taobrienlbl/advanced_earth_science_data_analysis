@@ -1,6 +1,5 @@
 channels:
  - conda-forge
- - plotly
 dependencies:
  - cartopy #plotting geospatial data
  - cftime #handling non-standard calendars
