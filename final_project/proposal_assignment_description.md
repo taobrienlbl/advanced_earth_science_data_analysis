@@ -26,12 +26,11 @@ For the timeline, use markdown's checkbox feature so that you can mark items as 
 ```
 
 This will render in github as:
-> ## Example project timeline
-> - [x] (Oct 13) write code to read in seismometer data files
-> - [ ] (Oct 20) write and test function `extract_earthquakes()` to extract individual earthquakes from data
-> - [ ] (Oct 27) write and test function `estimate_magnitude()` to estimate the magnitude of each earthquake
-> - [ ] (Nov 4) write code to run magnitude estimation in paralell on multiple seismometer data files
-> ... etc.
+## Example project timeline
+- [x] (Oct 13) write code to read in seismometer data files
+- [ ] (Oct 20) write and test function `extract_earthquakes()` to extract individual earthquakes from data
+- [ ] (Oct 27) write and test function `estimate_magnitude()` to estimate the magnitude of each earthquake
+- [ ] (Nov 4) write code to run magnitude estimation in paralell on multiple seismometer data files
 
 
 ## What is the final project?
