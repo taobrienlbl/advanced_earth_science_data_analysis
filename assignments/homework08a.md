@@ -42,9 +42,9 @@ If you encounter problems, send a message on the `#general` channel at https://i
     * Instead, install to `/N/slate/YOURUSERNAME/software/bigred200/miniforge3`
     * see this gif for the complete install (note the install was done on quartz, not bigred200, but the steps are identical execpt for the install directory name)
     ![animation of install process](quartz_miniforge_install.gif)
-1. Open a new terminal (or just the command `bash`)
+1. Close vscode and reconnect to bigred200
 1. Prevent miniconda from automatically activating: `conda config --set auto_activate_base false`
-1. Activate your environment `mamba activate`
+1. Activate your base conda environment `mamba activate`
 1. Create a new easg690 environment: `mamba create -n easg690 python=3.11 --yes` (note we are using python 3.11 for this exercise)
 1. Activate your new environment: `mamba activate easg690`
 1. Download the class `requirements.yml` file: `wget https://raw.githubusercontent.com/taobrienlbl/advanced_earth_science_data_analysis/spring_2023_iub/lessons/06_advanced_plotting/requirements.yml`
