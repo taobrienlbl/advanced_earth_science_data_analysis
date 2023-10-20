@@ -18,7 +18,7 @@ This works toward the course goal to "apply machine learning libraries to real d
 
 ## COMPLETE | Reading and Homework:
 
-* Homework 07: apply machine learning concepts from today to your own research data
+* ~~Homework 07: apply machine learning concepts from today to your own research data~~ *(shifted to following week)*
 * Final project proposal
 
 ## PREVIEW | Class Overview:
@@ -39,9 +39,10 @@ This works toward the course goal to "apply machine learning libraries to real d
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
-(10 min) Intro to Classes in Python (interwoven with above ML workalong)
+~~(10 min) Intro to Classes in Python (interwoven with above ML workalong)
 <a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/07_machine_learning_intro/07_workalong02_intro_to_classes.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
-</a>
+</a>~~
+*(Stopped part way through 'Basics of machine learning': ran out of time)*
 
 
