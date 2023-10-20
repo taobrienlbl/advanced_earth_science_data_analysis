@@ -1,4 +1,4 @@
-# COMPLETE | Homework 07a
+# COMPLETE | Homework 08a
 
 **Goal:** get set up with IU supercomputing accounts in advance of our labs and assignments on parallel programming.
 

@@ -18,7 +18,8 @@ This works toward the course goal to "apply machine learning libraries to real d
 
 ## COMPLETE | Reading and Homework:
 
-* Homework 08: apply machine learning concepts from today to your own research data
+* Homework 08a: [setup bigred200 for next week](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/assignments/homework08a.md)
+* Homework 08b: apply machine learning concepts from today to your own research data
 * Final project proposal
 
 ## PREVIEW | Class Overview:
@@ -45,4 +46,4 @@ This works toward the course goal to "apply machine learning libraries to real d
 </a>
 
 
-(30 min) Getting setup on UITS systems for next week
+(30 min) Getting setup on UITS systems for next week: see [this link](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/assignments/homework08a.md)
