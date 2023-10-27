@@ -13,6 +13,7 @@
 1. (optional $^*$) Set up passwordless login:
     * https://kb.iu.edu/d/aews
     * ["SSH public key authentication to HPS systems" agreement](https://hpceverywhere.iu.edu/forms/agree?_gl=1*cxl9lp*_ga*MTI1NDQ3ODYxNi4xNjk2OTY2NzM1*_ga_61CH0D2DQW*MTY5NzQ3MDc4OC4zLjEuMTY5NzQ3MTU3NC41OS4wLjA.)
+    * If you are on windows, you'll need one additional step to get ssh authentication working: (Reusing a key generated in PuTTYGen)[https://code.visualstudio.com/docs/remote/troubleshooting#_reusing-a-key-generated-in-puttygen]
 1. Set up `bigred200.uits.iu.edu` in Visual Stuio Code: https://code.visualstudio.com/docs/remote/ssh
 
 $^*$ passwordless login is highly recommended. If you choose not to follow this step, you will have to enter your IU password *many* times on each day that we use UITS supercomputing systems.
