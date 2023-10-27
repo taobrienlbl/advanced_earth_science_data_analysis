@@ -2,6 +2,8 @@
 
 In this exercise, we will develop code to generate an animation, taking advantage of parallelization to make the process fast.
 
+https://github.com/taobrienlbl/advanced_earth_science_data_analysis/assets/8796694/7c701d6a-895d-4707-87c8-0d59066ce469
+
 ## 2.1 Developing plot code
 
 In a jupyter notebook, we'll develop code to generate a nice plot of total atmospheric water (*precipitable water* is the technical term), which is a good way to look at [atmospheric rivers](https://www.noaa.gov/stories/what-are-atmospheric-rivers).
