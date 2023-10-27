@@ -19,6 +19,8 @@ $^*$ passwordless login is highly recommended. If you choose not to follow this 
 
 ## Setting up your git environment
 1. Connect to `bigred200.uits.iu.edu` with Visual Stuio code.
+    * When it asks you what type of system (Linux, Windows, etc.), select 'Linux' - it's asking about the type of system that you're logging in to
+    * When you connect to bigred200 for the first time, make sure to enter your UITS username, i.e. `ssh YOURUSERNAME@bigred200.uits.iu.edu -A`
 1. Clone your course repository into `/N/slate/YOURUSERNAME` (replace `YOURUSERNAME` with your UITS username)
 ![Screenshot of git clone in Visual Studio Code](vscode_remote_screenshot1.png)
 ![Screenshot of choosing a folder to clone to in Visual Studio Code](vscode_remote_screenshot2.png)
