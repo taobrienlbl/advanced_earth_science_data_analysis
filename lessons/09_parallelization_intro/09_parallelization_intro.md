@@ -18,7 +18,7 @@ This works towards the goal to "parallelize *embarrassingly parallel* data proce
 
 ## COMPLETE | Reading and Homework:
 
-* TBD
+* Finish all in-class exercises.
 
 ## PREVIEW | Class Overview:
 
@@ -35,7 +35,5 @@ This works towards the goal to "parallelize *embarrassingly parallel* data proce
 
 (30 mins) `mpi4py` parallelism workalong (download [this file](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/09_parallelization_intro/09_workalong_01_mpi4py_intro.py) to your lesson09 folder on BigRed200)
 
-(45 mins) Exercise: Animate the weather with parallelization
-
-
+(45 mins) Exercise: Animate the weather with parallelization; go [here](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/09_parallelization_intro/09_workalong_02_instructions.md)
 

@@ -7,3 +7,5 @@ lessons/05_multidimensional_arrays_also_plotting/air.2m.gauss.1983.nc
 lessons/06_advanced_plotting/air.2m.gauss.2021.nc
 lessons/06_advanced_plotting/seasonal_max_temp.pdf
 lessons/06_advanced_plotting/seasonal_max_temp.png
+lessons/09_parallelization_intro/animation_frames
+*__pycache__*
