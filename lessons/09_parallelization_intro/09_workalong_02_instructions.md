@@ -41,8 +41,9 @@ Now we'll use `ffmpeg` to generate an animation.  We'll first need to install th
 Run the following command from your animation directory (e.g., do `cd animation_frames` first):
 
 ```bash
-ffmpeg -framerate 10 -i tcw_%05d.png -c:v libx264 -profile:v high -crf 20 -pix_fmt yuv420p tcw_animation.mp4
+ffmpeg -framerate 10 -i tcw_%05d.png -c:v libx264 -profile:v high -crf 20 -pix_fmt yuv420p -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" tcw_animation.mp4
 ```
+
 
 Note that my animation frame filenames have five digits in the frame number, hence the `-i tcw_%05d.png` argument.  If yours has fewer, like two digits, you'll need to modify, e.g.,: `-i tcw_%02d.png`
 
