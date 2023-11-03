@@ -32,7 +32,7 @@ This works towards the goal to "parallelize *embarrassingly parallel* data proce
 
 (5 mins) Install simplempi in your `easg690` environment on BigRed200: `pip install simplempi`
 
-(20 mins) `simplempi` exercise: instructions are [here](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/10_paralellelization_continued/10_workalong_02_simplempi_instructions.md)
+(20 mins) [simplempi](https://github.com/taobrienlbl/simplempi) exercise: instructions are [here](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/10_paralellelization_continued/10_workalong_02_simplempi_instructions.md)
 
 (35 mins) Final project work
 
