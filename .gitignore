@@ -9,3 +9,4 @@ lessons/06_advanced_plotting/seasonal_max_temp.pdf
 lessons/06_advanced_plotting/seasonal_max_temp.png
 lessons/09_parallelization_intro/animation_frames
 *__pycache__*
+*animation_frames*
