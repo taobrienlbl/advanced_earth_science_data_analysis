@@ -23,7 +23,7 @@ This lesson works towards using Python for basic data analysis tasks.
 
 (10 mins) MPI collective communication overview: `scatter`, `gather`
 
-(30 mins) Calculating $\pi$ in parallel
+(30 mins) Calculating $\pi$ in parallel: instructions [here](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/f9b8dc6e80bf101cad30aab4d4d275f309964d83/lessons/10_paralellelization_continued/10_workalong01_parallel_pi.md)
 
 (5 mins) Switch from BigRed200 to personal computer + break
 
