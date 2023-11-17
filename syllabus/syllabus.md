@@ -23,6 +23,21 @@ Specifically, you will be able to:
 
 Note: while the above may sound like a lot for one course, the last four items are topics that will be interwoven through every class.
 
+| Week | Lesson |
+| ---- | ------ |
+| 01 | [Fundamentals](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/01_fundamentals/01_fundamentals.md) |
+| 02 | [Modules, VSCode, and Git](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/02_modules_vscode_git/02_modules_vscode_git.md) |
+| 03 | [Data Science Modules](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/03_data_science_modules/03_data_science_modules.md) |
+| 04 | [Digging Further into Data Wrangling](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/04_digging_further_into_data_wrangling/04_digging_further_into_data_wrangling.md) |
+| 05 | [Multidimensional Arrays and Plotting](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/05_multidimensional_arrays_also_plotting/05_multidimensional_arrays_also_plotting.md) |
+| 06 | [Advanced Plotting](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/06_advanced_plotting/06_advanced_plotting.md) |
+| 07 | [Machine Learning Introduction](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/07_machine_learning_intro/07_machine_learning_intro.md) |
+| 08 | [Machine Learning Continued](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/08_machine_learning_continued/08_machine_learning_continued.md) |
+| 09 | [Parallelization Introduction](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/09_parallelization_intro/09_parallelization_intro.md) |
+| 10 | [Parallelization Continued](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/10_paralellelization_continued/10_parallelization_continued.md) |
+| 11 | [Spectral Analysis Introduction](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/11_spectral_analysis_intro/11_spectral_analysis_intro.md) |
+| 12 | [Spectral Analysis Continued](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/12_spectral_analysis_continued/12_spectral_analysis_continued.md) |
+
 ## How will I learn?
 
 This is a lab-based course, in which you will do a combination of in-class exercises to reinforce concepts and also work to apply concepts learned in class to a final data analysis project (ideally one that is related to your own research!). The class will be one three-hour lab session each week, which will include a small amount of lecture and live demonstration time. 
