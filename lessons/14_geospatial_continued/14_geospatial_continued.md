@@ -1,4 +1,4 @@
-# TBD Lecture Title
+# Geospatial Continued
 
 *Lecture number:* 14
 
