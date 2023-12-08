@@ -11,3 +11,6 @@ lessons/09_parallelization_intro/animation_frames
 *__pycache__*
 *animation_frames*
 lessons/13_geospatial_intro/in_class_work/ca_earthquakes.shp.zip
+lessons/14_geospatial_continued/DataRecords.csv
+lessons/14_geospatial_continued/in_ghcnd_2023-12-08.csv
+lessons/14_geospatial_continued/USC00121998.csv

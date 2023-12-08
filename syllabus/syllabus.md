@@ -37,6 +37,8 @@ Note: while the above may sound like a lot for one course, the last four items a
 | 10 | [Parallelization Continued](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/10_paralellelization_continued/10_parallelization_continued.md) |
 | 11 | [Spectral Analysis Introduction](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/11_spectral_analysis_intro/11_spectral_analysis_intro.md) |
 | 12 | [Spectral Analysis Continued](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/12_spectral_analysis_continued/12_spectral_analysis_continued.md) |
+| 13 | [Geospatial Introduction](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/09188e9e6a0cf230f8473c0ae95d2e1b9079df3a/lessons/13_geospatial_intro/13_geospatial_intro.md) |
+| 14 | [Geospatial Continued](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/14_geospatial_continued/14_geospatial_continued.md) |
 
 ## How will I learn?
 
