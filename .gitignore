@@ -14,3 +14,13 @@ lessons/13_geospatial_intro/in_class_work/ca_earthquakes.shp.zip
 lessons/14_geospatial_continued/DataRecords.csv
 lessons/14_geospatial_continued/in_ghcnd_2023-12-08.csv
 lessons/14_geospatial_continued/USC00121998.csv
+content/lessons/01_fundamentals/air.2m.gauss.1983.nc
+content/lessons/05_multidimensional_arrays_also_plotting/air.2m.gauss.1983.nc
+content/lessons/06_advanced_plotting/air.2m.gauss.2021.nc
+content/lessons/06_advanced_plotting/seasonal_max_temp.png
+content/lessons/06_advanced_plotting/in_class_solutions/air.2m.gauss.2021.nc
+content/lessons/13_geospatial_intro/ca_earthquakes.shp.zip
+content/lessons/13_geospatial_intro/data/GTOPO30_5MIN.CDF
+content/lessons/13_geospatial_intro/data/tl_2012_us_state.zip
+content/lessons/13_geospatial_intro/data/western_us_topo_bathy_subset.tiff
+content/lessons/13_geospatial_intro/in_class_work/ca_earthquakes.shp.zip

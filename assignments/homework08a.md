@@ -50,7 +50,7 @@ If you encounter problems, send a message on the `#general` channel at https://i
 1. Activate your base conda environment `mamba activate`
 1. Create a new easg690 environment: `mamba create -n easg690 python=3.11 --yes` (note we are using python 3.11 for this exercise)
 1. Activate your new environment: `mamba activate easg690`
-1. Download the class `requirements.yml` file: `wget https://raw.githubusercontent.com/taobrienlbl/advanced_earth_science_data_analysis/fall_2025_iub/lessons/06_advanced_plotting/requirements.yml`
+1. Download the class `requirements.yml` file: `wget https://raw.githubusercontent.com/taobrienlbl/advanced_earth_science_data_analysis/fall_2025_iub/content/lessons/06_advanced_plotting/requirements.yml`
 1. Install the base packages: `mamba env update -f requirements.yml`
 1. Install the jupyter kernel into the environment: `ipython kernel install --name easg690 --user`
 1. Install `mpi4py` using the system MPI library: `MPICC="cc -shared" python3 -m pip install --force --no-binary=mpi4py mpi4py` 
