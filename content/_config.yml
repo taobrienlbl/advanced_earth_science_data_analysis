@@ -3,7 +3,7 @@
 
 title: Advanced Earth Science Data Analysis
 author: Travis A. O'Brien
-copyright: 2025
+copyright: "2025"
 logo: course_images/dall_e_2023-08-22_16_41_13_an_impressionist.png
 
 # Force re-execution of notebooks on each build.
