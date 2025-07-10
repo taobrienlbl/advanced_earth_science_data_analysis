@@ -22,5 +22,5 @@ This pulls together multiple data analysis tasks, such as reading data, geospati
 
 (10 min) Recap of course
 
-(65 min) [Indiana snow trend exercise](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/14_geospatial_continued/14_IN_snow_trends.ipynb)
+(65 min) [Indiana snow trend exercise](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/lessons/14_geospatial_continued/14_IN_snow_trends.ipynb)
 

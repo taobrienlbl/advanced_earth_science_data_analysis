@@ -25,7 +25,7 @@ These goals focus on creating and using modular Python code as a way to improve 
 ## PREVIEW | Class Overview:
 
 (25 min) Warmup & last-class refresher
-<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/02_modules_vscode_git/02_last_class_refresher.ipynb">
+<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/lessons/02_modules_vscode_git/02_last_class_refresher.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 

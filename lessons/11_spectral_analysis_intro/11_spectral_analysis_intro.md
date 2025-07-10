@@ -29,8 +29,8 @@ This lesson works towards using Python for basic data analysis tasks.
 
 (10 mins) Fourier transform lecture
 
-(45 mins) FFT workalong and exercise: download [this notebook](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/11_spectral_analysis_intro/11_workalong_01_fft.ipynb)
-<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/11_spectral_analysis_intro/11_workalong_01_fft.ipynb">
+(45 mins) FFT workalong and exercise: download [this notebook](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/lessons/11_spectral_analysis_intro/11_workalong_01_fft.ipynb)
+<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/lessons/11_spectral_analysis_intro/11_workalong_01_fft.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 

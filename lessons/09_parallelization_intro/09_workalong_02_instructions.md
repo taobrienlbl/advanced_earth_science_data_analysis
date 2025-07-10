@@ -8,7 +8,7 @@ https://github.com/taobrienlbl/advanced_earth_science_data_analysis/assets/87966
 
 In a jupyter notebook, we'll develop code to generate a nice plot of total atmospheric water (*precipitable water* is the technical term), which is a good way to look at [atmospheric rivers](https://www.noaa.gov/stories/what-are-atmospheric-rivers).
 
-Download [this file](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/09_parallelization_intro/09_workalong_02.1.ipynb) to your lesson09 folder on BigRed200 and follow along.
+Download [this file](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/lessons/09_parallelization_intro/09_workalong_02.1.ipynb) to your lesson09 folder on BigRed200 and follow along.
 
 ## 2.2 Testing plot code
 

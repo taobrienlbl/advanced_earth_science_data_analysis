@@ -25,8 +25,8 @@ This works toward the course goal to "apply machine learning libraries to real d
 
 (5 min) Recap last class
 
-(25 min) Complete mapping/plotting workalong from lesson 06 (see also [the solution to the first plotting exercise](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/06_advanced_plotting/06_workalong01_advanced_plotting_SOLUTION.ipynb))
-<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/06_advanced_plotting/06_workalong02_mapping.ipynb">
+(25 min) Complete mapping/plotting workalong from lesson 06 (see also [the solution to the first plotting exercise](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/lessons/06_advanced_plotting/06_workalong01_advanced_plotting_SOLUTION.ipynb))
+<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/lessons/06_advanced_plotting/06_workalong02_mapping.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
@@ -35,12 +35,12 @@ This works toward the course goal to "apply machine learning libraries to real d
 (20 min) Install `pytorch` (`mamba install -c conda-forge pytorch` or `pip install pytorch`)
 
 (45 min) Basics of machine learning - workalong
-<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/07_machine_learning_intro/07_workalong01_machine_learning_basics.ipynb">
+<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/lessons/07_machine_learning_intro/07_workalong01_machine_learning_basics.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
 ~~(10 min) Intro to Classes in Python (interwoven with above ML workalong)
-<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/07_machine_learning_intro/07_workalong02_intro_to_classes.ipynb">
+<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/lessons/07_machine_learning_intro/07_workalong02_intro_to_classes.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>~~
 *(Stopped part way through 'Basics of machine learning': ran out of time)*

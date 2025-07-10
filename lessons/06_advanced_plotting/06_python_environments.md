@@ -6,7 +6,7 @@ We'll use the following steps to create a new `conda` environment.
 1. Create a new conda environment: `conda create --yes -n easg690 python=3.10`
 1. Activate the new environmenta: `conda activate easg690`
 1. Install [`mamba`](https://github.com/mamba-org/mamba): `conda install --yes -c conda-forge mamba`
-1. Download this [requirements.yml](https://raw.githubusercontent.com/taobrienlbl/advanced_earth_science_data_analysis/spring_2023_iub/lessons/06_advanced_plotting/requirements.yml) file
+1. Download this [requirements.yml](https://raw.githubusercontent.com/taobrienlbl/advanced_earth_science_data_analysis/fall_2025_iub/lessons/06_advanced_plotting/requirements.yml) file
 1. Verify that `requirements.yml` has all the packages you think you'll need; add others as needed
 1. Install the packages into the environment: `mamba env update -f requirements.yml`
 1. Install the jupyter kernel into the environment: `ipython kernel install --name easg690 --user`

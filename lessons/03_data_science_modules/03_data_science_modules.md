@@ -24,14 +24,14 @@ This lesson contributes toward the overarching goal that you can "implement comm
 ## PREVIEW | Class Overview:
 
 (25 min) Lesson 03 warmup
-<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/03_data_science_modules/03_warmup.ipynb">
+<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/lessons/03_data_science_modules/03_warmup.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
 (25 min) Lecture on the big-four Python data science modules
 
 (35 min) Workalong: Winter temperature El Nino exercise
-<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/03_data_science_modules/03_winter_temperature_enso.ipynb">
+<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/lessons/03_data_science_modules/03_winter_temperature_enso.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 

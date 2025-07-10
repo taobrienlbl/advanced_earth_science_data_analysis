@@ -18,7 +18,7 @@ This works toward the course goal to "apply machine learning libraries to real d
 
 ## COMPLETE | Reading and Homework:
 
-* Homework 08a: [setup bigred200 for next week](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/assignments/homework08a.md)
+* Homework 08a: [setup bigred200 for next week](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/assignments/homework08a.md)
 * Homework 08b: apply machine learning concepts from today to your own research data
 * Final project proposal
 
@@ -31,19 +31,19 @@ This works toward the course goal to "apply machine learning libraries to real d
 * function approximation with reLUs
 
 (15 min) Finish optimization-by-hand part of Basics of machine learning - workalong (stop at *ReLUs in `pytorch`* section)
-<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/07_machine_learning_intro/07_workalong01_machine_learning_basics.ipynb">
+<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/lessons/07_machine_learning_intro/07_workalong01_machine_learning_basics.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
 (10 min) Intro to Classes in Python (interwoven with above ML workalong)
-<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/07_machine_learning_intro/07_workalong02_intro_to_classes.ipynb">
+<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/lessons/07_machine_learning_intro/07_workalong02_intro_to_classes.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
 (55 min) Continue: Basics of machine learning - workalong
-<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/07_machine_learning_intro/07_workalong01_machine_learning_basics.ipynb">
+<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/lessons/07_machine_learning_intro/07_workalong01_machine_learning_basics.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
 
-(30 min) Getting setup on UITS systems for next week: see [this link](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/assignments/homework08a.md)
+(30 min) Getting setup on UITS systems for next week: see [this link](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/assignments/homework08a.md)

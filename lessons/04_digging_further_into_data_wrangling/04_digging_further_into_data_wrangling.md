@@ -31,7 +31,7 @@ This lesson contributes toward the overarching goal that you can "implement comm
 (10 min) Intro to measurement exercise
 
 (95 min) Estimating the height of the 7th floor 
-<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/04_digging_further_into_data_wrangling/04_estimating_building_height.ipynb">
+<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/lessons/04_digging_further_into_data_wrangling/04_estimating_building_height.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 

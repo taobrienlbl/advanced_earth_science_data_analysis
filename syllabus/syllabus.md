@@ -25,20 +25,20 @@ Note: while the above may sound like a lot for one course, the last four items a
 
 | Week | Lesson |
 | ---- | ------ |
-| 01 | [Fundamentals](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/01_fundamentals/01_fundamentals.md) |
-| 02 | [Modules, VSCode, and Git](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/02_modules_vscode_git/02_modules_vscode_git.md) |
-| 03 | [Data Science Modules](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/03_data_science_modules/03_data_science_modules.md) |
-| 04 | [Digging Further into Data Wrangling](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/04_digging_further_into_data_wrangling/04_digging_further_into_data_wrangling.md) |
-| 05 | [Multidimensional Arrays and Plotting](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/05_multidimensional_arrays_also_plotting/05_multidimensional_arrays_also_plotting.md) |
-| 06 | [Advanced Plotting](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/06_advanced_plotting/06_advanced_plotting.md) |
-| 07 | [Machine Learning Introduction](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/07_machine_learning_intro/07_machine_learning_intro.md) |
-| 08 | [Machine Learning Continued](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/08_machine_learning_continued/08_machine_learning_continued.md) |
-| 09 | [Parallelization Introduction](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/09_parallelization_intro/09_parallelization_intro.md) |
-| 10 | [Parallelization Continued](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/10_paralellelization_continued/10_parallelization_continued.md) |
-| 11 | [Spectral Analysis Introduction](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/11_spectral_analysis_intro/11_spectral_analysis_intro.md) |
-| 12 | [Spectral Analysis Continued](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/12_spectral_analysis_continued/12_spectral_analysis_continued.md) |
+| 01 | [Fundamentals](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/lessons/01_fundamentals/01_fundamentals.md) |
+| 02 | [Modules, VSCode, and Git](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/lessons/02_modules_vscode_git/02_modules_vscode_git.md) |
+| 03 | [Data Science Modules](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/lessons/03_data_science_modules/03_data_science_modules.md) |
+| 04 | [Digging Further into Data Wrangling](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/lessons/04_digging_further_into_data_wrangling/04_digging_further_into_data_wrangling.md) |
+| 05 | [Multidimensional Arrays and Plotting](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/lessons/05_multidimensional_arrays_also_plotting/05_multidimensional_arrays_also_plotting.md) |
+| 06 | [Advanced Plotting](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/lessons/06_advanced_plotting/06_advanced_plotting.md) |
+| 07 | [Machine Learning Introduction](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/lessons/07_machine_learning_intro/07_machine_learning_intro.md) |
+| 08 | [Machine Learning Continued](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/lessons/08_machine_learning_continued/08_machine_learning_continued.md) |
+| 09 | [Parallelization Introduction](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/lessons/09_parallelization_intro/09_parallelization_intro.md) |
+| 10 | [Parallelization Continued](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/lessons/10_paralellelization_continued/10_parallelization_continued.md) |
+| 11 | [Spectral Analysis Introduction](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/lessons/11_spectral_analysis_intro/11_spectral_analysis_intro.md) |
+| 12 | [Spectral Analysis Continued](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/lessons/12_spectral_analysis_continued/12_spectral_analysis_continued.md) |
 | 13 | [Geospatial Introduction](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/09188e9e6a0cf230f8473c0ae95d2e1b9079df3a/lessons/13_geospatial_intro/13_geospatial_intro.md) |
-| 14 | [Geospatial Continued](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/spring_2023_iub/lessons/14_geospatial_continued/14_geospatial_continued.md) |
+| 14 | [Geospatial Continued](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/lessons/14_geospatial_continued/14_geospatial_continued.md) |
 
 ## How will I learn?
 
