@@ -1,6 +1,6 @@
 # About this repository
 
-This is the source for [Advanced Earth Science Data Analysis](https://TBD); information about the course can be found there.  Instructions below are for getting started with adapting/modifying the course (e.g., for the instructor or for someone who wants to duplicate and build on these course materials).
+This is the source for [Advanced Earth Science Data Analysis](https://TBD); information about the course can be found there.  Instructions below are for getting started with adapting/modifying the course (e.g., for the instructor or for someone who wants to duplicate and build on these course materials).t
 
 # Building the course website
 
