@@ -1,4 +1,4 @@
-# Multidimensional Arrays, and Also Plotting
+# Multidimensional Arrays + Plotting
 
 *Lecture number:* 05
 

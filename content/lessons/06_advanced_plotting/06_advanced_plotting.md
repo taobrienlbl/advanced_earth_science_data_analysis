@@ -2,7 +2,7 @@
 
 *Lecture number:* 06
 
-*Target Date:* 09/29/2023
+*Target Date:* 10/03/2025
 
 *Length:* 150 mins
 

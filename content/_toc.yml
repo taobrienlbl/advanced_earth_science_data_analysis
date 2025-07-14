@@ -4,7 +4,7 @@
 format: jb-book
 root: syllabus/syllabus
 parts:
-  - caption: "Advanced Earth Science Data Analysis"
+  - caption: "Advanced Earth Science Data Analysis: Fundamentals"
     chapters:
     - file: lessons/01_fundamentals/01_fundamentals
       sections:
@@ -31,8 +31,18 @@ parts:
       - file: lessons/05_multidimensional_arrays_also_plotting/05_multidimensional_array_lecture_notes
       - file: lessons/05_multidimensional_arrays_also_plotting/05_multidimensional_array_exercise
     - file: lessons/06_advanced_plotting/06_advanced_plotting
+      sections:
+      - file: lessons/06_advanced_plotting/06_workalong01_advanced_plotting
+      - file: lessons/06_advanced_plotting/06_python_environments
+      - file: lessons/06_advanced_plotting/06_workalong02_mapping
     - file: lessons/07_machine_learning_intro/07_machine_learning_intro
+      sections:
+      - file: lessons/07_machine_learning_intro/07_workalong_machine_learning_basics
     - file: lessons/08_machine_learning_continued/08_machine_learning_continued
+      sections:
+      - file: lessons/08_machine_learning_continued/08_workalong_intro_to_classes
+  - caption: "Advanced Earth Science Data Analysis: HPC"
+    chapters:
     - file: lessons/09_parallelization_intro/09_parallelization_intro
     - file: lessons/10_paralellelization_continued/10_parallelization_continued
     - file: lessons/11_spectral_analysis_intro/11_spectral_analysis_intro
@@ -43,6 +53,7 @@ parts:
     chapters:
     - file: solutions/solutions
       sections:
+      - file: lessons/01_fundamentals/01b_madhava_pi_calculation_SOLUTION
       - file: lessons/01_fundamentals/01c_calculating_e_SOLUTION
       - file: lessons/01_fundamentals/01d_trig_fucntion_SOLUTION
       - file: lessons/02_modules_vscode_git/02_last_class_refresher_SOLUTION
@@ -53,8 +64,8 @@ parts:
       - file: lessons/05_multidimensional_arrays_also_plotting/05_warmup_SOLUTION
       - file: lessons/06_advanced_plotting/06_workalong01_advanced_plotting_SOLUTION
       - file: lessons/06_advanced_plotting/06_workalong02_mapping_SOLUTION
-      - file: lessons/07_machine_learning_intro/07_workalong01_machine_learning_basics_SOLUTION
-      - file: lessons/07_machine_learning_intro/07_workalong02_intro_to_classes_SOLUTION
+      - file: lessons/07_machine_learning_intro/07_workalong_machine_learning_basics_SOLUTION
+      - file: lessons/08_machine_learning_continued/08_workalong_intro_to_classes_SOLUTION
       - file: lessons/09_parallelization_intro/09_workalong_02.1_SOLUTION
       - file: lessons/11_spectral_analysis_intro/11_workalong_01_fft_SOLUTION
       - file: lessons/12_spectral_analysis_continued/12_workalong_01_filter_SOLUTION

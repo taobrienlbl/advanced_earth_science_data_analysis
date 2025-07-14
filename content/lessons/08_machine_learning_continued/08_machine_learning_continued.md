@@ -1,8 +1,8 @@
-# Machine Learning Introduction
+# Machine Learning Continued
 
 *Lecture number:* 08
 
-*Target Date:* 10/20/2023
+*Target Date:* 10/17/2025
 
 *Length:* 120 mins
 
@@ -30,13 +30,14 @@ This works toward the course goal to "apply machine learning libraries to real d
 * neuron model w/ reLUs
 * function approximation with reLUs
 
-(15 min) Finish optimization-by-hand part of Basics of machine learning - workalong (stop at *ReLUs in `pytorch`* section)
-<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/07_machine_learning_intro/07_workalong01_machine_learning_basics.ipynb">
+(15 min) Finish optimization-by-hand part of Basics of machine learning - workalong
+<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/07_machine_learning_intro/07_workalong_machine_learning_basics.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
+
 (10 min) Intro to Classes in Python (interwoven with above ML workalong)
-<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/07_machine_learning_intro/07_workalong02_intro_to_classes.ipynb">
+<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/07_machine_learning_intro/08_workalong_intro_to_classes.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 

@@ -2,7 +2,7 @@
 
 *Lecture number:* 07
 
-*Target Date:* 10/06/2023
+*Target Date:* 10/10/2025
 
 *Length:* 150 mins
 
@@ -34,15 +34,11 @@ This works toward the course goal to "apply machine learning libraries to real d
 
 (20 min) Install `pytorch` (`mamba install -c conda-forge pytorch` or `pip install pytorch`)
 
-(45 min) Basics of machine learning - workalong
-<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/07_machine_learning_intro/07_workalong01_machine_learning_basics.ipynb">
+(55 min) Basics of machine learning - workalong
+<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/07_machine_learning_intro/07_workalong_machine_learning_basics.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
-~~(10 min) Intro to Classes in Python (interwoven with above ML workalong)
-<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/07_machine_learning_intro/07_workalong02_intro_to_classes.ipynb">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
-</a>~~
-*(Stopped part way through 'Basics of machine learning': ran out of time)*
+
 
 
