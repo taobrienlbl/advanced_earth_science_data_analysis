@@ -2,7 +2,7 @@
 
 *Lecture number:* 14
 
-*Target Date:* 12/08/2023
+*Target Date:* 12/05/2025
 
 *Length:* 75 mins
 
@@ -22,5 +22,5 @@ This pulls together multiple data analysis tasks, such as reading data, geospati
 
 (10 min) Recap of course
 
-(65 min) [Indiana snow trend exercise](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/14_geospatial_continued/14_IN_snow_trends.ipynb)
+(65 min) [Indiana snow trend exercise](./14_IN_snow_trends.ipynb)
 

@@ -2,7 +2,7 @@
 
 *Lecture number:* 13
 
-*Target Date:* 11/28/2023 (pre-recorded)
+*Target Date:* 11/21/2025
 
 *Length:* 75 mins
 
@@ -26,6 +26,6 @@ This builds on the course goal to implement basic data analysis tasks in python 
 
 (10 min) Introduction to geospatial libraries in Python
 
-(30 min) [Workalong 01](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/13_geospatial_intro/13_workalong01_california_earthquakes.ipynb): Finding Earthquakes within California
+(30 min) [Workalong 01](./13_workalong01_california_earthquakes.ipynb): Finding Earthquakes within California
 
-(30 min) [Workalong 02](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/13_geospatial_intro/13_workalong02_geospatial_plotting.ipynb): Loading USGS topo data & making nice geospatial plots
+(30 min) [Workalong 02](./13_workalong02_geospatial_plotting.ipynb): Loading USGS topo data & making nice geospatial plots

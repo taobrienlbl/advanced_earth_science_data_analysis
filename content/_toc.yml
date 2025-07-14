@@ -55,9 +55,18 @@ parts:
       - file: lessons/10_paralellelization_continued/10_bcast_gather
       - file: lessons/10_paralellelization_continued/10_workalong01_parallel_pi
     - file: lessons/11_spectral_analysis_intro/11_spectral_analysis_intro
+      sections:
+      - file: lessons/11_spectral_analysis_intro/11_workalong_01_fft
     - file: lessons/12_spectral_analysis_continued/12_spectral_analysis_continued
+      sections:
+      - file: lessons/12_spectral_analysis_continued/12_workalong_01_filter
     - file: lessons/13_geospatial_intro/13_geospatial_intro
+      sections:
+      - file: lessons/13_geospatial_intro/13_workalong01_california_earthquakes
+      - file: lessons/13_geospatial_intro/13_workalong02_geospatial_plotting
     - file: lessons/14_geospatial_continued/14_geospatial_continued
+      sections:
+      - file: lessons/14_geospatial_continued/14_IN_snow_trends
   - caption: "Solutions"
     chapters:
     - file: solutions/solutions

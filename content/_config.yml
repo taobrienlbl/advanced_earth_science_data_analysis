@@ -32,6 +32,9 @@ html:
   use_issues_button: true
   use_repository_button: true
 
+# skip building README.md files
+exclude_patterns : ["lessons/*/README.md"]
+
 sphinx:
   config:
     html_extra_path: ['./course_images']
