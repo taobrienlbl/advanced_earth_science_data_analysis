@@ -50,6 +50,10 @@ parts:
       - file: lessons/09_parallelization_intro/09_workalong_01_mpi4py_intro
       - file: lessons/09_parallelization_intro/09_workalong_02_instructions
     - file: lessons/10_paralellelization_continued/10_parallelization_continued
+      sections:
+      - file: lessons/10_paralellelization_continued/10_workalong_02_simplempi_instructions
+      - file: lessons/10_paralellelization_continued/10_bcast_gather
+      - file: lessons/10_paralellelization_continued/10_workalong01_parallel_pi
     - file: lessons/11_spectral_analysis_intro/11_spectral_analysis_intro
     - file: lessons/12_spectral_analysis_continued/12_spectral_analysis_continued
     - file: lessons/13_geospatial_intro/13_geospatial_intro
@@ -73,6 +77,7 @@ parts:
       - file: lessons/08_machine_learning_continued/08_workalong_intro_to_classes_SOLUTION
       - file: lessons/09_parallelization_intro/09_workalong_01_mpi4py_intro_SOLUTION
       - file: lessons/09_parallelization_intro/09_workalong_02_SOLUTION
+      - file: lessons/10_paralellelization_continued/10_workalong_01_parallel_pi_SOLUTION
       - file: lessons/11_spectral_analysis_intro/11_workalong_01_fft_SOLUTION
       - file: lessons/12_spectral_analysis_continued/12_workalong_01_filter_SOLUTION
       - file: lessons/13_geospatial_intro/13_workalong01_california_earthquakes_SOLUTION

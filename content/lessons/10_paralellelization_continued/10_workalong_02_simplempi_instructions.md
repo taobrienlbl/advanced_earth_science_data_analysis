@@ -1,4 +1,4 @@
-# Using `simplempi`
+# Work-along: Using `simplempi`
 
 For this exercise, we will build on the first excercise from class, using the `simplempi` package.
 
