@@ -4,7 +4,7 @@
 
 *Lecture number:* 01
 
-*Target Date:* 2023-08-25
+*Target Date:* 2025-08-29
 
 *Length:* 150 mins
 
