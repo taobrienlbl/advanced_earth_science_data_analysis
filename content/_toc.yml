@@ -3,6 +3,8 @@
 
 format: jb-book
 root: syllabus/syllabus
+options:
+  numbered: true
 parts:
   - caption: "Advanced Earth Science Data Analysis: Fundamentals"
     chapters:
@@ -44,6 +46,9 @@ parts:
   - caption: "Advanced Earth Science Data Analysis: HPC"
     chapters:
     - file: lessons/09_parallelization_intro/09_parallelization_intro
+      sections:
+      - file: lessons/09_parallelization_intro/09_workalong_01_mpi4py_intro
+      - file: lessons/09_parallelization_intro/09_workalong_02_instructions
     - file: lessons/10_paralellelization_continued/10_parallelization_continued
     - file: lessons/11_spectral_analysis_intro/11_spectral_analysis_intro
     - file: lessons/12_spectral_analysis_continued/12_spectral_analysis_continued
@@ -66,7 +71,8 @@ parts:
       - file: lessons/06_advanced_plotting/06_workalong02_mapping_SOLUTION
       - file: lessons/07_machine_learning_intro/07_workalong_machine_learning_basics_SOLUTION
       - file: lessons/08_machine_learning_continued/08_workalong_intro_to_classes_SOLUTION
-      - file: lessons/09_parallelization_intro/09_workalong_02.1_SOLUTION
+      - file: lessons/09_parallelization_intro/09_workalong_01_mpi4py_intro_SOLUTION
+      - file: lessons/09_parallelization_intro/09_workalong_02_SOLUTION
       - file: lessons/11_spectral_analysis_intro/11_workalong_01_fft_SOLUTION
       - file: lessons/12_spectral_analysis_continued/12_workalong_01_filter_SOLUTION
       - file: lessons/13_geospatial_intro/13_workalong01_california_earthquakes_SOLUTION

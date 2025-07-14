@@ -1,8 +1,8 @@
-# Exercise 02 - Animating the weather in parallel
+# Work-along: Animating the weather in parallel
 
 In this exercise, we will develop code to generate an animation, taking advantage of parallelization to make the process fast.
 
-https://github.com/taobrienlbl/advanced_earth_science_data_analysis/assets/8796694/7c701d6a-895d-4707-87c8-0d59066ce469
+<video src="../../_static/videos/tcw_animation.mp4" controls width="600" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px; min-height: 200px"></video>
 
 ## 2.1 Developing plot code
 
@@ -12,7 +12,7 @@ Download [this file](https://github.com/taobrienlbl/advanced_earth_science_data_
 
 ## 2.2 Testing plot code
 
-Make a module for your plotting code called `generate_frame.py`; put your function in that file (and any necessary imports).
+Now that we have drafted and tested code for generating a single animation frame, make a module for your plotting code called `generate_frame.py`; put your function in that file (and any necessary imports).
 
 Test your function from the command line by typing the following in the terminal:
 ```bash

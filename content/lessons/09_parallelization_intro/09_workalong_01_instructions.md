@@ -1,4 +1,25 @@
-Once we draft the code or the first workalong in this lesson, we will need to run on a *compute node* of BigRed200. Follow these steps, which assume that you are running VS Code on BigRed200 already.
+# Work-along: Basic parallelization
+
+## Drafting the parallel code
+
+First we will draft code that shows the most basic use of the `mpi4py` library, which is one of the primary libraries for coarse-grained parallelism in Python.  Here's a skeleton of the code that we will draft:
+
+```python
+# import libraries
+
+# get the 'communicator'
+
+# get the 'rank' of the process
+
+# get the total number of processes
+
+# print the rank
+
+```
+
+## Running the code on a compute node
+
+Once we draft the code above code, we will need to run on a *compute node* of BigRed200. Follow these steps, which assume that you are running VS Code on BigRed200 already.
 
 1. Open a terminal
 1. Activate your class conda environment: `conda activate easg690`

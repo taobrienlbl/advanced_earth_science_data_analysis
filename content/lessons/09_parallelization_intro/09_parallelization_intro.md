@@ -2,7 +2,7 @@
 
 *Lecture number:* 09
 
-*Target Date:* 10/27/2023
+*Target Date:* 10/24/2025
 
 *Length:* 150 mins
 
@@ -33,7 +33,7 @@ This works towards the goal to "parallelize *embarrassingly parallel* data proce
 
 (15 mins) Parallelization overview: coarse- vs fine-grained parallelism
 
-(30 mins) `mpi4py` parallelism workalong (download [this file](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/09_parallelization_intro/09_workalong_01_mpi4py_intro.py) to your lesson09 folder on BigRed200)
+(30 mins) `mpi4py` parallelism workalong (download [this file](https://raw.githubusercontent.com/taobrienlbl/advanced_earth_science_data_analysis/refs/heads/fall_2025_iub/content/lessons/09_parallelization_intro/09_workalong_01_mpi4py_intro.py) to your lesson09 folder on BigRed200)
 
-(45 mins) Exercise: Animate the weather with parallelization; go [here](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/09_parallelization_intro/09_workalong_02_instructions.md)
+(45 mins) Exercise: Animate the weather with parallelization; go [here](09_workalong_02_instructions.md)
 
