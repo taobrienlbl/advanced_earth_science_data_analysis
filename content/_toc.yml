@@ -13,6 +13,11 @@ parts:
       - file: lessons/01_fundamentals/01c_calculating_e
       - file: lessons/01_fundamentals/01d_trig_fucntion
     - file: lessons/02_modules_vscode_git/02_modules_vscode_git
+      sections:
+      - file: lessons/02_modules_vscode_git/02_last_class_refresher
+      - file: lessons/02_modules_vscode_git/02_new_module
+      - file: lessons/02_modules_vscode_git/02_git_workalong
+      - file: lessons/02_modules_vscode_git/02_looking_ahead
     - file: lessons/03_data_science_modules/03_data_science_modules
     - file: lessons/04_digging_further_into_data_wrangling/04_digging_further_into_data_wrangling
     - file: lessons/05_multidimensional_arrays_also_plotting/05_multidimensional_arrays_also_plotting
