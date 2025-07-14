@@ -2,7 +2,7 @@
 
 *Lecture number:* 05
 
-*Target Date:* 09/22/2023
+*Target Date:* 09/26/2025
 
 *Length:* 150 mins
 
@@ -33,7 +33,7 @@ This contributes to two goals:
 
 (5 min) Break
 
-(40 min) Follow-along: lecture on multidimensional arrays
+(40 min) Work-along: lecture on multidimensional arrays
 <a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/05_multidimensional_arrays_also_plotting/05_multidimensional_array_lecture_notes.ipynb">
 </a>
 
