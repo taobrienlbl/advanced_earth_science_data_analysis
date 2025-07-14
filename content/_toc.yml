@@ -23,6 +23,8 @@ parts:
       - file: lessons/03_data_science_modules/03_warmup
       - file: lessons/03_data_science_modules/03_winter_temperature_enso
     - file: lessons/04_digging_further_into_data_wrangling/04_digging_further_into_data_wrangling
+      sections:
+      - file: lessons/04_digging_further_into_data_wrangling/04_estimating_building_height
     - file: lessons/05_multidimensional_arrays_also_plotting/05_multidimensional_arrays_also_plotting
     - file: lessons/06_advanced_plotting/06_advanced_plotting
     - file: lessons/07_machine_learning_intro/07_machine_learning_intro
