@@ -1,7 +1,10 @@
 # Syllabus
+
+Main course website: [https://obrienta.pages.iu.edu](https://obrienta.pages.iu.edu/courses/adv_eart_sci_data_analysis_fall_2025/)
+
 Course github site: [https://github.com/taobrienlbl/advanced_earth_science_data_analysis](https://github.com/taobrienlbl/advanced_earth_science_data_analysis)
 
-Fall 2023 Student Hours (M,W,Th,F): [Book time](https://outlook.office.com/bookwithme/user/720d05499372402eb10295f8a632eee6@iu.edu/meetingtype/SVRwCe7HMUGxuT6WGxi68g2?anonymous&ep=mLinkFromTile)
+Fall 2025 Student Hours (M,Tu,W,Th): [Book time](https://outlook.office.com/bookwithme/user/720d05499372402eb10295f8a632eee6@iu.edu/meetingtype/SVRwCe7HMUGxuT6WGxi68g2?anonymous&ismsaljsauthenabled&ep=mLinkFromTile)
 
 ## What is this course?
 "Advanced Data Analysis for Earth Science" is a graduate-level programming and data analysis course aimed at giving students in environment-related disciplines--like Geology, Atmospheric Science, Physical Geography, Environmental Science, etc.--the technical skills necessary to do high-quality science.
@@ -50,7 +53,7 @@ Learning will be reinforced by weekly readings and/or videos.  There will also b
 ## Who is teaching it and how can I reach them?
 Prof. Travis A. O'Brien (he/him/his) - I'm a scientist who leads a group of undergraduate, graduate, and postdoctoral researchers focused on understanding what controls year-to-year variability in extreme weather and how this is being affected by climate change (see [my Google Scholar page](https://scholar.google.com/citations?user=LcMrbQYAAAAJ&hl=en)). I have been programming in general since 1995 and programming in the sciences since 2005, learning many programming languages along the way: BASIC, C, C++, Fortran, Perl, NCL, Matlab/Octave, BASH, HTML, LaTeX (believe it or not, LaTeX is [Turing complete](https://en.wikipedia.org/wiki/Turing_completeness)!), Javascript, Julia, and of course Python.  If it is not obvious from that list, I love programming--it's sort of meditative for me, and it's something I do as a hobby in addition to what I do for work.  Along the way, I have written a Python package that is used in numerous fields (see [fastKDE](https://github.com/LBL-EESA/fastkde)) and contributed to other software pacakges (see [my github page](https://github.com/taobrienlbl))
 
-I'll post formal office hours at the beginning of the semester, and in general, if my office door is open, you're welcome to drop by to chat any time: Geology 4037.
+See the link at the top to schedule student hours with me. And in general, if my office door is open, you're welcome to drop by to chat any time: Geology 4038.
 
 
 ## How will I be graded?
@@ -93,7 +96,7 @@ Grades will usually be posted in Canvas within two weeks of the due date. Since 
 
 ### What about late work?
 
-All late assignments will be subject to a 40% penalty unless arrangements are made in advance of the due date: the grade for late assignments will therefore be calculated as 0.6 times the actual grade given.  Assignments turned in after the last day of the semester will not be counted unless arrangements have been made for an incomplete, consistent with [IU policies on incompletes](https://bulletins.iu.edu/iu/gradschool/2022-2023/policies/grading.shtml).
+All late assignments will be subject to a 40% penalty unless arrangements are made in advance of the due date: the grade for late assignments will therefore be calculated as 0.6 times the actual grade given.  Assignments turned in after the last day of the semester will not be counted unless arrangements have been made for an incomplete, consistent with [IU policies on incompletes](https://bulletins.iu.edu/iu/gradschool/2024-2025/policies/grading.shtml).
 
 ## What are the prerequisites?
 
