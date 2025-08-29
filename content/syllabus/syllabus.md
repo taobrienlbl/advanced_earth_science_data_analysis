@@ -29,20 +29,20 @@ Note: while the above may sound like a lot for one course, the last four items a
 
 | Week | Lesson |
 | ---- | ------ |
-| 01 | [Fundamentals](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/01_fundamentals/01_fundamentals.md) |
-| 02 | [Modules, VSCode, and Git](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/02_modules_vscode_git/02_modules_vscode_git.md) |
-| 03 | [Data Science Modules](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/03_data_science_modules/03_data_science_modules.md) |
-| 04 | [Digging Further into Data Wrangling](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/04_digging_further_into_data_wrangling/04_digging_further_into_data_wrangling.md) |
-| 05 | [Multidimensional Arrays and Plotting](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/05_multidimensional_arrays_also_plotting/05_multidimensional_arrays_also_plotting.md) |
-| 06 | [Advanced Plotting](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/06_advanced_plotting/06_advanced_plotting.md) |
-| 07 | [Machine Learning Introduction](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/07_machine_learning_intro/07_machine_learning_intro.md) |
-| 08 | [Machine Learning Continued](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/08_machine_learning_continued/08_machine_learning_continued.md) |
-| 09 | [Parallelization Introduction](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/09_parallelization_intro/09_parallelization_intro.md) |
-| 10 | [Parallelization Continued](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/10_paralellelization_continued/10_parallelization_continued.md) |
-| 11 | [Spectral Analysis Introduction](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/11_spectral_analysis_intro/11_spectral_analysis_intro.md) |
-| 12 | [Spectral Analysis Continued](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/12_spectral_analysis_continued/12_spectral_analysis_continued.md) |
-| 13 | [Geospatial Introduction](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/09188e9e6a0cf230f8473c0ae95d2e1b9079df3a/lessons/13_geospatial_intro/13_geospatial_intro.md) |
-| 14 | [Geospatial Continued](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/14_geospatial_continued/14_geospatial_continued.md) |
+| 01 | [](../lessons/01_fundamentals/01_fundamentals.md) |
+| 02 | [](../lessons/02_modules_vscode_git/02_modules_vscode_git.md) |
+| 03 | [](../lessons/03_data_science_modules/03_data_science_modules.md) |
+| 04 | [](../lessons/04_digging_further_into_data_wrangling/04_digging_further_into_data_wrangling.md) |
+| 05 | [](../lessons/05_multidimensional_arrays_also_plotting/05_multidimensional_arrays_also_plotting.md) |
+| 06 | [](../lessons/06_advanced_plotting/06_advanced_plotting.md) |
+| 07 | [](../lessons/07_machine_learning_intro/07_machine_learning_intro.md) |
+| 08 | [](../lessons/08_machine_learning_continued/08_machine_learning_continued.md) |
+| 09 | [](../lessons/09_parallelization_intro/09_parallelization_intro.md) |
+| 10 | [](../lessons/10_paralellelization_continued/10_parallelization_continued.md) |
+| 11 | [](../lessons/11_spectral_analysis_intro/11_spectral_analysis_intro.md) |
+| 12 | [](../lessons/12_spectral_analysis_continued/12_spectral_analysis_continued.md) |
+| 13 | [](../lessons/13_geospatial_intro/13_geospatial_intro.md) |
+| 14 | [](../lessons/14_geospatial_continued/14_geospatial_continued.md) |
 
 ## How will I learn?
 
@@ -80,6 +80,7 @@ The assignments will have a clearly-stated set of objectives for you to meet: e.
 
 In some instances, I may also request peer review, which will also count for points in the homework category.
 
+(final-project)=
 ### Final project
 The final project will consist of research code and Jupyter notebooks in a git repository, along with a well-written 'README' file that orients the viewer to the contents of the repository.  Specific requirements for the final project will be given later in the course, but the general goal of the project is to (a) demonstrate that concepts in the course have been applied in your research, and (b) demonstrate that all of the learning goals of the course (see "what will I learn?") have been met.  A rubric will be provided when the final project is assigned, and peer reviews may be requested.
 
@@ -135,7 +136,7 @@ $^*$ If you are finding that you're consistently needing to spend more than 6--8
 
 ## What if I need accommodations?
 
-Every attempt will be made to accommodate students with disabilities (e.g. mental health, learning, chronic health, physical, hearing, vision, neurological, etc.). You must have established your eligibility for support services through the appropriate office that services students with disabilities. Note that services are confidential, may take time to put in place, and are forward moving. Captions and alternate media for print materials may take three or more weeks to get produced. Please contact the Disability Services for Students (DSS) at 812-855-7578 as soon as possible if accommodations are needed. The office is located on the third floor, west tower, of the Wells Library, Room W302. Walk-ins are welcome, 8 a.m. to 5 p.m. Monday through Friday. You can also locate a variety of campus resources for students and visitors who need assistance at [iu.edu/~ada](iu.edu/~ada).
+Every attempt will be made to accommodate students with disabilities (e.g. mental health, learning, chronic health, physical, hearing, vision, neurological, etc.). You must have established your eligibility for support services through the appropriate office that services students with disabilities. Note that services are confidential, may take time to put in place, and are forward moving. Captions and alternate media for print materials may take three or more weeks to get produced. Please contact the Accessible Educational Services (AES) at 812-855-7578 or iubaes@iu.edu as soon as possible if accommodations are needed. The office is located in Eigenmann Hall #001 (1900 E. 10th St). Walk-ins are welcome, 8 a.m. to 5 p.m. Monday through Friday. You can also locate a variety of campus resources for students and visitors who need assistance at [https://studentlife.indiana.edu/care-advocacy/iub-aes/index.html](https://studentlife.indiana.edu/care-advocacy/iub-aes/index.html).
 
 ## What is the grading policy?
 

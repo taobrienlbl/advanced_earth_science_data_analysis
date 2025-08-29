@@ -67,6 +67,10 @@ parts:
     - file: lessons/14_geospatial_continued/14_geospatial_continued
       sections:
       - file: lessons/14_geospatial_continued/14_IN_snow_trends
+  - caption: "Homework"
+    chapters:
+    - file: assignments/01a_homework
+    - file: assignments/01b_homework
   - caption: "Solutions"
     chapters:
     - file: solutions/solutions

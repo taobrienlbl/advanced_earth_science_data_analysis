@@ -26,8 +26,8 @@ This lesson builds toward course goals 1, 6, 7, and 9:
 ## COMPLETE | Reading and Homework:
 
 * OBTAIN | the course textbook: [An Introduction to Python Programming for Scientists and Engineers](https://www.cambridge.org/highereducation/books/an-introduction-to-python-programming-for-scientists-and-engineers/271C02A02E8B775066316E92A68E187A#overview), ISBN 9781108701129 or 9781108571531 (digital)
-* COMPLETE | Homework 01
-* COMPLETE | Final project: initial proposal (half-page)
+* COMPLETE | [](../../assignments/01a_homework.md)
+* COMPLETE | [Final project: initial proposal (half-page)](../../assignments/01b_homework.md)
 
 ## PREVIEW | Class Overview:
 
