@@ -2,6 +2,11 @@
 
 **Learn Python fundamentals through calculating π & writing custom trig functions**
 
+
+```{note}
+URL to this lesson: https://go.iu.edu/8uLh
+```
+
 *Lecture number:* 01
 
 *Target Date:* 2025-08-29

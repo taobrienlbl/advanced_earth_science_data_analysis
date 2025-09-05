@@ -1,5 +1,9 @@
 # Syllabus
 
+```{note}
+URL to this page: https://go.iu.edu/8uwq
+```
+
 Main course website: [https://obrienta.pages.iu.edu](https://obrienta.pages.iu.edu/courses/adv_eart_sci_data_analysis_fall_2025/)
 
 Course github site: [https://github.com/taobrienlbl/advanced_earth_science_data_analysis](https://github.com/taobrienlbl/advanced_earth_science_data_analysis)

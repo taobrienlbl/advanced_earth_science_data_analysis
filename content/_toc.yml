@@ -17,6 +17,7 @@ parts:
     - file: lessons/02_modules_vscode_git/02_modules_vscode_git
       sections:
       - file: lessons/02_modules_vscode_git/02_last_class_refresher
+      - file: lessons/02_modules_vscode_git/02_download_install
       - file: lessons/02_modules_vscode_git/02_new_module
       - file: lessons/02_modules_vscode_git/02_git_workalong
       - file: lessons/02_modules_vscode_git/02_looking_ahead
@@ -71,6 +72,7 @@ parts:
     chapters:
     - file: assignments/01a_homework
     - file: assignments/01b_homework
+    - file: assignments/02_homework
   - caption: "Solutions"
     chapters:
     - file: solutions/solutions

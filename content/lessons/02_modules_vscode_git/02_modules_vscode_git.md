@@ -1,7 +1,10 @@
 # Modules, VSCode, and Git
 
+**Getting started with tools for reuseable, reliable coding**
+
+
 ```{note}
-URL to this lesson: https://bit.ly/44IbwEM 
+URL to this lesson: https://go.iu.edu/8uLg
 ```
 
 *Lecture number:* 02
@@ -23,27 +26,21 @@ These goals focus on creating and using modular Python code as a way to improve 
 ## COMPLETE | Reading and Homework:
 
 * READ | Chapters 4 and 24
-* COMPLETE | Homework 02
+* COMPLETE | [](../../assignments/02_homework.md)
 
 ## PREVIEW | Class Overview:
 
-(25 min) Warmup & last-class refresher
-<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/02_modules_vscode_git/02_last_class_refresher.ipynb">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
-</a>
+(25 min) [Warmup](02_last_class_refresher.ipynb)
 
-(45 min) Download and install the following: 
+(40 min) Solution to [last class's exercises](../01_fundamentals/01_fundamentals.md)
 
- 2. [Anaconda python](https://www.anaconda.com/download)
- 3. [Visual Studio Code](https://code.visualstudio.com/download)
+(25 min) [Download necessary software](02_download_install.md)
 
-(5 min) break
+(25 min) [Creating a python module](02_new_module.md) - follow-along
 
-(20 min) Creating a python module - follow-along
+(35 min) [Initialize, commit, and push with github](02_git_workalong.md) - follow-along
 
-(35 min) Initialize, commit, and push with github - follow-along
-
-(20 min) *looking ahead to next week* using the big-four Python data science libraries: `numpy`, `pandas`, `matplotlib`, and `scipy`
+(as time allows) [*looking ahead to next week*](02_looking_ahead.md) using the big-four Python data science libraries: `numpy`, `pandas`, `matplotlib`, and `scipy`
 
 
 
