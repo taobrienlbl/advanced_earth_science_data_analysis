@@ -38,3 +38,7 @@ exclude_patterns : ["lessons/*/README.md"]
 sphinx:
   config:
     html_extra_path: ['./course_images']
+
+launch_buttons:
+  notebook_interface: jupyterlab
+  thebe: true
