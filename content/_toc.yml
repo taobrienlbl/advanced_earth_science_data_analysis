@@ -25,6 +25,7 @@ parts:
       sections:
       - file: lessons/03_data_science_modules/03_install_big_four
       - file: lessons/03_data_science_modules/03_warmup
+      - file: lessons/03_data_science_modules/03_big_four_lecture_demo
       - file: lessons/03_data_science_modules/03_winter_temperature_enso
     - file: lessons/04_digging_further_into_data_wrangling/04_digging_further_into_data_wrangling
       sections:
