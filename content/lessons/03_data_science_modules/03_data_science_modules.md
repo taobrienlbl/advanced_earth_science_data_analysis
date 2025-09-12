@@ -33,7 +33,7 @@ This lesson contributes toward the overarching goal that you can "implement comm
 
 (10 mins) [](03_install_big_four.md)
 
-(15 mins )[Lesson 03 warmup](03_warmup.ipynb)
+(15 mins) [Lesson 03 warmup](03_warmup.ipynb)
 
 (25 min) [Lecture & workalong](03_big_four_lecture_demo.ipynb) on the big-four Python data science modules
 
