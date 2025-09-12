@@ -1,5 +1,11 @@
 # Data Science Modules
 
+**Overview of major Python data science libraries**
+
+```{note}
+URL to this lesson: https://go.iu.edu/8uRl
+```
+
 *Lecture number:* 03
 
 *Target Date:* 09/12/2025
@@ -19,20 +25,18 @@ This lesson contributes toward the overarching goal that you can "implement comm
 ## COMPLETE | Reading and Homework:
 
 * READ | Chapter 6
-* COMPLETE | Homework 3
+* COMPLETE | [Homework 3](../../assignments/03_homework.md)
 
 ## PREVIEW | Class Overview:
 
-(25 min) Lesson 03 warmup
-<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/03_data_science_modules/03_warmup.ipynb">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
-</a>
+(15 min) Complete [git exercises from Lesson 02](../02_modules_vscode_git/02_modules_vscode_git.md) 
 
-(25 min) Lecture on the big-four Python data science modules
+(10 mins) [](03_install_big_four.md)
 
-(35 min) Workalong: Winter temperature El Nino exercise
-<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/03_data_science_modules/03_winter_temperature_enso.ipynb">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
-</a>
+(15 mins )[Lesson 03 warmup](03_warmup.ipynb)
 
-(65 min) On your own: complete winter temperature El Nino exercise (& commit/push to github)
+(25 min) [Lecture & workalong](03_big_four_lecture_demo.ipynb) on the big-four Python data science modules
+
+(35 min) [](03_winter_temperature_enso.ipynb) 
+
+(50 min) On your own: complete [](03_winter_temperature_enso.ipynb)
