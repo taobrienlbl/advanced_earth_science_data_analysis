@@ -30,6 +30,8 @@ parts:
     - file: lessons/04_digging_further_into_data_wrangling/04_digging_further_into_data_wrangling
       sections:
       - file: lessons/04_digging_further_into_data_wrangling/04_estimating_building_height
+  - caption: "Advanced Earth Science Data Analysis: HPC"
+    chapters:
     - file: lessons/05_multidimensional_arrays_also_plotting/05_multidimensional_arrays_also_plotting
       sections:
       - file: lessons/05_multidimensional_arrays_also_plotting/05_warmup
@@ -46,8 +48,6 @@ parts:
     - file: lessons/08_machine_learning_continued/08_machine_learning_continued
       sections:
       - file: lessons/08_machine_learning_continued/08_workalong_intro_to_classes
-  - caption: "Advanced Earth Science Data Analysis: HPC"
-    chapters:
     - file: lessons/09_parallelization_intro/09_parallelization_intro
       sections:
       - file: lessons/09_parallelization_intro/09_workalong_01_mpi4py_intro
