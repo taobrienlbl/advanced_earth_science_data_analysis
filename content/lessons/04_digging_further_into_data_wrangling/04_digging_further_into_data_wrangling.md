@@ -1,5 +1,11 @@
 # Digging Further Into Data Wrangling
 
+**Using pandas to read and manipulate in situ data**
+
+```{note}
+URL to this lesson: https://go.iu.edu/8uWD
+```
+
 *Lecture number:* 04
 
 *Target Date:* 09/19/2025
@@ -18,21 +24,20 @@ This lesson contributes toward the overarching goal that you can "implement comm
 
 ## COMPLETE | Reading and Homework:
 
-* SCHEDULE | time to meet w/ Travis to discuss final project
+* [SCHEDULE | time to meet w/ Travis to discuss final project](https://outlook.office.com/bookwithme/user/720d05499372402eb10295f8a632eee6@iu.edu/meetingtype/SVRwCe7HMUGxuT6WGxi68g2?anonymous&ismsaljsauthenabled&ep=mLinkFromTile)
 * READ | Chapter 7
-* COMPLETE | HW 4
+* COMPLETE | 👍 the first post in [the EAS-G690 UITS Slack channel](https://iu-hpc-users.slack.com/archives/C09EL47LSF4) to confirm you have joined
+* COMPLETE | [](../../assignments/04a_homework.md)
+* COMPLETE | [](../../assignments/04b_homework.md)
 
 ## PREVIEW | Class Overview:
 
-(30 min) Solution to last week's exercise
+(30 min) Solution to last week's exercise: [](../03_data_science_modules/03_winter_temperature_enso_SOLUTION.ipynb)
 
 (15 min) Discussing use of Jupyter for documenting the data analysis process
 
 (10 min) Intro to measurement exercise
 
-(95 min) Estimating the height of the 7th floor 
-<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/04_digging_further_into_data_wrangling/04_estimating_building_height.ipynb">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
-</a>
+(95 min) [](./04_estimating_building_height.ipynb)
 
 

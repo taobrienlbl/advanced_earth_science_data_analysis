@@ -76,6 +76,8 @@ parts:
     - file: assignments/01b_homework
     - file: assignments/02_homework
     - file: assignments/03_homework
+    - file: assignments/04a_homework
+    - file: assignments/04b_homework
   - caption: "Solutions"
     chapters:
     - file: solutions/solutions
