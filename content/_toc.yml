@@ -34,6 +34,7 @@ parts:
     chapters:
     - file: lessons/05_multidimensional_arrays_also_plotting/05_multidimensional_arrays_also_plotting
       sections:
+      - file: lessons/05_multidimensional_arrays_also_plotting/05_setup_git_vscode_on_red
       - file: lessons/05_multidimensional_arrays_also_plotting/05_warmup
       - file: lessons/05_multidimensional_arrays_also_plotting/05_multidimensional_array_lecture_notes
       - file: lessons/05_multidimensional_arrays_also_plotting/05_multidimensional_array_exercise
@@ -78,6 +79,7 @@ parts:
     - file: assignments/03_homework
     - file: assignments/04a_homework
     - file: assignments/04b_homework
+    - file: assignments/05_homework
   - caption: "Solutions"
     chapters:
     - file: solutions/solutions

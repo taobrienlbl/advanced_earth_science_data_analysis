@@ -1,5 +1,12 @@
 # Multidimensional Arrays + Plotting
 
+**Working with 2D and 3D arrays in `numpy` and plotting with `matplotlib`**
+
+```{note}
+URL to this lesson: https://go.iu.edu/8vx9
+```
+
+
 *Lecture number:* 05
 
 *Target Date:* 09/26/2025
@@ -26,21 +33,13 @@ This contributes to two goals:
 
 ## PREVIEW | Class Overview:
 
-(55 min) WARMUP | Plotting earthquake data vs time
-<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/05_multidimensional_arrays_also_plotting/05_warmup.ipynb">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
-</a>
+(10 min) [](./05_setup_git_vscode_on_red.md)
+
+(55 min) [](./05_warmup.ipynb)
 
 (5 min) Break
 
-(40 min) Work-along: lecture on multidimensional arrays
-<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/05_multidimensional_arrays_also_plotting/05_multidimensional_array_lecture_notes.ipynb">
-</a>
+(40 min) [](./05_multidimensional_array_lecture_notes.ipynb)
 
-(35 min) Multidimensional array exercise 
-<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/05_multidimensional_arrays_also_plotting/05_multidimensional_array_exercise.ipynb">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
-</a>
-
-(10 min) Lecture on `matplotlib`'s plotting model
+(35 min) [](./05_multidimensional_array_exercise.ipynb)
 
