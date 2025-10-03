@@ -43,3 +43,7 @@ This contributes to two goals:
 
 (35 min) [](./05_multidimensional_array_exercise.ipynb)
 
+```{note}
+In the Fall 2025 version of this class, we did not make it to this last exercise in class due to technical issues with the projector and then with VS Code on RED. It moved to lecture 6
+```
+

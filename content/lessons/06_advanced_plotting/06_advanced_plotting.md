@@ -1,5 +1,11 @@
 # Advanced Plotting
 
+**Making publication-quality plots with matplotlib and cartopy**
+
+```{note}
+URL to this lesson: https://go.iu.edu/8vCW
+```
+
 *Lecture number:* 06
 
 *Target Date:* 10/03/2025
@@ -25,21 +31,11 @@ There is also a somewhat tangential goal of managing python environments: not ex
 
 ## PREVIEW | Class Overview:
 
-(10 min) Overview last class and multidimensional array exercise solution
+(10 min) [](./06_python_environments.md)
 
-(5 min) Discuss final project
+(30 min) (while the above completes) [](../05_multidimensional_arrays_also_plotting/05_multidimensional_array_exercise.ipynb)
 
-(45 min) Advanced matplotlib workalong
-<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/06_advanced_plotting/06_workalong01_advanced_plotting.ipynb">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
-</a>
+(45 min) [](./06_workalong01_advanced_plotting.ipynb)
 
-(10 min) Discussion about python environments, miniconda, conda forge; see also [instructions](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/06_advanced_plotting/06_python_environments.md)
-
-(15 min) Installing new conda environment using `mamba` + break while waiting for install
-
-(45 min) Mapping workalong & exercise
-<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/06_advanced_plotting/06_workalong02_mapping.ipynb">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
-</a>
+(45 min) [](./06_workalong02_mapping.ipynb)
 
