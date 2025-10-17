@@ -1,5 +1,7 @@
 # Work-along: Basic parallelization
 
+<div style="max-width:720px"><div style="position:relative;padding-bottom:56.25%"><iframe id="kaltura_player" src='https://cdnapisec.kaltura.com/p/1751071/embedPlaykitJs/uiconf_id/55382703?iframeembed=true&amp;entry_id=1_6zpiyqhr&amp;config%5Bprovider%5D=%7B%22widgetId%22%3A%221_p6we1x11%22%7D&amp;config%5Bplayback%5D=%7B%22startTime%22%3A0%7D'  allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" title="EAS-G 690 - Lesson 07 mpi4py example" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"></iframe></div></div>
+
 ## Installing `mpi4py` properly
 
 When we installed `mpi4py` in our conda environment, it was built in a way inappropriate for Quartz; we need to reinstall it.  Open a terminal and do the following:
@@ -36,7 +38,7 @@ Paste the code above into the script and follow along; we'll explain each part a
 Once we draft the code above code, we will need to run on a *compute node* of Quartz. Follow these steps, which assume that you are running VS Code on Quartz already.
 
 1. Open a terminal
-1. Activate your class conda environment: `conda activate easg690`
+1. Activate your class conda environment: `conda activate /N/slate/$USER/conda_envs/easg690`
 1. Change directory to the location of your script.  For me, my script is in the `lessons/07_parallelization_intro` subdirectory of my repository, so I need to type: `cd lessons/07_parallelization_intro`.  It will be different for you; the important thing is the `cd` command, which changes your directory.
 1. Get an interactive allocation:
 `salloc -A c01837 -p debug -N 1 -n 9 -t 30`

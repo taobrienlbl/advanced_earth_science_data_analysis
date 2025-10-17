@@ -7,7 +7,6 @@
     * Both panels should share the same map projection and extent (you can choose the projection)
     * Both panels should have appropriate colorbars and should show the same times
     * Both panels should be 'publication quality'
-1. Augment the animation so that the central longitude of the map projection increases with time, creating a 'rotating globe' effect.
 1. Paste the URL to your GitHub repository containing your code and animation in the homework 7 assignment submission box in Canvas.
 
 
