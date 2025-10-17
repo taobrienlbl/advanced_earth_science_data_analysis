@@ -1,8 +1,14 @@
 # Intro to Parallelization
 
+**Getting many computers to do your work for you**
+
+```{note}
+URL to this lesson: https://go.iu.edu/8vQI
+```
+
 *Lecture number:* 07
 
-*Target Date:* 10/10/2025
+*Target Date:* 10/17/2025
 
 *Length:* 150 mins
 
@@ -22,18 +28,11 @@ This works towards the goal to "parallelize *embarrassingly parallel* data proce
 
 ## PREVIEW | Class Overview:
 
-(15 min) Recap last class
+(60 min) [](./07_warmup.md)
 
-(30 min) Finish [ML intro workalong](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/09_machine_learning_intro/09_workalong01_machine_learning_basics.ipynb) 
-<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/09_machine_learning_intro/09_workalong01_machine_learning_basics.ipynb">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
-</a>
+(15 mins) [](./07_parallelization_overview.md)
 
-(15 mins) What is a 'supercomputer'? Overview of HPC (and BigRed200) architecture
+(30 mins) [](./07_workalong_mpi4py_intro.md)
 
-(15 mins) Parallelization overview: coarse- vs fine-grained parallelism
-
-(30 mins) `mpi4py` parallelism workalong (download [this file](https://raw.githubusercontent.com/taobrienlbl/advanced_earth_science_data_analysis/refs/heads/fall_2025_iub/content/lessons/07_parallelization_intro/07_workalong_01_mpi4py_intro.py) to your lesson07 folder on BigRed200)
-
-(45 mins) Exercise: Animate the weather with parallelization; go [here](07_workalong_02_instructions.md)
+(45 mins) [](./07_exercise.md)
 

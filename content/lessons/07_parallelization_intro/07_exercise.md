@@ -6,9 +6,7 @@ In this exercise, we will develop code to generate an animation, taking advantag
 
 ## 2.1 Developing plot code
 
-In a jupyter notebook, we'll develop code to generate a nice plot of total atmospheric water (*precipitable water* is the technical term), which is a good way to look at [atmospheric rivers](https://www.noaa.gov/stories/what-are-atmospheric-rivers).
-
-Download [this file](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/07_parallelization_intro/07_workalong_02.1.ipynb) to your lesson07 folder on BigRed200 and follow along.
+In [](./07_warmup.md), you created a function called `generate_frame()` that can generate and save a plot for a given timestep index. If you didn't finish that part in the warmup, do so now.
 
 ## 2.2 Testing plot code
 
@@ -21,7 +19,7 @@ cd lessons/07_parallelization_intro/
 python3 -c 'import generate_frame; generate_frame.generate_frame(11)'
 ```
 
-It might not work the first time.  If not, look at the error messages and try to understand what is not working; update `generate_frame.py` until the testing process results in the creation of the expected image file (in this case `animation_frames/tcw_00011.png`) without errors.
+It might not work the first time.  If not, look at the error messages and try to understand what is not working; update `generate_frame.py` until the testing process results in the creation of the expected image file without errors.
 
 ## 2.3 Parallelize the plot code
 
@@ -36,7 +34,7 @@ Now we can use `mpi4py` to generate animation frames in parallel! Do the followi
 
 ## 2.4 Make an mp4
 
-Now we'll use `ffmpeg` to generate an animation.  We'll first need to install the `ffmpeg` and `openh264` libraries in conda; run `mamba install -c conda-forge ffmpeg openh264 --yes` in your terminal (make sure your `easg690` environment is active when you do.)
+Now we'll use `ffmpeg` to generate an animation.  We'll first need to install the `ffmpeg` and `openh264` libraries in conda; run `conda install -c conda-forge ffmpeg openh264 --yes` in your terminal (make sure your `easg690` environment is active when you do.)
 
 Run the following command from your animation directory (e.g., do `cd animation_frames` first):
 
