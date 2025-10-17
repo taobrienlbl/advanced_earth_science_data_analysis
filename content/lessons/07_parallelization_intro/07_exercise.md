@@ -1,4 +1,4 @@
-# Work-along: Animating the weather in parallel
+# Exercise: Animating the weather in parallel
 
 In this exercise, we will develop code to generate an animation, taking advantage of parallelization to make the process fast.
 

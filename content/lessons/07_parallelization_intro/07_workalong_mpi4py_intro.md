@@ -1,5 +1,14 @@
 # Work-along: Basic parallelization
 
+## Installing `mpi4py` properly
+
+When we installed `mpi4py` in our conda environment, it was built in a way inappropriate for Quartz; we need to reinstall it.  Open a terminal and do the following:
+
+1. Open a terminal 
+1. Make conda available: `module load conda`
+1. Activate your environment: `conda activate /N/slate/$USER/conda_envs/easg690`
+1. Force reinstallation of `mpi4py`: `MPICC="mpicc" pip install --force-reinstall --no-cache-dir --no-binary=mpi4py mpi4py`
+
 ## Drafting the parallel code
 
 First we will draft code that shows the most basic use of the `mpi4py` library, which is one of the primary libraries for coarse-grained parallelism in Python.  Here's a skeleton of the code that we will draft:
@@ -38,8 +47,10 @@ Once we draft the code above code, we will need to run on a *compute node* of Qu
         * `-N 1`: ask for one compute node
         * `-n 9`: ask for exclusive access to up to 9 processors
         * `-t 30`: request a 30 minute allocation
-1. Run your code in parallel: `srun -n 9 python3 -u 07_workalong.py`
+1. Reactivate your conda environment: `conda activate /N/slate/$USER/conda_envs/easg690`
+1. Run your code in parallel: `I_MPI_FABRICS=shm srun -n 9 python3 -u 07_workalong.py`
     * Explanation:
+        * `I_MPI_FABRICS=shm`: a workaround I had to add...unclear why
         * `srun`: command to execute code on one or more processors
         * `-n 9`: run on 9 processors
         * `python3 07_workalong.py`: use python to execute your script (substitute with your actual script name).
