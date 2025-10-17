@@ -31,7 +31,7 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
-  extra_navbar: |
+  extra_head: |
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
@@ -41,9 +41,8 @@ exclude_patterns : ["lessons/*/README.md"]
 
 sphinx:
   config:
-    html_extra_path: ['./course_images']
-    html_css_files:
-      - 'cache-buster.css'
+    html_extra_path: ['./course_images', './_static']
+    # Removed non-existent cache-buster.css reference
     # Add cache control headers and force refresh
     html_theme_options:
       extra_footer: |

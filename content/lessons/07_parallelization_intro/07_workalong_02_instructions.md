@@ -8,7 +8,7 @@ In this exercise, we will develop code to generate an animation, taking advantag
 
 In a jupyter notebook, we'll develop code to generate a nice plot of total atmospheric water (*precipitable water* is the technical term), which is a good way to look at [atmospheric rivers](https://www.noaa.gov/stories/what-are-atmospheric-rivers).
 
-Download [this file](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/09_parallelization_intro/09_workalong_02.1.ipynb) to your lesson09 folder on BigRed200 and follow along.
+Download [this file](https://github.com/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/07_parallelization_intro/07_workalong_02.1.ipynb) to your lesson07 folder on BigRed200 and follow along.
 
 ## 2.2 Testing plot code
 
@@ -17,7 +17,7 @@ Now that we have drafted and tested code for generating a single animation frame
 Test your function from the command line by typing the following in the terminal:
 ```bash
 conda activate easg690
-cd lessons/09_parallelization_intro/
+cd lessons/07_parallelization_intro/
 python3 -c 'import generate_frame; generate_frame.generate_frame(11)'
 ```
 

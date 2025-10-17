@@ -1,8 +1,8 @@
 # Parallelization Continued
 
-*Lecture number:* 10
+*Lecture number:* 08
 
-*Target Date:* 10/31/2025
+*Target Date:* 10/17/2025
 
 *Length:* 150 mins
 
@@ -24,11 +24,11 @@ This works towards the goal to "parallelize *embarrassingly parallel* data proce
 
 (5 min) Recap last class
 
-(45 mins) (from last week) Exercise: Animate the weather with parallelization; go [here](../09_parallelization_intro/09_workalong_02_instructions.md)
+(45 mins) (from last week) Exercise: Animate the weather with parallelization; go [here](../07_parallelization_intro/07_workalong_02_instructions.md)
 
 (5 mins) Install simplempi in your `easg690` environment on BigRed200: `pip install simplempi`
 
-(20 mins) [simplempi](https://github.com/taobrienlbl/simplempi) exercise: instructions are [here](./10_workalong_02_simplempi_instructions.md)
+(20 mins) [simplempi](https://github.com/taobrienlbl/simplempi) exercise: instructions are [here](./08_workalong_02_simplempi_instructions.md)
 
 (10 mins) MPI collective communication overview: `scatter`, `gather`
     

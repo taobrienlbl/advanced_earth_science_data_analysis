@@ -1,8 +1,8 @@
 # Machine Learning Introduction
 
-*Lecture number:* 07
+*Lecture number:* 09
 
-*Target Date:* 10/10/2025
+*Target Date:* 10/24/2025
 
 *Length:* 150 mins
 
@@ -18,7 +18,7 @@ This works toward the course goal to "apply machine learning libraries to real d
 
 ## COMPLETE | Reading and Homework:
 
-* ~~Homework 07: apply machine learning concepts from today to your own research data~~ *(shifted to following week)*
+* ~~Homework 09: apply machine learning concepts from today to your own research data~~ *(shifted to following week)*
 * Final project proposal
 
 ## PREVIEW | Class Overview:
@@ -35,7 +35,7 @@ This works toward the course goal to "apply machine learning libraries to real d
 (20 min) Install `pytorch` (`mamba install -c conda-forge pytorch` or `pip install pytorch`)
 
 (55 min) Basics of machine learning - workalong
-<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/07_machine_learning_intro/07_workalong_machine_learning_basics.ipynb">
+<a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/09_machine_learning_intro/09_workalong_machine_learning_basics.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 

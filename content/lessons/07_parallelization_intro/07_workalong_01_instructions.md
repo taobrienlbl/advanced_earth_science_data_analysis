@@ -23,7 +23,7 @@ Once we draft the code above code, we will need to run on a *compute node* of Bi
 
 1. Open a terminal
 1. Activate your class conda environment: `conda activate easg690`
-1. Change directory to the location of your script.  For me, my script is in the `lessons/09_parallelization_intro` subdirectory of my repository, so I need to type: `cd lessons/09_parallelization_intro`.  It will be different for you; the important thing is the `cd` command, which changes your directory.
+1. Change directory to the location of your script.  For me, my script is in the `lessons/07_parallelization_intro` subdirectory of my repository, so I need to type: `cd lessons/07_parallelization_intro`.  It will be different for you; the important thing is the `cd` command, which changes your directory.
 1. Get an interactive allocation:
 `salloc -A r00389 -p debug -N 1 -n 9 -t 30`
     * Explanation:

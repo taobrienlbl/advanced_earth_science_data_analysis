@@ -39,10 +39,10 @@ Note: while the above may sound like a lot for one course, the last four items a
 | 04 | [](../lessons/04_digging_further_into_data_wrangling/04_digging_further_into_data_wrangling.md) |
 | 05 | [](../lessons/05_multidimensional_arrays_also_plotting/05_multidimensional_arrays_also_plotting.md) |
 | 06 | [](../lessons/06_advanced_plotting/06_advanced_plotting.md) |
-| 07 | [](../lessons/07_machine_learning_intro/07_machine_learning_intro.md) |
-| 08 | [](../lessons/08_machine_learning_continued/08_machine_learning_continued.md) |
-| 09 | [](../lessons/09_parallelization_intro/09_parallelization_intro.md) |
-| 10 | [](../lessons/10_paralellelization_continued/10_parallelization_continued.md) |
+| 07 | [](../lessons/07_parallelization_intro/07_parallelization_intro.md) |
+| 08 | [](../lessons/08_parallelization_continued/08_parallelization_continued.md) |
+| 09 | [](../lessons/09_machine_learning_intro/09_machine_learning_intro.md) |
+| 10 | [](../lessons/10_machine_learning_continued/10_machine_learning_continued.md) |
 | 11 | [](../lessons/11_spectral_analysis_intro/11_spectral_analysis_intro.md) |
 | 12 | [](../lessons/12_spectral_analysis_continued/12_spectral_analysis_continued.md) |
 | 13 | [](../lessons/13_geospatial_intro/13_geospatial_intro.md) |
