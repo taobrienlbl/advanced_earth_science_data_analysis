@@ -24,7 +24,7 @@ This works towards the goal to "parallelize *embarrassingly parallel* data proce
 
 ## COMPLETE | Reading and Homework:
 
-* Finish all in-class exercises.
+* [](../../assignments/07_homework.md)
 
 ## PREVIEW | Class Overview:
 
