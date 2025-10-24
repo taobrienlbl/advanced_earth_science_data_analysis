@@ -1,6 +1,10 @@
 # *Collective communications* with MPI
 
+## Embarrassingly parallel algorithms
+
 In the example in [](./08_workalong_01_simplempi.md), no communication was needed among the copies of `parallel_generate_frames.py`.  This type of algorithm (an algorithm being a set of steps to complete a task) is referred to as *embarrassingly parallel*.  The key feature of *embarrassingly parallel* algorithms is that no communication is needed among copies of the code that run in parallel.  In the case of looping over frames, the generation of each frame is independent of the generation of every other frame, so no coordination or communication was needed.  `simplempi` is designed specifically to make it easy to run parallelize embarrassingly parallel `for` loops.
+
+## Collective communications 
 
 But what if an algorithm needs some sort of communication or coordination to complete?  What types of communication or coordination are there?
 

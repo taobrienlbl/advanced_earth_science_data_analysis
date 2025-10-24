@@ -1,5 +1,9 @@
 # Exercise: Madhava pi calculation in parallel
 
+```{note}
+This solution differs in approach from the solution presented in the video in [](./08_workalong_02_parallel_pi.md).
+```
+
 ```python
 #!/usr/bin/env python3
 # import libraries
