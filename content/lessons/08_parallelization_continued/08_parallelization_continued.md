@@ -1,15 +1,21 @@
 # Parallelization Continued
 
+**Working with *embarassingly parallel* algorithms**
+
+```{note}
+URL to this lesson: https://go.iu.edu/8vVO
+```
+
 *Lecture number:* 08
 
-*Target Date:* 10/17/2025
+*Target Date:* 10/24/2025
 
 *Length:* 150 mins
 
 ## READ | Lecture Objectives:
 
-* Implement and run a rudimentary `mpi4py` code on BigRed200
-* Implement and run advanced `mpi4py` code on BigRed200
+* Implement and run a rudimentary `mpi4py` code on Quartz
+* Implement and run advanced `mpi4py` code on Quartz
 * Install and use `simplempi`
 
 ### Relation to course goals:
@@ -18,21 +24,23 @@ This works towards the goal to "parallelize *embarrassingly parallel* data proce
 
 ## COMPLETE | Reading and Homework:
 
-* Work on final project
+* [](../../assignments/08a_homework.md)
+* [](../../assignments/08b_final_project_proposal.md)
+
+```{note}
+These are both due in two weeks.  They are the last assignments until the final project.
+```
+
 
 ## PREVIEW | Class Overview:
 
 (5 min) Recap last class
 
-(45 mins) (from last week) Exercise: Animate the weather with parallelization; go [here](../07_parallelization_intro/07_workalong_02_instructions.md)
+(45 mins) [](./08_workalong_01_simplempi.md)
 
-(5 mins) Install simplempi in your `easg690` environment on BigRed200: `pip install simplempi`
-
-(20 mins) [simplempi](https://github.com/taobrienlbl/simplempi) exercise: instructions are [here](./08_workalong_02_simplempi_instructions.md)
-
-(10 mins) MPI collective communication overview: `scatter`, `gather`
+(10 mins) [](./08_collective_communications.md)
     
-(30 mins) Calculating $\pi$ in parallel
+(30 mins) [](./08_workalong_02_parallel_pi.md)
 
-(35 mins) Final project work
+(35 mins) [](./08_final_project_work.md)
 

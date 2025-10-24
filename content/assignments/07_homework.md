@@ -12,6 +12,4 @@
 
 ```{note}
 Due date and submission details can be found in [Canvas](https://iu.instructure.com/courses/2330390/assignments/18195233).
-
-
 ```

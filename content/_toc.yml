@@ -51,9 +51,10 @@ parts:
       - file: lessons/07_parallelization_intro/07_exercise
     - file: lessons/08_parallelization_continued/08_parallelization_continued
       sections:
-      - file: lessons/08_parallelization_continued/08_workalong_02_simplempi_instructions
-      - file: lessons/08_parallelization_continued/08_bcast_gather
-      - file: lessons/08_parallelization_continued/08_workalong01_parallel_pi
+      - file: lessons/08_parallelization_continued/08_workalong_01_simplempi
+      - file: lessons/08_parallelization_continued/08_collective_communications
+      - file: lessons/08_parallelization_continued/08_workalong_02_parallel_pi
+      - file: lessons/08_parallelization_continued/08_final_project_work
     - file: lessons/09_machine_learning_intro/09_machine_learning_intro
       sections:
       - file: lessons/09_machine_learning_intro/09_workalong_machine_learning_basics
@@ -83,6 +84,8 @@ parts:
     - file: assignments/04b_homework
     - file: assignments/05_homework
     - file: assignments/07_homework
+    - file: assignments/08a_homework
+    - file: assignments/08b_final_project_proposal
   - caption: "Solutions"
     chapters:
     - file: solutions/solutions
@@ -101,7 +104,7 @@ parts:
       - file: lessons/07_parallelization_intro/07_warmup_SOLUTION
       - file: lessons/07_parallelization_intro/07_workalong_mpi4py_intro_SOLUTION
       - file: lessons/07_parallelization_intro/07_exercise_SOLUTION
-      - file: lessons/08_parallelization_continued/08_workalong_01_parallel_pi_SOLUTION
+      - file: lessons/08_parallelization_continued/08_workalong_02_parallel_pi_SOLUTION
       - file: lessons/09_machine_learning_intro/09_workalong_machine_learning_basics_SOLUTION
       - file: lessons/10_machine_learning_continued/10_workalong_intro_to_classes_SOLUTION
       - file: lessons/11_spectral_analysis_intro/11_workalong_01_fft_SOLUTION
