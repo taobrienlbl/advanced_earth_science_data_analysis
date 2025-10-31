@@ -57,6 +57,8 @@ parts:
       - file: lessons/08_parallelization_continued/08_final_project_work
     - file: lessons/09_machine_learning_intro/09_machine_learning_intro
       sections:
+      - file: lessons/09_machine_learning_intro/09_installing_pytorch
+      - file: lessons/09_machine_learning_intro/09_machine_learning_lecture
       - file: lessons/09_machine_learning_intro/09_workalong_machine_learning_basics
     - file: lessons/10_machine_learning_continued/10_machine_learning_continued
       sections:
