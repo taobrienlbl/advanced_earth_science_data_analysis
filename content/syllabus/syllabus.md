@@ -43,8 +43,8 @@ Note: while the above may sound like a lot for one course, the last four items a
 | 08 | [](../lessons/08_parallelization_continued/08_parallelization_continued.md) |
 | 09 | [](../lessons/09_machine_learning_intro/09_machine_learning_intro.md) |
 | 10 | [](../lessons/10_machine_learning_continued/10_machine_learning_continued.md) |
-| 11 | [](../lessons/11_spectral_analysis_intro/11_spectral_analysis_intro.md) |
-| 12 | [](../lessons/12_spectral_analysis_continued/12_spectral_analysis_continued.md) |
+| 11 | [](../lessons/11_machine_learning_finale/11_machine_learning_finale.md) |
+| 12 | [](../lessons/12_spectral_analysis/12_spectral_analysis.md) |
 | 13 | [](../lessons/13_geospatial_intro/13_geospatial_intro.md) |
 | 14 | [](../lessons/14_geospatial_continued/14_geospatial_continued.md) |
 

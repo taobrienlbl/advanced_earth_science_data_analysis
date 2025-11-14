@@ -1,4 +1,4 @@
-# Intro to Spectral Analysis
+# Machine Learning Finale
 
 *Lecture number:* 11
 
