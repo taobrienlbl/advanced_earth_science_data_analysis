@@ -63,12 +63,14 @@ parts:
     - file: lessons/10_machine_learning_continued/10_machine_learning_continued
       sections:
       - file: lessons/10_machine_learning_continued/10_workalong_intro_to_classes
-    - file: lessons/11_spectral_analysis_intro/11_spectral_analysis_intro
+    - file: lessons/11_machine_learning_finale/11_machine_learning_finale
       sections:
-      - file: lessons/11_spectral_analysis_intro/11_workalong_01_fft
-    - file: lessons/12_spectral_analysis_continued/12_spectral_analysis_continued
+      - file: lessons/11_machine_learning_finale/11_apply_ml_to_data
+    - file: lessons/12_spectral_analysis/12_spectral_analysis
       sections:
-      - file: lessons/12_spectral_analysis_continued/12_workalong_01_filter
+      - file: lessons/12_spectral_analysis/12_fourier_transform_lecture
+      - file: lessons/12_spectral_analysis/12_workalong01_fft
+      - file: lessons/12_spectral_analysis/12_workalong_02_filter
     - file: lessons/13_geospatial_intro/13_geospatial_intro
       sections:
       - file: lessons/13_geospatial_intro/13_workalong01_california_earthquakes
