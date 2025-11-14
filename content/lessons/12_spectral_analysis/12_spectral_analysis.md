@@ -1,4 +1,4 @@
-# Spectral Analysis Continued
+# Spectral Analysis
 
 *Lecture number:* 12
 
