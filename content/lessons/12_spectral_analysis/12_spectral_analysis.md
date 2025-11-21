@@ -1,5 +1,11 @@
 # Spectral Analysis
 
+**Breaking a timeseries down by frequency components.**
+
+```{note}
+URL to this lesson: https://go.iu.edu/8wh8
+```
+
 *Lecture number:* 12
 
 *Target Date:* 11/21/2025
@@ -20,10 +26,10 @@ This lesson works towards using Python for basic data analysis tasks.
 
 ## PREVIEW | Class Overview:
 
-(10 mins) [](./12_fourier_transform_lecture.md)
+(20 mins) [](./12_fourier_transform_lecture.md)
 
-(30 mins) [](./12_workalong_01_fft.ipynb)
+(60 mins) [](./12_workalong_01_fft.ipynb)
 
 (30 mins) [](./12_workalong_02_filter.ipynb)
 
-(90 mins) Final project work
+(50 mins) Final project work
