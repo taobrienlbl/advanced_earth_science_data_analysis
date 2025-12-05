@@ -1,8 +1,14 @@
 # Introduction to Geospatial Analysis
 
+**Selecting data in custom regions**
+
+```{note}
+URL to this lesson: https://go.iu.edu/8wmj
+```
+
 *Lecture number:* 13
 
-*Target Date:* 11/21/2025
+*Target Date:* 12/05/2025
 
 *Length:* 75 mins
 
@@ -18,14 +24,12 @@ This builds on the course goal to implement basic data analysis tasks in python 
 
 ## COMPLETE | Reading and Homework:
 
-* See the [Customize Raster Plots](https://www.earthdatascience.org/courses/scientists-guide-to-plotting-data-in-python/plot-spatial-data/customize-raster-plots/plotting-extents/)  lesson from [Earth Lab](https://www.earthdatascience.org/)
+* N/A
 
 ## PREVIEW | Class Overview:
 
-(5 min) Last class overview
+(15 min) Last class overview & overview of geospatial libraries in Python
 
-(10 min) Introduction to geospatial libraries in Python
+(30 min) [](./13_workalong01_california_earthquakes.ipynb)
 
-(30 min) [Workalong 01](./13_workalong01_california_earthquakes.ipynb): Finding Earthquakes within California
-
-(30 min) [Workalong 02](./13_workalong02_geospatial_plotting.ipynb): Loading USGS topo data & making nice geospatial plots
+(30 min) [](./13_workalong02_geospatial_plotting.ipynb)
