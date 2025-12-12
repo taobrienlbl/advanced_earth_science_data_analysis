@@ -2,7 +2,7 @@
 
 *Lecture number:* 14
 
-*Target Date:* 12/05/2025
+*Target Date:* 12/12/2025
 
 *Length:* 75 mins
 

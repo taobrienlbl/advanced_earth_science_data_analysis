@@ -1,5 +1,10 @@
 # Work-along: Installing a new Python environment
 
+<div style="max-width:720px"><div style="position:relative;padding-bottom:56.25%"><iframe id="kaltura_player" src='https://cdnapisec.kaltura.com/p/1751071/embedPlaykitJs/uiconf_id/55382703?iframeembed=true&amp;entry_id=1_vmhbleei&amp;config%5Bprovider%5D=%7B%22widgetId%22%3A%221_ca2vfw6v%22%7D&amp;config%5Bplayback%5D=%7B%22startTime%22%3A0%7D'  allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" title="EAS-G 690 Lesson 06 - Intro &amp; Conda Environments" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"></iframe></div></div>
+
+*Use [this link](https://iu.mediaspace.kaltura.com/media/t/1_vmhbleei) if you have issues viewing the above video.*
+
+
 We'll use the following steps to create a new `conda` environment.
 
 ---
