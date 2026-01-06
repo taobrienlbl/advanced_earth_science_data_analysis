@@ -12,6 +12,7 @@ dependencies = [
     "descartes>=1.1.0",
     "fastkde>=2.1.5",
     "geopandas>=1.1.1",
+    "ghp-import>=2.1.0",
     "gitpython>=3.1.44",
     "gitsummary>=0.2",
     "h5netcdf>=1.6.3",
