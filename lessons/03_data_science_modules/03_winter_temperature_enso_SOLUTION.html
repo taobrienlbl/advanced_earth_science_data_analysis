@@ -1,0 +1,1708 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Work-along: El Nino and IN Winter Temperatures &#8212; Advanced Earth Science Data Analysis</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/header.css?v=415f224a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/cache-buster.css?v=5532fd1c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lessons/03_data_science_modules/03_winter_temperature_enso_SOLUTION';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Exercise: Estimating Building Height with Pressure" href="../04_digging_further_into_data_wrangling/04_estimating_building_height_SOLUTION.html" />
+    <link rel="prev" title="Warmup: git, vscode, and fundamentals revisited" href="03_warmup_SOLUTION.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../syllabus/syllabus.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/dall_e_2023-08-22_16_41_13_an_impressionist.png" class="logo__image only-light" alt="Advanced Earth Science Data Analysis - Home"/>
+    <script>document.write(`<img src="../../_static/dall_e_2023-08-22_16_41_13_an_impressionist.png" class="logo__image only-dark" alt="Advanced Earth Science Data Analysis - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Earth Science Data Analysis: Fundamentals</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../01_fundamentals/01_fundamentals.html">Fundamentals through examples</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../01_fundamentals/01a_sound_from_data.html">Sound from Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01_fundamentals/01b_madhava_pi_calculation.html">Madhava-Leibniz π calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01_fundamentals/01c_calculating_e.html">Exercise: calculating e</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01_fundamentals/01d_trig_fucntion.html">Creating trig functions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../02_modules_vscode_git/02_modules_vscode_git.html">Modules, VSCode, and Git</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../02_modules_vscode_git/02_last_class_refresher.html">Warmup: fundamentals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02_modules_vscode_git/02_download_install.html">Download and Install Python and VSCode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02_modules_vscode_git/02_new_module.html">Exercise: Creating a module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02_modules_vscode_git/02_git_workalong.html">Git workalong</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02_modules_vscode_git/02_looking_ahead.html">Exercise: looking ahead</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="03_data_science_modules.html">Data Science Modules</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="03_install_big_four.html">Install the <code class="docutils literal notranslate"><span class="pre">big_four</span></code> conda environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_warmup.html">Warmup: git, vscode, and fundamentals revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_big_four_lecture_demo.html">Big Four python Data Science Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_winter_temperature_enso.html">Work-along: El Nino and IN Winter Temperatures</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../04_digging_further_into_data_wrangling/04_digging_further_into_data_wrangling.html">Digging Further Into Data Wrangling</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../04_digging_further_into_data_wrangling/04_estimating_building_height.html">Exercise: Estimating Building Height with Pressure</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Earth Science Data Analysis: HPC</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../05_multidimensional_arrays_also_plotting/05_multidimensional_arrays_also_plotting.html">Multidimensional Arrays + Plotting</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../05_multidimensional_arrays_also_plotting/05_setup_git_vscode_on_red.html">Set up GitHub and VS Code on RED Desktop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../05_multidimensional_arrays_also_plotting/05_warmup.html">WARMUP | Data Wrangling</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../05_multidimensional_arrays_also_plotting/05_multidimensional_array_lecture_notes.html">Work-along: Multidimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../05_multidimensional_arrays_also_plotting/05_multidimensional_array_exercise.html">Workalong &amp; Exercise: Multidimensional Arrays</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../06_advanced_plotting/06_advanced_plotting.html">Advanced Plotting</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../06_advanced_plotting/06_workalong01_advanced_plotting.html">Work-along: Advanced Plotting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../06_advanced_plotting/06_python_environments.html">Work-along: Installing a new Python environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../06_advanced_plotting/06_workalong02_mapping.html">Work-along: Mapping</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../07_parallelization_intro/07_parallelization_intro.html">Intro to Parallelization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../07_parallelization_intro/07_warmup.html">WARMUP | Advanced Plotting &amp; Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_parallelization_intro/07_parallelization_overview.html">Parallelization Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_parallelization_intro/07_workalong_mpi4py_intro.html">Work-along: Basic parallelization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_parallelization_intro/07_exercise.html">Exercise: Animating the weather in parallel</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../08_parallelization_continued/08_parallelization_continued.html">Parallelization Continued</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../08_parallelization_continued/08_workalong_01_simplempi.html">Work-along: Using <code class="docutils literal notranslate"><span class="pre">simplempi</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../08_parallelization_continued/08_collective_communications.html"><em>Collective communications</em> with MPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../08_parallelization_continued/08_workalong_02_parallel_pi.html">Workalong: Madhava pi calculation in parallel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../08_parallelization_continued/08_final_project_work.html">Final Project Work</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../09_machine_learning_intro/09_machine_learning_intro.html">Machine Learning Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../09_machine_learning_intro/09_installing_pytorch.html">Installing pytorch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../09_machine_learning_intro/09_machine_learning_lecture.html">A practical intro to machine learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../09_machine_learning_intro/09_workalong_machine_learning_basics.html">Work-along: Machine Learning Basics</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../10_machine_learning_continued/10_machine_learning_continued.html">Machine Learning Continued</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../10_machine_learning_continued/10_workalong_intro_to_classes.html">Work-along: Intro to <em>classes</em> in Python</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../11_machine_learning_finale/11_machine_learning_finale.html">Machine Learning Finale</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../11_machine_learning_finale/11_apply_ml_to_data.html">Apply ML to Real Data</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../12_spectral_analysis/12_spectral_analysis.html">Spectral Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../12_spectral_analysis/12_fourier_transform_lecture.html">Fourier Transform Lecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../12_spectral_analysis/12_workalong_01_fft.html">Work-along: Working with the FFT</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../12_spectral_analysis/12_workalong_02_filter.html">Work-along: Simple filtering</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../13_geospatial_intro/13_geospatial_intro.html">Introduction to Geospatial Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../13_geospatial_intro/13_workalong01_california_earthquakes.html">Workalong: Finding Earthquakes in California</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../13_geospatial_intro/13_workalong02_geospatial_plotting.html">Workalong: Plotting geospatial data</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../14_geospatial_continued/14_geospatial_continued.html">Geospatial Continued</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../14_geospatial_continued/14_IN_snow_trends.html">Exercise: Trends in IN Snow</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/01a_homework.html">Homework 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/01b_homework.html">Initial Idea for Final Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/02_homework.html">Homework 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/03_homework.html">Homework 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/04a_homework.html">Homework 4a: Chapter 7 Self-Test Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/04b_homework.html">Homework 4b: Get set up with RED Desktop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/05_homework.html">Homework 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/07_homework.html">Homework 7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/08a_homework.html">Homework 08</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/08b_final_project_proposal.html">Final Project Proposal</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Solutions</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../solutions/solutions.html">Exercise solutions</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../01_fundamentals/01b_madhava_pi_calculation_SOLUTION.html">Madhava-Leibniz π calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01_fundamentals/01c_calculating_e_SOLUTION.html">Exercise: calculating e</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01_fundamentals/01d_trig_fucntion_SOLUTION.html">Creating trig functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02_modules_vscode_git/02_last_class_refresher_SOLUTION.html">Warmup: fundamentals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_warmup_SOLUTION.html">Warmup: git, vscode, and fundamentals revisited</a></li>
+
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Work-along: El Nino and IN Winter Temperatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../04_digging_further_into_data_wrangling/04_estimating_building_height_SOLUTION.html">Exercise: Estimating Building Height with Pressure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../05_multidimensional_arrays_also_plotting/05_multidimensional_array_exercise_SOLUTION.html">Workalong &amp; Exercise: Multidimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../05_multidimensional_arrays_also_plotting/05_warmup_SOLUTION.html">Warmup: Data Wrangling</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../06_advanced_plotting/06_workalong01_advanced_plotting_SOLUTION.html">Work-along: Advanced Plotting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../06_advanced_plotting/06_workalong02_mapping_SOLUTION.html">Work-along: Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_parallelization_intro/07_warmup_SOLUTION.html">WARMUP | Advanced Plotting &amp; Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_parallelization_intro/07_workalong_mpi4py_intro_SOLUTION.html">Work-along: Basic parallelization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_parallelization_intro/07_exercise_SOLUTION.html">Exercise: Animating the weather in parallel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../08_parallelization_continued/08_workalong_02_parallel_pi_SOLUTION.html">Exercise: Madhava pi calculation in parallel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../09_machine_learning_intro/09_workalong_machine_learning_basics_SOLUTION.html">Work-along: Machine Learning Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../10_machine_learning_continued/10_workalong_intro_to_classes_SOLUTION.html">Work-along: Intro to <em>classes</em> in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../12_spectral_analysis/12_workalong_01_fft_SOLUTION.html">Work-along: Working with the FFT</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../12_spectral_analysis/12_workalong_02_filter_SOLUTION.html">Work-along: Simple filtering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../13_geospatial_intro/13_workalong01_california_earthquakes_SOLUTION.html">Workalong: Finding Earthquakes in California</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../13_geospatial_intro/13_workalong02_geospatial_plotting_SOLUTION.html">Workalong: Plotting geospatial data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14_geospatial_continued/14_IN_snow_trends_SOLUTION.html">Exercise: Trends in IN Snow</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/lessons/03_data_science_modules/03_winter_temperature_enso_SOLUTION.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Work-along: El Nino and IN Winter Temperatures</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-getting-the-nclimdiv-data">Part 1: Getting the NClimDiv data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-getting-the-eli-data">Part 2: Getting the ELI data</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/03_data_science_modules/03_winter_temperature_enso_SOLUTION.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
+<section class="tex2jax_ignore mathjax_ignore" id="work-along-el-nino-and-in-winter-temperatures">
+<h1>Work-along: El Nino and IN Winter Temperatures<a class="headerlink" href="#work-along-el-nino-and-in-winter-temperatures" title="Link to this heading">#</a></h1>
+<p>This notebook examines the relationship between winter minimum temperatures in southern central IN and El Nino.</p>
+<p><strong>Goal:</strong> examine the relationship between El Nino and minimum winter (Dec-Jan-Feb) temperatures in Bloomington, IN</p>
+<p><strong>Method:</strong></p>
+<ul class="simple">
+<li><p>obtain minimum temperature data from <a class="reference external" href="https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.ncdc:C00005">NOAA NClimDiv</a>, using the <em>NCEI Direct Download</em> method</p></li>
+<li><p>read the dataset using <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, filter out data for southern central Indiana</p></li>
+<li><p>convert the data to timeseries format</p></li>
+<li><p>obtain the <a class="reference external" href="https://cascade.lbl.gov/enso-longitude-index-eli/">ENSO longitude index</a> Excel file and read with <code class="docutils literal notranslate"><span class="pre">pandas</span></code>; convert to timeseries format</p></li>
+<li><p>make the ENSO and NClimDiv timeseries align (same start and end dates, same period - DJF, etc)</p></li>
+<li><p>plot both timeseries</p></li>
+<li><p>plot a scatter plot</p></li>
+<li><p>do linear regression and correlation analyses</p></li>
+</ul>
+<p>For this solution notebook, I will be using data directly from NOAA instead of downloading it, since <code class="docutils literal notranslate"><span class="pre">pandas</span></code> has the ability to open data from a URL.</p>
+<section id="part-1-getting-the-nclimdiv-data">
+<h2>Part 1: Getting the NClimDiv data<a class="headerlink" href="#part-1-getting-the-nclimdiv-data" title="Link to this heading">#</a></h2>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Download this notebook and place it in your course folder, running it in Visual Studio Code (not Google Colab).  You’ll commit this to your git repository at the end.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; Import libraries. &quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">mpl</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">scipy.stats</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>According to the <a class="reference external" href="https://www.ncei.noaa.gov/pub/data/cirs/climdiv/divisional-readme.txt">README</a> file, the first column encodes climate division, variable, and year information, and the remaining 12 columns give data for that month.  The format for the ‘code’ column is as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Element</span>          <span class="n">Record</span>
+<span class="n">Name</span>             <span class="n">Position</span>    <span class="n">Element</span> <span class="n">Description</span>
+
+<span class="n">STATE</span><span class="o">-</span><span class="n">CODE</span>          <span class="mi">1</span><span class="o">-</span><span class="mi">2</span>      <span class="n">STATE</span><span class="o">-</span><span class="n">CODE</span> <span class="k">as</span> <span class="n">indicated</span> <span class="ow">in</span> <span class="n">State</span> <span class="n">Code</span> <span class="n">Table</span> <span class="k">as</span>
+                             <span class="n">described</span> <span class="ow">in</span> <span class="n">FILE</span> <span class="mf">1.</span>  <span class="n">Range</span> <span class="n">of</span> <span class="n">values</span> <span class="ow">is</span> <span class="mi">01</span><span class="o">-</span><span class="mf">91.</span>
+
+<span class="n">DIVISION</span><span class="o">-</span><span class="n">NUMBER</span>     <span class="mi">3</span><span class="o">-</span><span class="mi">4</span>      <span class="n">DIVISION</span> <span class="n">NUMBER</span> <span class="o">-</span> <span class="n">Assigned</span> <span class="n">by</span> <span class="n">NCDC</span><span class="o">.</span>  <span class="n">Range</span> <span class="n">of</span>
+                             <span class="n">values</span> <span class="mi">01</span><span class="o">-</span><span class="mf">10.</span>
+
+<span class="n">ELEMENT</span> <span class="n">CODE</span>        <span class="mi">5</span><span class="o">-</span><span class="mi">6</span>      <span class="mi">01</span> <span class="o">=</span> <span class="n">Precipitation</span>
+                             <span class="mi">02</span> <span class="o">=</span> <span class="n">Average</span> <span class="n">Temperature</span>
+                             <span class="mi">05</span> <span class="o">=</span> <span class="n">PDSI</span>
+                             <span class="mi">06</span> <span class="o">=</span> <span class="n">PHDI</span>
+                             <span class="mi">07</span> <span class="o">=</span> <span class="n">ZNDX</span>
+                             <span class="mi">08</span> <span class="o">=</span> <span class="n">PMDI</span>
+                             <span class="mi">25</span> <span class="o">=</span> <span class="n">Heating</span> <span class="n">Degree</span> <span class="n">Days</span>
+                             <span class="mi">26</span> <span class="o">=</span> <span class="n">Cooling</span> <span class="n">Degree</span> <span class="n">Days</span>
+                             <span class="mi">27</span> <span class="o">=</span> <span class="n">Maximum</span> <span class="n">Temperature</span>
+                             <span class="mi">28</span> <span class="o">=</span> <span class="n">Minimum</span> <span class="n">Temperature</span>
+			     <span class="mi">71</span> <span class="o">=</span> <span class="mi">1</span><span class="o">-</span><span class="n">month</span> <span class="n">Standardized</span> <span class="n">Precipitation</span> <span class="n">Index</span>
+			     <span class="mi">72</span> <span class="o">=</span> <span class="mi">2</span><span class="o">-</span><span class="n">month</span> <span class="n">Standardized</span> <span class="n">Precipitation</span> <span class="n">Index</span>
+                             <span class="mi">73</span> <span class="o">=</span> <span class="mi">3</span><span class="o">-</span><span class="n">month</span> <span class="n">Standardized</span> <span class="n">Precipitation</span> <span class="n">Index</span>
+                             <span class="mi">74</span> <span class="o">=</span> <span class="mi">6</span><span class="o">-</span><span class="n">month</span> <span class="n">Standardized</span> <span class="n">Precipitation</span> <span class="n">Index</span>
+                             <span class="mi">75</span> <span class="o">=</span> <span class="mi">9</span><span class="o">-</span><span class="n">month</span> <span class="n">Standardized</span> <span class="n">Precipitation</span> <span class="n">Index</span>
+                             <span class="mi">76</span> <span class="o">=</span> <span class="mi">12</span><span class="o">-</span><span class="n">month</span> <span class="n">Standardized</span> <span class="n">Precipitation</span> <span class="n">Index</span>
+                             <span class="mi">77</span> <span class="o">=</span> <span class="mi">24</span><span class="o">-</span><span class="n">month</span> <span class="n">Standardized</span> <span class="n">Precipitation</span> <span class="n">Index</span>
+
+<span class="n">YEAR</span>                <span class="mi">7</span><span class="o">-</span><span class="mi">10</span>     <span class="n">This</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">year</span> <span class="n">of</span> <span class="n">record</span><span class="o">.</span>  <span class="n">Range</span> <span class="ow">is</span> <span class="mi">1895</span> <span class="n">to</span>
+                             <span class="n">current</span> <span class="n">year</span> <span class="n">processed</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>And the state codes are as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">STATE</span> <span class="n">CODE</span> <span class="n">TABLE</span><span class="p">:</span> 
+                             <span class="n">Range</span> <span class="n">of</span> <span class="n">values</span> <span class="n">of</span> <span class="mi">01</span><span class="o">-</span><span class="mf">91.</span>
+
+                             <span class="mi">01</span> <span class="n">Alabama</span>                 <span class="mi">28</span> <span class="n">New</span> <span class="n">Jersey</span>
+                             <span class="mi">02</span> <span class="n">Arizona</span>                 <span class="mi">29</span> <span class="n">New</span> <span class="n">Mexico</span>
+                             <span class="mi">03</span> <span class="n">Arkansas</span>                <span class="mi">30</span> <span class="n">New</span> <span class="n">York</span>
+                             <span class="mi">04</span> <span class="n">California</span>              <span class="mi">31</span> <span class="n">North</span> <span class="n">Carolina</span>
+                             <span class="mi">05</span> <span class="n">Colorado</span>                <span class="mi">32</span> <span class="n">North</span> <span class="n">Dakota</span>
+                             <span class="mi">06</span> <span class="n">Connecticut</span>             <span class="mi">33</span> <span class="n">Ohio</span>
+                             <span class="mi">07</span> <span class="n">Delaware</span>                <span class="mi">34</span> <span class="n">Oklahoma</span>
+                             <span class="mi">08</span> <span class="n">Florida</span>                 <span class="mi">35</span> <span class="n">Oregon</span>
+                             <span class="mi">09</span> <span class="n">Georgia</span>                 <span class="mi">36</span> <span class="n">Pennsylvania</span>
+                             <span class="mi">10</span> <span class="n">Idaho</span>                   <span class="mi">37</span> <span class="n">Rhode</span> <span class="n">Island</span>
+                             <span class="mi">11</span> <span class="n">Illinois</span>                <span class="mi">38</span> <span class="n">South</span> <span class="n">Carolina</span>
+                             <span class="mi">12</span> <span class="n">Indiana</span>                 <span class="mi">39</span> <span class="n">South</span> <span class="n">Dakota</span>
+                             <span class="mi">13</span> <span class="n">Iowa</span>                    <span class="mi">40</span> <span class="n">Tennessee</span>
+                             <span class="mi">14</span> <span class="n">Kansas</span>                  <span class="mi">41</span> <span class="n">Texas</span>
+                             <span class="mi">15</span> <span class="n">Kentucky</span>                <span class="mi">42</span> <span class="n">Utah</span>
+                             <span class="mi">16</span> <span class="n">Louisiana</span>               <span class="mi">43</span> <span class="n">Vermont</span>
+                             <span class="mi">17</span> <span class="n">Maine</span>                   <span class="mi">44</span> <span class="n">Virginia</span>
+                             <span class="mi">18</span> <span class="n">Maryland</span>                <span class="mi">45</span> <span class="n">Washington</span>
+                             <span class="mi">19</span> <span class="n">Massachusetts</span>           <span class="mi">46</span> <span class="n">West</span> <span class="n">Virginia</span>
+                             <span class="mi">20</span> <span class="n">Michigan</span>                <span class="mi">47</span> <span class="n">Wisconsin</span>
+                             <span class="mi">21</span> <span class="n">Minnesota</span>               <span class="mi">48</span> <span class="n">Wyoming</span>
+                             <span class="mi">22</span> <span class="n">Mississippi</span>             <span class="mi">50</span> <span class="n">Alaska</span>
+                             <span class="mi">23</span> <span class="n">Missouri</span>   
+                             <span class="mi">24</span> <span class="n">Montana</span>   
+                             <span class="mi">25</span> <span class="n">Nebraska</span> 
+                             <span class="mi">26</span> <span class="n">Nevada</span>  
+                             <span class="mi">27</span> <span class="n">New</span> <span class="n">Hampshire</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; Load the tmin data file. &quot;&quot;&quot;</span>
+
+<span class="n">climdiv_tminv_url</span> <span class="o">=</span> <span class="s2">&quot;https://www.ncei.noaa.gov/pub/data/cirs/climdiv/climdiv-tmindv-v1.0.0-20250707&quot;</span>
+
+<span class="c1"># read the NClimDiv data setting -99.99 to NaN</span>
+<span class="n">climdiv_tminv</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">climdiv_tminv_url</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;code&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">13</span><span class="p">)),</span> <span class="n">na_values</span><span class="o">=-</span><span class="mf">99.9</span><span class="p">)</span>
+
+<span class="n">climdiv_tminv</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;&gt;:6: SyntaxWarning: invalid escape sequence &#39;\s&#39;
+&lt;&gt;:6: SyntaxWarning: invalid escape sequence &#39;\s&#39;
+/tmp/ipykernel_1896249/1322948465.py:6: SyntaxWarning: invalid escape sequence &#39;\s&#39;
+  climdiv_tminv = pd.read_csv(climdiv_tminv_url, sep=&#39;\s+&#39;, header=None, names=[&#39;code&#39;] + list(range(1,13)), na_values=-99.9)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1896249/1322948465.py:6: SyntaxWarning: invalid escape sequence &#39;\s&#39;
+  climdiv_tminv = pd.read_csv(climdiv_tminv_url, sep=&#39;\s+&#39;, header=None, names=[&#39;code&#39;] + list(range(1,13)), na_values=-99.9)
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">SSLCertVerificationError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="nn">File ~/.local/share/uv/python/cpython-3.12.10-linux-x86_64-gnu/lib/python3.12/urllib/request.py:1344,</span> in <span class="ni">AbstractHTTPHandler.do_open</span><span class="nt">(self, http_class, req, **http_conn_args)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1343</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1344</span>     <span class="n">h</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">get_method</span><span class="p">(),</span> <span class="n">req</span><span class="o">.</span><span class="n">selector</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1345</span>               <span class="n">encode_chunked</span><span class="o">=</span><span class="n">req</span><span class="o">.</span><span class="n">has_header</span><span class="p">(</span><span class="s1">&#39;Transfer-encoding&#39;</span><span class="p">))</span>
+<span class="g g-Whitespace">   </span><span class="mi">1346</span> <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span> <span class="c1"># timeout error</span>
+
+<span class="nn">File ~/.local/share/uv/python/cpython-3.12.10-linux-x86_64-gnu/lib/python3.12/http/client.py:1338,</span> in <span class="ni">HTTPConnection.request</span><span class="nt">(self, method, url, body, headers, encode_chunked)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1337</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Send a complete request to the server.&quot;&quot;&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1338</span> <span class="bp">self</span><span class="o">.</span><span class="n">_send_request</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">encode_chunked</span><span class="p">)</span>
+
+<span class="nn">File ~/.local/share/uv/python/cpython-3.12.10-linux-x86_64-gnu/lib/python3.12/http/client.py:1384,</span> in <span class="ni">HTTPConnection._send_request</span><span class="nt">(self, method, url, body, headers, encode_chunked)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1383</span>     <span class="n">body</span> <span class="o">=</span> <span class="n">_encode</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="s1">&#39;body&#39;</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1384</span> <span class="bp">self</span><span class="o">.</span><span class="n">endheaders</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="n">encode_chunked</span><span class="o">=</span><span class="n">encode_chunked</span><span class="p">)</span>
+
+<span class="nn">File ~/.local/share/uv/python/cpython-3.12.10-linux-x86_64-gnu/lib/python3.12/http/client.py:1333,</span> in <span class="ni">HTTPConnection.endheaders</span><span class="nt">(self, message_body, encode_chunked)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1332</span>     <span class="k">raise</span> <span class="n">CannotSendHeader</span><span class="p">()</span>
+<span class="ne">-&gt; </span><span class="mi">1333</span> <span class="bp">self</span><span class="o">.</span><span class="n">_send_output</span><span class="p">(</span><span class="n">message_body</span><span class="p">,</span> <span class="n">encode_chunked</span><span class="o">=</span><span class="n">encode_chunked</span><span class="p">)</span>
+
+<span class="nn">File ~/.local/share/uv/python/cpython-3.12.10-linux-x86_64-gnu/lib/python3.12/http/client.py:1093,</span> in <span class="ni">HTTPConnection._send_output</span><span class="nt">(self, message_body, encode_chunked)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1092</span> <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">_buffer</span><span class="p">[:]</span>
+<span class="ne">-&gt; </span><span class="mi">1093</span> <span class="bp">self</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1095</span> <span class="k">if</span> <span class="n">message_body</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1096</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1097</span>     <span class="c1"># create a consistent interface to message_body</span>
+
+<span class="nn">File ~/.local/share/uv/python/cpython-3.12.10-linux-x86_64-gnu/lib/python3.12/http/client.py:1037,</span> in <span class="ni">HTTPConnection.send</span><span class="nt">(self, data)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1036</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">auto_open</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1037</span>     <span class="bp">self</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1038</span> <span class="k">else</span><span class="p">:</span>
+
+<span class="nn">File ~/.local/share/uv/python/cpython-3.12.10-linux-x86_64-gnu/lib/python3.12/http/client.py:1479,</span> in <span class="ni">HTTPSConnection.connect</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1477</span>     <span class="n">server_hostname</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">host</span>
+<span class="ne">-&gt; </span><span class="mi">1479</span> <span class="bp">self</span><span class="o">.</span><span class="n">sock</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_context</span><span class="o">.</span><span class="n">wrap_socket</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sock</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1480</span>                                       <span class="n">server_hostname</span><span class="o">=</span><span class="n">server_hostname</span><span class="p">)</span>
+
+<span class="nn">File ~/.local/share/uv/python/cpython-3.12.10-linux-x86_64-gnu/lib/python3.12/ssl.py:455,</span> in <span class="ni">SSLContext.wrap_socket</span><span class="nt">(self, sock, server_side, do_handshake_on_connect, suppress_ragged_eofs, server_hostname, session)</span>
+<span class="g g-Whitespace">    </span><span class="mi">449</span> <span class="k">def</span><span class="w"> </span><span class="nf">wrap_socket</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sock</span><span class="p">,</span> <span class="n">server_side</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">450</span>                 <span class="n">do_handshake_on_connect</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">451</span>                 <span class="n">suppress_ragged_eofs</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">452</span>                 <span class="n">server_hostname</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">453</span>     <span class="c1"># SSLSocket class handles server_hostname encoding before it calls</span>
+<span class="g g-Whitespace">    </span><span class="mi">454</span>     <span class="c1"># ctx._wrap_socket()</span>
+<span class="ne">--&gt; </span><span class="mi">455</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">sslsocket_class</span><span class="o">.</span><span class="n">_create</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">456</span>         <span class="n">sock</span><span class="o">=</span><span class="n">sock</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">457</span>         <span class="n">server_side</span><span class="o">=</span><span class="n">server_side</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">458</span>         <span class="n">do_handshake_on_connect</span><span class="o">=</span><span class="n">do_handshake_on_connect</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">459</span>         <span class="n">suppress_ragged_eofs</span><span class="o">=</span><span class="n">suppress_ragged_eofs</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">460</span>         <span class="n">server_hostname</span><span class="o">=</span><span class="n">server_hostname</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">461</span>         <span class="n">context</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">462</span>         <span class="n">session</span><span class="o">=</span><span class="n">session</span>
+<span class="g g-Whitespace">    </span><span class="mi">463</span>     <span class="p">)</span>
+
+<span class="nn">File ~/.local/share/uv/python/cpython-3.12.10-linux-x86_64-gnu/lib/python3.12/ssl.py:1041,</span> in <span class="ni">SSLSocket._create</span><span class="nt">(cls, sock, server_side, do_handshake_on_connect, suppress_ragged_eofs, server_hostname, context, session)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1040</span>                 <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;do_handshake_on_connect should not be specified for non-blocking sockets&quot;</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1041</span>             <span class="bp">self</span><span class="o">.</span><span class="n">do_handshake</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1042</span> <span class="k">except</span><span class="p">:</span>
+
+<span class="nn">File ~/.local/share/uv/python/cpython-3.12.10-linux-x86_64-gnu/lib/python3.12/ssl.py:1319,</span> in <span class="ni">SSLSocket.do_handshake</span><span class="nt">(self, block)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1318</span>         <span class="bp">self</span><span class="o">.</span><span class="n">settimeout</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1319</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">do_handshake</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1320</span> <span class="k">finally</span><span class="p">:</span>
+
+<span class="ne">SSLCertVerificationError</span>: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">URLError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">climdiv_tminv_url</span> <span class="o">=</span> <span class="s2">&quot;https://www.ncei.noaa.gov/pub/data/cirs/climdiv/climdiv-tmindv-v1.0.0-20250707&quot;</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># read the NClimDiv data setting -99.99 to NaN</span>
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">climdiv_tminv</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">climdiv_tminv_url</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;code&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">13</span><span class="p">)),</span> <span class="n">na_values</span><span class="o">=-</span><span class="mf">99.9</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">climdiv_tminv</span>
+
+<span class="nn">File /N/project/easg690_fall2025/student_work_dirs/obrienta/advanced_earth_science_data_analysis/.venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py:1026,</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, date_format, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options, dtype_backend)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1013</span> <span class="n">kwds_defaults</span> <span class="o">=</span> <span class="n">_refine_defaults_read</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1014</span>     <span class="n">dialect</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1015</span>     <span class="n">delimiter</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>   <span class="mi">1022</span>     <span class="n">dtype_backend</span><span class="o">=</span><span class="n">dtype_backend</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1023</span> <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1024</span> <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1026</span> <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
+
+<span class="nn">File /N/project/easg690_fall2025/student_work_dirs/obrienta/advanced_earth_science_data_analysis/.venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py:620,</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">617</span> <span class="n">_validate_names</span><span class="p">(</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;names&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">619</span> <span class="c1"># Create the parser.</span>
+<span class="ne">--&gt; </span><span class="mi">620</span> <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">622</span> <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">623</span>     <span class="k">return</span> <span class="n">parser</span>
+
+<span class="nn">File /N/project/easg690_fall2025/student_work_dirs/obrienta/advanced_earth_science_data_analysis/.venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py:1620,</span> in <span class="ni">TextFileReader.__init__</span><span class="nt">(self, f, engine, **kwds)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1617</span>     <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1619</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="p">:</span> <span class="n">IOHandles</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="ne">-&gt; </span><span class="mi">1620</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
+
+<span class="nn">File /N/project/easg690_fall2025/student_work_dirs/obrienta/advanced_earth_science_data_analysis/.venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py:1880,</span> in <span class="ni">TextFileReader._make_engine</span><span class="nt">(self, f, engine)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1878</span>     <span class="k">if</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">mode</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1879</span>         <span class="n">mode</span> <span class="o">+=</span> <span class="s2">&quot;b&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1880</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="o">=</span> <span class="n">get_handle</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1881</span>     <span class="n">f</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1882</span>     <span class="n">mode</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1883</span>     <span class="n">encoding</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1884</span>     <span class="n">compression</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;compression&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1885</span>     <span class="n">memory_map</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;memory_map&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1886</span>     <span class="n">is_text</span><span class="o">=</span><span class="n">is_text</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1887</span>     <span class="n">errors</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding_errors&quot;</span><span class="p">,</span> <span class="s2">&quot;strict&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1888</span>     <span class="n">storage_options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;storage_options&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1889</span> <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1890</span> <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+<span class="g g-Whitespace">   </span><span class="mi">1891</span> <span class="n">f</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="o">.</span><span class="n">handle</span>
+
+<span class="nn">File /N/project/easg690_fall2025/student_work_dirs/obrienta/advanced_earth_science_data_analysis/.venv/lib/python3.12/site-packages/pandas/io/common.py:728,</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">725</span>     <span class="n">codecs</span><span class="o">.</span><span class="n">lookup_error</span><span class="p">(</span><span class="n">errors</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">727</span> <span class="c1"># open URLs</span>
+<span class="ne">--&gt; </span><span class="mi">728</span> <span class="n">ioargs</span> <span class="o">=</span> <span class="n">_get_filepath_or_buffer</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">729</span>     <span class="n">path_or_buf</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">730</span>     <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">731</span>     <span class="n">compression</span><span class="o">=</span><span class="n">compression</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">732</span>     <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">733</span>     <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">734</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">736</span> <span class="n">handle</span> <span class="o">=</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">filepath_or_buffer</span>
+<span class="g g-Whitespace">    </span><span class="mi">737</span> <span class="n">handles</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">BaseBuffer</span><span class="p">]</span>
+
+<span class="nn">File /N/project/easg690_fall2025/student_work_dirs/obrienta/advanced_earth_science_data_analysis/.venv/lib/python3.12/site-packages/pandas/io/common.py:384,</span> in <span class="ni">_get_filepath_or_buffer</span><span class="nt">(filepath_or_buffer, encoding, compression, mode, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">382</span> <span class="c1"># assuming storage_options is to be interpreted as headers</span>
+<span class="g g-Whitespace">    </span><span class="mi">383</span> <span class="n">req_info</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">storage_options</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">384</span> <span class="k">with</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">req_info</span><span class="p">)</span> <span class="k">as</span> <span class="n">req</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">385</span>     <span class="n">content_encoding</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Content-Encoding&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">386</span>     <span class="k">if</span> <span class="n">content_encoding</span> <span class="o">==</span> <span class="s2">&quot;gzip&quot;</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">387</span>         <span class="c1"># Override compression based on Content-Encoding header</span>
+
+<span class="nn">File /N/project/easg690_fall2025/student_work_dirs/obrienta/advanced_earth_science_data_analysis/.venv/lib/python3.12/site-packages/pandas/io/common.py:289,</span> in <span class="ni">urlopen</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">283</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">284</span><span class="sd"> Lazy-import wrapper for stdlib urlopen, as that imports a big chunk of</span>
+<span class="g g-Whitespace">    </span><span class="mi">285</span><span class="sd"> the stdlib.</span>
+<span class="g g-Whitespace">    </span><span class="mi">286</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">287</span> <span class="kn">import</span><span class="w"> </span><span class="nn">urllib.request</span>
+<span class="ne">--&gt; </span><span class="mi">289</span> <span class="k">return</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File ~/.local/share/uv/python/cpython-3.12.10-linux-x86_64-gnu/lib/python3.12/urllib/request.py:215,</span> in <span class="ni">urlopen</span><span class="nt">(url, data, timeout, cafile, capath, cadefault, context)</span>
+<span class="g g-Whitespace">    </span><span class="mi">213</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">214</span>     <span class="n">opener</span> <span class="o">=</span> <span class="n">_opener</span>
+<span class="ne">--&gt; </span><span class="mi">215</span> <span class="k">return</span> <span class="n">opener</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">timeout</span><span class="p">)</span>
+
+<span class="nn">File ~/.local/share/uv/python/cpython-3.12.10-linux-x86_64-gnu/lib/python3.12/urllib/request.py:515,</span> in <span class="ni">OpenerDirector.open</span><span class="nt">(self, fullurl, data, timeout)</span>
+<span class="g g-Whitespace">    </span><span class="mi">512</span>     <span class="n">req</span> <span class="o">=</span> <span class="n">meth</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">514</span> <span class="n">sys</span><span class="o">.</span><span class="n">audit</span><span class="p">(</span><span class="s1">&#39;urllib.Request&#39;</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">full_url</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">headers</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">get_method</span><span class="p">())</span>
+<span class="ne">--&gt; </span><span class="mi">515</span> <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_open</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">517</span> <span class="c1"># post-process response</span>
+<span class="g g-Whitespace">    </span><span class="mi">518</span> <span class="n">meth_name</span> <span class="o">=</span> <span class="n">protocol</span><span class="o">+</span><span class="s2">&quot;_response&quot;</span>
+
+<span class="nn">File ~/.local/share/uv/python/cpython-3.12.10-linux-x86_64-gnu/lib/python3.12/urllib/request.py:532,</span> in <span class="ni">OpenerDirector._open</span><span class="nt">(self, req, data)</span>
+<span class="g g-Whitespace">    </span><span class="mi">529</span>     <span class="k">return</span> <span class="n">result</span>
+<span class="g g-Whitespace">    </span><span class="mi">531</span> <span class="n">protocol</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="n">type</span>
+<span class="ne">--&gt; </span><span class="mi">532</span> <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_call_chain</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">handle_open</span><span class="p">,</span> <span class="n">protocol</span><span class="p">,</span> <span class="n">protocol</span> <span class="o">+</span>
+<span class="g g-Whitespace">    </span><span class="mi">533</span>                           <span class="s1">&#39;_open&#39;</span><span class="p">,</span> <span class="n">req</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">534</span> <span class="k">if</span> <span class="n">result</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">535</span>     <span class="k">return</span> <span class="n">result</span>
+
+<span class="nn">File ~/.local/share/uv/python/cpython-3.12.10-linux-x86_64-gnu/lib/python3.12/urllib/request.py:492,</span> in <span class="ni">OpenerDirector._call_chain</span><span class="nt">(self, chain, kind, meth_name, *args)</span>
+<span class="g g-Whitespace">    </span><span class="mi">490</span> <span class="k">for</span> <span class="n">handler</span> <span class="ow">in</span> <span class="n">handlers</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">491</span>     <span class="n">func</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">handler</span><span class="p">,</span> <span class="n">meth_name</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">492</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">493</span>     <span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">494</span>         <span class="k">return</span> <span class="n">result</span>
+
+<span class="nn">File ~/.local/share/uv/python/cpython-3.12.10-linux-x86_64-gnu/lib/python3.12/urllib/request.py:1392,</span> in <span class="ni">HTTPSHandler.https_open</span><span class="nt">(self, req)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1391</span> <span class="k">def</span><span class="w"> </span><span class="nf">https_open</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">req</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">1392</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">do_open</span><span class="p">(</span><span class="n">http</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">HTTPSConnection</span><span class="p">,</span> <span class="n">req</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1393</span>                         <span class="n">context</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_context</span><span class="p">)</span>
+
+<span class="nn">File ~/.local/share/uv/python/cpython-3.12.10-linux-x86_64-gnu/lib/python3.12/urllib/request.py:1347,</span> in <span class="ni">AbstractHTTPHandler.do_open</span><span class="nt">(self, http_class, req, **http_conn_args)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1344</span>         <span class="n">h</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">get_method</span><span class="p">(),</span> <span class="n">req</span><span class="o">.</span><span class="n">selector</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1345</span>                   <span class="n">encode_chunked</span><span class="o">=</span><span class="n">req</span><span class="o">.</span><span class="n">has_header</span><span class="p">(</span><span class="s1">&#39;Transfer-encoding&#39;</span><span class="p">))</span>
+<span class="g g-Whitespace">   </span><span class="mi">1346</span>     <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span> <span class="c1"># timeout error</span>
+<span class="ne">-&gt; </span><span class="mi">1347</span>         <span class="k">raise</span> <span class="n">URLError</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1348</span>     <span class="n">r</span> <span class="o">=</span> <span class="n">h</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1349</span> <span class="k">except</span><span class="p">:</span>
+
+<span class="ne">URLError</span>: &lt;urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Following the information in the README file, we want statecode 12 and (from looking at other sources) division code 08 for southern central IN.  We can use <code class="docutils literal notranslate"><span class="pre">pandas</span></code> functions to filter out rows that start with code 1208.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; Isolate the south central IN region &quot;&quot;&quot;</span>
+
+<span class="n">state_region_code</span> <span class="o">=</span> <span class="s2">&quot;1208&quot;</span>
+
+<span class="c1"># find rows that start with the state_region_code</span>
+<span class="n">scin_rows</span> <span class="o">=</span> <span class="n">climdiv_tminv</span><span class="p">[</span><span class="n">climdiv_tminv</span><span class="p">[</span><span class="s1">&#39;code&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">state_region_code</span><span class="p">)]</span>
+
+<span class="n">scin_rows</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>code</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+      <th>10</th>
+      <th>11</th>
+      <th>12</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>10873</th>
+      <td>1208281895</td>
+      <td>14.5</td>
+      <td>11.1</td>
+      <td>28.5</td>
+      <td>42.8</td>
+      <td>50.1</td>
+      <td>61.6</td>
+      <td>61.8</td>
+      <td>62.1</td>
+      <td>56.9</td>
+      <td>33.6</td>
+      <td>31.6</td>
+      <td>25.8</td>
+    </tr>
+    <tr>
+      <th>10874</th>
+      <td>1208281896</td>
+      <td>22.8</td>
+      <td>23.5</td>
+      <td>26.5</td>
+      <td>47.8</td>
+      <td>56.6</td>
+      <td>59.7</td>
+      <td>64.9</td>
+      <td>62.1</td>
+      <td>52.8</td>
+      <td>37.7</td>
+      <td>34.4</td>
+      <td>27.0</td>
+    </tr>
+    <tr>
+      <th>10875</th>
+      <td>1208281897</td>
+      <td>17.8</td>
+      <td>25.4</td>
+      <td>33.3</td>
+      <td>40.8</td>
+      <td>45.1</td>
+      <td>58.4</td>
+      <td>65.6</td>
+      <td>60.3</td>
+      <td>53.6</td>
+      <td>45.3</td>
+      <td>32.6</td>
+      <td>25.8</td>
+    </tr>
+    <tr>
+      <th>10876</th>
+      <td>1208281898</td>
+      <td>26.0</td>
+      <td>23.8</td>
+      <td>36.2</td>
+      <td>38.8</td>
+      <td>53.1</td>
+      <td>61.5</td>
+      <td>64.9</td>
+      <td>63.9</td>
+      <td>58.8</td>
+      <td>45.0</td>
+      <td>28.8</td>
+      <td>20.6</td>
+    </tr>
+    <tr>
+      <th>10877</th>
+      <td>1208281899</td>
+      <td>20.7</td>
+      <td>12.7</td>
+      <td>29.4</td>
+      <td>43.9</td>
+      <td>55.1</td>
+      <td>62.8</td>
+      <td>63.0</td>
+      <td>64.4</td>
+      <td>53.1</td>
+      <td>46.5</td>
+      <td>36.1</td>
+      <td>21.4</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>10999</th>
+      <td>1208282021</td>
+      <td>25.4</td>
+      <td>19.6</td>
+      <td>35.6</td>
+      <td>41.0</td>
+      <td>49.0</td>
+      <td>62.2</td>
+      <td>64.7</td>
+      <td>65.0</td>
+      <td>57.2</td>
+      <td>51.3</td>
+      <td>29.4</td>
+      <td>33.3</td>
+    </tr>
+    <tr>
+      <th>11000</th>
+      <td>1208282022</td>
+      <td>17.6</td>
+      <td>23.1</td>
+      <td>34.2</td>
+      <td>40.6</td>
+      <td>54.9</td>
+      <td>60.0</td>
+      <td>66.4</td>
+      <td>63.5</td>
+      <td>55.7</td>
+      <td>39.5</td>
+      <td>33.1</td>
+      <td>25.9</td>
+    </tr>
+    <tr>
+      <th>11001</th>
+      <td>1208282023</td>
+      <td>31.2</td>
+      <td>30.0</td>
+      <td>33.0</td>
+      <td>41.2</td>
+      <td>50.8</td>
+      <td>56.8</td>
+      <td>64.9</td>
+      <td>61.9</td>
+      <td>55.9</td>
+      <td>45.8</td>
+      <td>32.7</td>
+      <td>32.2</td>
+    </tr>
+    <tr>
+      <th>11002</th>
+      <td>1208282024</td>
+      <td>22.4</td>
+      <td>30.1</td>
+      <td>36.9</td>
+      <td>46.0</td>
+      <td>56.9</td>
+      <td>61.4</td>
+      <td>64.1</td>
+      <td>62.6</td>
+      <td>57.4</td>
+      <td>43.7</td>
+      <td>39.4</td>
+      <td>29.1</td>
+    </tr>
+    <tr>
+      <th>11003</th>
+      <td>1208282025</td>
+      <td>16.2</td>
+      <td>24.4</td>
+      <td>36.3</td>
+      <td>43.3</td>
+      <td>51.6</td>
+      <td>64.1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>131 rows × 13 columns</p>
+</div></div></div>
+</div>
+<p>Okay, now we have 129 rows, ranging from the year 1895 up to 2023, and I see missing values for the last months of 2025 (Aug-Dec) as expected given that those months don’t yet have data.</p>
+<p>Now we want to create a vector timeseries out of this.  We can access the underlying <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array and use <code class="docutils literal notranslate"><span class="pre">ravel()</span></code> to do so.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; Extract a vector of the data values. &quot;&quot;&quot;</span>
+<span class="c1"># convert the data to a numpy array</span>
+<span class="n">scin_data_np</span> <span class="o">=</span> <span class="n">scin_rows</span><span class="o">.</span><span class="n">values</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;scin_data_np.shape = </span><span class="si">{</span><span class="n">scin_data_np</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># remove the first column (the code column)</span>
+<span class="n">scin_data_np</span> <span class="o">=</span> <span class="n">scin_data_np</span><span class="p">[:,</span><span class="mi">1</span><span class="p">:]</span>
+
+<span class="c1"># ravel the data</span>
+<span class="n">scin_data</span> <span class="o">=</span> <span class="n">scin_data_np</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+<span class="n">scin_data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>scin_data_np.shape = (131, 13)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([14.5, 11.1, 28.5, ...,  nan,  nan,  nan], shape=(1572,))
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now that we have the vector, we want to create a vector of the corresponding dates.  We can use <code class="docutils literal notranslate"><span class="pre">date_range</span></code> to do this.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; Create dates and plot the data. &quot;&quot;&quot;</span>
+<span class="n">scin_dates</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s1">&#39;1895-01-01&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;2025-12-31&#39;</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;M&#39;</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">scin_dates</span><span class="p">,</span> <span class="n">scin_data</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;South Central Indiana Minimum Temperature&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Temperature (F)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/0s/yp78v9d15qd8pmgtc3xknpfh37trx3/T/ipykernel_53285/2944604734.py:2: FutureWarning: &#39;M&#39; is deprecated and will be removed in a future version, please use &#39;ME&#39; instead.
+  scin_dates = pd.date_range(start=&#39;1895-01-01&#39;, end=&#39;2025-12-31&#39;, freq=&#39;M&#39;)
+</pre></div>
+</div>
+<img alt="../../_images/86b73523c1dc19ff71ee2cc038cbb1d8fa2816a2a6a74cb6135a94cb20ef35e7.png" src="../../_images/86b73523c1dc19ff71ee2cc038cbb1d8fa2816a2a6a74cb6135a94cb20ef35e7.png" />
+</div>
+</div>
+<p>Now that we have the timeseries, we can use pandas to calculate the DJF averages.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; Calculate winter (DJF) averages. &quot;&quot;&quot;</span>
+
+<span class="c1"># create a new pandas dataframe with the dates and data</span>
+<span class="n">scin_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;date&#39;</span><span class="p">:</span> <span class="n">scin_dates</span><span class="p">,</span> <span class="s1">&#39;South Central Indiana&#39;</span><span class="p">:</span> <span class="n">scin_data</span><span class="p">})</span>
+
+<span class="c1"># extract only DJF data</span>
+<span class="n">scin_djf_df</span> <span class="o">=</span> <span class="n">scin_df</span><span class="p">[</span><span class="n">scin_df</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="mi">12</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])]</span>
+
+<span class="c1"># omit the first two steps of the first year and the last step of the last year since they are incomplete seasons</span>
+<span class="n">scin_djf_df</span> <span class="o">=</span> <span class="n">scin_djf_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># group by year and average</span>
+<span class="n">scin_djf_avg</span> <span class="o">=</span> <span class="n">scin_djf_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">scin_djf_df</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="c1"># plot the data</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">scin_djf_avg</span><span class="p">[</span><span class="s1">&#39;South Central Indiana&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;South Central Indiana Winter Minimum Temperature&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Temperature (F)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/b76ee8297713d850cd45ebe8f9c4c1e4219463a1bcdc152b0d124aa0daa252b8.png" src="../../_images/b76ee8297713d850cd45ebe8f9c4c1e4219463a1bcdc152b0d124aa0daa252b8.png" />
+</div>
+</div>
+</section>
+<section id="part-2-getting-the-eli-data">
+<h2>Part 2: Getting the ELI data<a class="headerlink" href="#part-2-getting-the-eli-data" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; Get the ENSO data. &quot;&quot;&quot;</span>
+<span class="n">eli_url</span> <span class="o">=</span> <span class="s2">&quot;https://portal.nersc.gov/archive/home/projects/cascade/www/ELI/ELI_ERSSTv5_1854.01-2020.05.xlsx&quot;</span>
+
+<span class="c1"># read the data (note, I had to install the openpyxl package to read this file)</span>
+<span class="n">eli_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">eli_url</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;ELI_ERSSTv5_1854.01-2020.02&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">eli_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/0s/yp78v9d15qd8pmgtc3xknpfh37trx3/T/ipykernel_53285/620503612.py:5: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  eli_df = pd.read_excel(eli_url, sheet_name=&#39;ELI_ERSSTv5_1854.01-2020.02&#39;, header=0, index_col=0, parse_dates=True)
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>1854</th>
+      <th>1855</th>
+      <th>1856</th>
+      <th>1857</th>
+      <th>1858</th>
+      <th>1859</th>
+      <th>1860</th>
+      <th>1861</th>
+      <th>1862</th>
+      <th>1863</th>
+      <th>...</th>
+      <th>2011</th>
+      <th>2012</th>
+      <th>2013</th>
+      <th>2014</th>
+      <th>2015</th>
+      <th>2016</th>
+      <th>2017</th>
+      <th>2018</th>
+      <th>2019</th>
+      <th>2020</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Jan</th>
+      <td>158.62</td>
+      <td>156.95</td>
+      <td>163.24</td>
+      <td>151.52</td>
+      <td>164.42</td>
+      <td>158.76</td>
+      <td>156.20</td>
+      <td>159.05</td>
+      <td>155.27</td>
+      <td>158.75</td>
+      <td>...</td>
+      <td>150.93</td>
+      <td>152.95</td>
+      <td>155.70</td>
+      <td>157.64</td>
+      <td>160.75</td>
+      <td>175.10</td>
+      <td>155.08</td>
+      <td>154.20</td>
+      <td>160.23</td>
+      <td>158.67</td>
+    </tr>
+    <tr>
+      <th>Feb</th>
+      <td>159.30</td>
+      <td>159.96</td>
+      <td>158.84</td>
+      <td>154.36</td>
+      <td>167.38</td>
+      <td>154.50</td>
+      <td>153.08</td>
+      <td>178.75</td>
+      <td>156.26</td>
+      <td>178.35</td>
+      <td>...</td>
+      <td>150.42</td>
+      <td>153.97</td>
+      <td>154.62</td>
+      <td>157.65</td>
+      <td>160.22</td>
+      <td>172.86</td>
+      <td>156.50</td>
+      <td>154.15</td>
+      <td>163.96</td>
+      <td>158.26</td>
+    </tr>
+    <tr>
+      <th>Mar</th>
+      <td>154.63</td>
+      <td>155.97</td>
+      <td>158.07</td>
+      <td>150.68</td>
+      <td>154.81</td>
+      <td>157.37</td>
+      <td>161.36</td>
+      <td>172.58</td>
+      <td>159.08</td>
+      <td>166.54</td>
+      <td>...</td>
+      <td>146.19</td>
+      <td>153.88</td>
+      <td>147.89</td>
+      <td>158.11</td>
+      <td>161.58</td>
+      <td>164.78</td>
+      <td>158.90</td>
+      <td>151.16</td>
+      <td>161.35</td>
+      <td>155.82</td>
+    </tr>
+    <tr>
+      <th>Apr</th>
+      <td>154.60</td>
+      <td>154.78</td>
+      <td>150.77</td>
+      <td>147.31</td>
+      <td>162.29</td>
+      <td>154.51</td>
+      <td>152.08</td>
+      <td>151.74</td>
+      <td>151.58</td>
+      <td>154.86</td>
+      <td>...</td>
+      <td>146.99</td>
+      <td>158.13</td>
+      <td>148.63</td>
+      <td>154.01</td>
+      <td>164.81</td>
+      <td>155.91</td>
+      <td>156.11</td>
+      <td>152.29</td>
+      <td>157.37</td>
+      <td>152.13</td>
+    </tr>
+    <tr>
+      <th>May</th>
+      <td>160.56</td>
+      <td>159.68</td>
+      <td>157.31</td>
+      <td>157.18</td>
+      <td>163.30</td>
+      <td>155.67</td>
+      <td>155.39</td>
+      <td>153.93</td>
+      <td>154.05</td>
+      <td>153.56</td>
+      <td>...</td>
+      <td>148.74</td>
+      <td>151.82</td>
+      <td>157.76</td>
+      <td>157.77</td>
+      <td>167.87</td>
+      <td>160.95</td>
+      <td>157.20</td>
+      <td>157.35</td>
+      <td>161.7</td>
+      <td>154.51</td>
+    </tr>
+    <tr>
+      <th>Jun</th>
+      <td>167.42</td>
+      <td>164.79</td>
+      <td>160.78</td>
+      <td>175.59</td>
+      <td>166.08</td>
+      <td>159.56</td>
+      <td>168.50</td>
+      <td>158.09</td>
+      <td>161.82</td>
+      <td>158.75</td>
+      <td>...</td>
+      <td>160.46</td>
+      <td>163.68</td>
+      <td>163.07</td>
+      <td>168.99</td>
+      <td>179.12</td>
+      <td>162.99</td>
+      <td>166.31</td>
+      <td>163.56</td>
+      <td>169.81</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>Jul</th>
+      <td>171.27</td>
+      <td>169.29</td>
+      <td>164.36</td>
+      <td>170.79</td>
+      <td>168.07</td>
+      <td>172.13</td>
+      <td>174.46</td>
+      <td>162.12</td>
+      <td>163.93</td>
+      <td>175.96</td>
+      <td>...</td>
+      <td>165.15</td>
+      <td>171.93</td>
+      <td>165.38</td>
+      <td>172.30</td>
+      <td>182.31</td>
+      <td>162.86</td>
+      <td>167.77</td>
+      <td>167.36</td>
+      <td>170.99</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>Aug</th>
+      <td>170.06</td>
+      <td>164.72</td>
+      <td>162.23</td>
+      <td>168.05</td>
+      <td>165.31</td>
+      <td>171.72</td>
+      <td>168.99</td>
+      <td>168.20</td>
+      <td>167.53</td>
+      <td>169.20</td>
+      <td>...</td>
+      <td>163.99</td>
+      <td>170.16</td>
+      <td>165.98</td>
+      <td>170.86</td>
+      <td>182.46</td>
+      <td>160.89</td>
+      <td>165.69</td>
+      <td>167.66</td>
+      <td>169.55</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>Sep</th>
+      <td>167.25</td>
+      <td>170.77</td>
+      <td>157.28</td>
+      <td>171.20</td>
+      <td>163.19</td>
+      <td>166.94</td>
+      <td>160.77</td>
+      <td>167.22</td>
+      <td>172.79</td>
+      <td>165.32</td>
+      <td>...</td>
+      <td>162.47</td>
+      <td>167.07</td>
+      <td>164.86</td>
+      <td>168.46</td>
+      <td>181.57</td>
+      <td>159.52</td>
+      <td>165.12</td>
+      <td>165.77</td>
+      <td>167.04</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>Oct</th>
+      <td>162.51</td>
+      <td>171.23</td>
+      <td>163.08</td>
+      <td>167.59</td>
+      <td>163.84</td>
+      <td>165.18</td>
+      <td>157.49</td>
+      <td>158.13</td>
+      <td>169.94</td>
+      <td>160.51</td>
+      <td>...</td>
+      <td>158.79</td>
+      <td>164.63</td>
+      <td>161.79</td>
+      <td>164.21</td>
+      <td>179.94</td>
+      <td>156.15</td>
+      <td>161.67</td>
+      <td>165.35</td>
+      <td>164.16</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>Nov</th>
+      <td>159.23</td>
+      <td>172.59</td>
+      <td>162.32</td>
+      <td>161.12</td>
+      <td>156.80</td>
+      <td>164.99</td>
+      <td>157.38</td>
+      <td>156.89</td>
+      <td>170.88</td>
+      <td>163.11</td>
+      <td>...</td>
+      <td>156.34</td>
+      <td>160.81</td>
+      <td>159.37</td>
+      <td>163.18</td>
+      <td>173.05</td>
+      <td>155.56</td>
+      <td>157.99</td>
+      <td>162.75</td>
+      <td>161.39</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>Dec</th>
+      <td>155.39</td>
+      <td>170.07</td>
+      <td>158.21</td>
+      <td>163.04</td>
+      <td>158.08</td>
+      <td>163.27</td>
+      <td>157.97</td>
+      <td>155.87</td>
+      <td>156.28</td>
+      <td>175.48</td>
+      <td>...</td>
+      <td>154.87</td>
+      <td>157.99</td>
+      <td>158.56</td>
+      <td>161.79</td>
+      <td>172.93</td>
+      <td>155.60</td>
+      <td>155.97</td>
+      <td>161.52</td>
+      <td>160.333</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>12 rows × 167 columns</p>
+</div></div></div>
+</div>
+<p>That was easy - but this data has a similar problem to the NClimDiv dataset - the data are in a table, but we want a timeseries.  We can extract the numpy values, transpose, and ravel.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; Create an ELI timeseries. &quot;&quot;&quot;</span>
+
+<span class="c1"># create a timeseries from the data</span>
+<span class="n">eli_data_np</span> <span class="o">=</span> <span class="n">eli_df</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+
+<span class="c1"># create dates corresponding to the data</span>
+<span class="n">eli_dates</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s1">&#39;1854-01-01&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;2021-01-01&#39;</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;M&#39;</span><span class="p">)</span>
+
+<span class="c1"># put this back into a data frame</span>
+<span class="n">eli_ts_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;date&#39;</span><span class="p">:</span> <span class="n">eli_dates</span><span class="p">,</span> <span class="s1">&#39;ELI&#39;</span><span class="p">:</span> <span class="n">eli_data_np</span><span class="p">})</span>
+
+<span class="c1"># calculate the DJF average</span>
+<span class="n">eli_djf_df</span> <span class="o">=</span> <span class="n">eli_ts_df</span><span class="p">[</span><span class="n">eli_ts_df</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="mi">12</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])]</span>
+
+<span class="c1"># omit the first two steps of the first year and the last step of the last year since they are incomplete seasons</span>
+<span class="n">eli_djf_df</span> <span class="o">=</span> <span class="n">eli_djf_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># group by year and average</span>
+<span class="n">eli_djf_avg</span> <span class="o">=</span> <span class="n">eli_djf_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">eli_djf_df</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># plot the data</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">eli_djf_avg</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;ELI (degrees_east)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/0s/yp78v9d15qd8pmgtc3xknpfh37trx3/T/ipykernel_53285/3917109031.py:7: FutureWarning: &#39;M&#39; is deprecated and will be removed in a future version, please use &#39;ME&#39; instead.
+  eli_dates = pd.date_range(start=&#39;1854-01-01&#39;, end=&#39;2021-01-01&#39;, freq=&#39;M&#39;)
+</pre></div>
+</div>
+<img alt="../../_images/77082fb10d9ad8a07a3b70afc8a25fc7d1866fe714cf789c9479d176a42dffb6.png" src="../../_images/77082fb10d9ad8a07a3b70afc8a25fc7d1866fe714cf789c9479d176a42dffb6.png" />
+</div>
+</div>
+<p>Now that we have timeseries for both datasets, all that’s left is to combine them.  Pandas makes that easy with the <code class="docutils literal notranslate"><span class="pre">merge()</span></code> method.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; Combine the two datasets. &quot;&quot;&quot;</span>
+<span class="c1"># merge the two dataframes</span>
+<span class="n">scin_eli_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">scin_djf_avg</span><span class="p">,</span> <span class="n">eli_djf_avg</span><span class="p">,</span> <span class="n">left_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># plot a scatter plot</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">scin_eli_df</span><span class="p">[</span><span class="s1">&#39;ELI&#39;</span><span class="p">],</span> <span class="n">scin_eli_df</span><span class="p">[</span><span class="s1">&#39;South Central Indiana&#39;</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;ELI (degrees_east))&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Temperature (F)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/42158afce739b3e784b891862860c86de1f5887ca5ec3f5ae0052b454b3d0e86.png" src="../../_images/42158afce739b3e784b891862860c86de1f5887ca5ec3f5ae0052b454b3d0e86.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scin_eli_df</span><span class="p">[</span><span class="s1">&#39;ELI&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>date
+1895        165.47
+1896         164.1
+1897        164.01
+1898        157.22
+1899    157.756667
+           ...    
+2016    167.853333
+2017        155.85
+2018    156.623333
+2019    161.507667
+2020       158.465
+Name: ELI, Length: 126, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; Calculate the correlation coefficient and regression line. &quot;&quot;&quot;</span>
+
+<span class="c1"># calculate the correlation coefficient</span>
+<span class="n">corr_matrix</span> <span class="o">=</span> <span class="n">scin_eli_df</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+<span class="n">corr</span> <span class="o">=</span> <span class="n">corr_matrix</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># calculate the regression line using scipy.stats.linregress</span>
+<span class="c1"># note that we use the to_numpy() method to ensure we are using numpy arrays that are floats</span>
+<span class="c1"># for some reason, the ELI data comes back as dtype &#39;object&#39; and not &#39;float&#39;, so we convert it</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">linregress</span><span class="p">(</span><span class="n">scin_eli_df</span><span class="p">[</span><span class="s1">&#39;ELI&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;float&#39;</span><span class="p">),</span> <span class="n">scin_eli_df</span><span class="p">[</span><span class="s1">&#39;South Central Indiana&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;float&#39;</span><span class="p">))</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">slope</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">intercept</span>
+
+<span class="c1"># plot the data with the regression line</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">scin_eli_df</span><span class="p">[</span><span class="s1">&#39;ELI&#39;</span><span class="p">],</span> <span class="n">scin_eli_df</span><span class="p">[</span><span class="s1">&#39;South Central Indiana&#39;</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">scin_eli_df</span><span class="p">[</span><span class="s1">&#39;ELI&#39;</span><span class="p">],</span> <span class="n">m</span> <span class="o">*</span> <span class="n">scin_eli_df</span><span class="p">[</span><span class="s1">&#39;ELI&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">b</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;ELI&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;South Central Indiana Winter Minimum Temperature [F]&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/e32b731a1866841c54b04577fb81bc2f71e64f2af69c8e80f92f2fdb4b9c3ec5.png" src="../../_images/e32b731a1866841c54b04577fb81bc2f71e64f2af69c8e80f92f2fdb4b9c3ec5.png" />
+</div>
+</div>
+<p>Based on visual inspection, based on a small correlation coefficient (close to 0.001!), and based on a nearly-zero regression slope, I conclude that El Nino has very little impact on minimum temperatures in the South Central Indiana region.  So it appears that a prediction based on ELI might not be possible.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./lessons/03_data_science_modules"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="03_warmup_SOLUTION.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Warmup: git, vscode, and fundamentals revisited</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../04_digging_further_into_data_wrangling/04_estimating_building_height_SOLUTION.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Exercise: Estimating Building Height with Pressure</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-1-getting-the-nclimdiv-data">Part 1: Getting the NClimDiv data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#part-2-getting-the-eli-data">Part 2: Getting the ELI data</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Travis A. O'Brien
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <script>
+// Force refresh when navigating back to page from cache
+window.addEventListener('pageshow', function(event) {
+  if (event.persisted) {
+    window.location.reload();
+  }
+});
+// Add timestamp to force browser refresh
+document.addEventListener('DOMContentLoaded', function() {
+  var links = document.querySelectorAll('link[rel="stylesheet"]');
+  links.forEach(function(link) {
+    if (!link.href.includes('?v=')) {
+      link.href += '?v=' + new Date().getTime();
+    }
+  });
+  // Also add cache-busting to images
+  var images = document.querySelectorAll('img');
+  images.forEach(function(img) {
+    if (img.src && !img.src.includes('?v=')) {
+      img.src += '?v=' + new Date().getTime();
+    }
+  });
+});
+</script>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

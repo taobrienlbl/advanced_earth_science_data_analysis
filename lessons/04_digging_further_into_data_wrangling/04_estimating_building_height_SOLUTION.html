@@ -1,0 +1,1171 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Exercise: Estimating Building Height with Pressure &#8212; Advanced Earth Science Data Analysis</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/header.css?v=415f224a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/cache-buster.css?v=5532fd1c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lessons/04_digging_further_into_data_wrangling/04_estimating_building_height_SOLUTION';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Workalong &amp; Exercise: Multidimensional Arrays" href="../05_multidimensional_arrays_also_plotting/05_multidimensional_array_exercise_SOLUTION.html" />
+    <link rel="prev" title="Work-along: El Nino and IN Winter Temperatures" href="../03_data_science_modules/03_winter_temperature_enso_SOLUTION.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../syllabus/syllabus.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/dall_e_2023-08-22_16_41_13_an_impressionist.png" class="logo__image only-light" alt="Advanced Earth Science Data Analysis - Home"/>
+    <script>document.write(`<img src="../../_static/dall_e_2023-08-22_16_41_13_an_impressionist.png" class="logo__image only-dark" alt="Advanced Earth Science Data Analysis - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Earth Science Data Analysis: Fundamentals</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../01_fundamentals/01_fundamentals.html">Fundamentals through examples</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../01_fundamentals/01a_sound_from_data.html">Sound from Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01_fundamentals/01b_madhava_pi_calculation.html">Madhava-Leibniz π calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01_fundamentals/01c_calculating_e.html">Exercise: calculating e</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01_fundamentals/01d_trig_fucntion.html">Creating trig functions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../02_modules_vscode_git/02_modules_vscode_git.html">Modules, VSCode, and Git</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../02_modules_vscode_git/02_last_class_refresher.html">Warmup: fundamentals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02_modules_vscode_git/02_download_install.html">Download and Install Python and VSCode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02_modules_vscode_git/02_new_module.html">Exercise: Creating a module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02_modules_vscode_git/02_git_workalong.html">Git workalong</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02_modules_vscode_git/02_looking_ahead.html">Exercise: looking ahead</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../03_data_science_modules/03_data_science_modules.html">Data Science Modules</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../03_data_science_modules/03_install_big_four.html">Install the <code class="docutils literal notranslate"><span class="pre">big_four</span></code> conda environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03_data_science_modules/03_warmup.html">Warmup: git, vscode, and fundamentals revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03_data_science_modules/03_big_four_lecture_demo.html">Big Four python Data Science Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03_data_science_modules/03_winter_temperature_enso.html">Work-along: El Nino and IN Winter Temperatures</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="04_digging_further_into_data_wrangling.html">Digging Further Into Data Wrangling</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="04_estimating_building_height.html">Exercise: Estimating Building Height with Pressure</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Earth Science Data Analysis: HPC</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../05_multidimensional_arrays_also_plotting/05_multidimensional_arrays_also_plotting.html">Multidimensional Arrays + Plotting</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../05_multidimensional_arrays_also_plotting/05_setup_git_vscode_on_red.html">Set up GitHub and VS Code on RED Desktop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../05_multidimensional_arrays_also_plotting/05_warmup.html">WARMUP | Data Wrangling</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../05_multidimensional_arrays_also_plotting/05_multidimensional_array_lecture_notes.html">Work-along: Multidimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../05_multidimensional_arrays_also_plotting/05_multidimensional_array_exercise.html">Workalong &amp; Exercise: Multidimensional Arrays</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../06_advanced_plotting/06_advanced_plotting.html">Advanced Plotting</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../06_advanced_plotting/06_workalong01_advanced_plotting.html">Work-along: Advanced Plotting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../06_advanced_plotting/06_python_environments.html">Work-along: Installing a new Python environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../06_advanced_plotting/06_workalong02_mapping.html">Work-along: Mapping</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../07_parallelization_intro/07_parallelization_intro.html">Intro to Parallelization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../07_parallelization_intro/07_warmup.html">WARMUP | Advanced Plotting &amp; Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_parallelization_intro/07_parallelization_overview.html">Parallelization Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_parallelization_intro/07_workalong_mpi4py_intro.html">Work-along: Basic parallelization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_parallelization_intro/07_exercise.html">Exercise: Animating the weather in parallel</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../08_parallelization_continued/08_parallelization_continued.html">Parallelization Continued</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../08_parallelization_continued/08_workalong_01_simplempi.html">Work-along: Using <code class="docutils literal notranslate"><span class="pre">simplempi</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../08_parallelization_continued/08_collective_communications.html"><em>Collective communications</em> with MPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../08_parallelization_continued/08_workalong_02_parallel_pi.html">Workalong: Madhava pi calculation in parallel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../08_parallelization_continued/08_final_project_work.html">Final Project Work</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../09_machine_learning_intro/09_machine_learning_intro.html">Machine Learning Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../09_machine_learning_intro/09_installing_pytorch.html">Installing pytorch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../09_machine_learning_intro/09_machine_learning_lecture.html">A practical intro to machine learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../09_machine_learning_intro/09_workalong_machine_learning_basics.html">Work-along: Machine Learning Basics</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../10_machine_learning_continued/10_machine_learning_continued.html">Machine Learning Continued</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../10_machine_learning_continued/10_workalong_intro_to_classes.html">Work-along: Intro to <em>classes</em> in Python</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../11_machine_learning_finale/11_machine_learning_finale.html">Machine Learning Finale</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../11_machine_learning_finale/11_apply_ml_to_data.html">Apply ML to Real Data</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../12_spectral_analysis/12_spectral_analysis.html">Spectral Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../12_spectral_analysis/12_fourier_transform_lecture.html">Fourier Transform Lecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../12_spectral_analysis/12_workalong_01_fft.html">Work-along: Working with the FFT</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../12_spectral_analysis/12_workalong_02_filter.html">Work-along: Simple filtering</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../13_geospatial_intro/13_geospatial_intro.html">Introduction to Geospatial Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../13_geospatial_intro/13_workalong01_california_earthquakes.html">Workalong: Finding Earthquakes in California</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../13_geospatial_intro/13_workalong02_geospatial_plotting.html">Workalong: Plotting geospatial data</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../14_geospatial_continued/14_geospatial_continued.html">Geospatial Continued</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../14_geospatial_continued/14_IN_snow_trends.html">Exercise: Trends in IN Snow</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/01a_homework.html">Homework 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/01b_homework.html">Initial Idea for Final Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/02_homework.html">Homework 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/03_homework.html">Homework 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/04a_homework.html">Homework 4a: Chapter 7 Self-Test Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/04b_homework.html">Homework 4b: Get set up with RED Desktop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/05_homework.html">Homework 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/07_homework.html">Homework 7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/08a_homework.html">Homework 08</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/08b_final_project_proposal.html">Final Project Proposal</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Solutions</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../solutions/solutions.html">Exercise solutions</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../01_fundamentals/01b_madhava_pi_calculation_SOLUTION.html">Madhava-Leibniz π calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01_fundamentals/01c_calculating_e_SOLUTION.html">Exercise: calculating e</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01_fundamentals/01d_trig_fucntion_SOLUTION.html">Creating trig functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02_modules_vscode_git/02_last_class_refresher_SOLUTION.html">Warmup: fundamentals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03_data_science_modules/03_warmup_SOLUTION.html">Warmup: git, vscode, and fundamentals revisited</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../03_data_science_modules/03_winter_temperature_enso_SOLUTION.html">Work-along: El Nino and IN Winter Temperatures</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Exercise: Estimating Building Height with Pressure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../05_multidimensional_arrays_also_plotting/05_multidimensional_array_exercise_SOLUTION.html">Workalong &amp; Exercise: Multidimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../05_multidimensional_arrays_also_plotting/05_warmup_SOLUTION.html">Warmup: Data Wrangling</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../06_advanced_plotting/06_workalong01_advanced_plotting_SOLUTION.html">Work-along: Advanced Plotting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../06_advanced_plotting/06_workalong02_mapping_SOLUTION.html">Work-along: Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_parallelization_intro/07_warmup_SOLUTION.html">WARMUP | Advanced Plotting &amp; Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_parallelization_intro/07_workalong_mpi4py_intro_SOLUTION.html">Work-along: Basic parallelization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_parallelization_intro/07_exercise_SOLUTION.html">Exercise: Animating the weather in parallel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../08_parallelization_continued/08_workalong_02_parallel_pi_SOLUTION.html">Exercise: Madhava pi calculation in parallel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../09_machine_learning_intro/09_workalong_machine_learning_basics_SOLUTION.html">Work-along: Machine Learning Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../10_machine_learning_continued/10_workalong_intro_to_classes_SOLUTION.html">Work-along: Intro to <em>classes</em> in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../12_spectral_analysis/12_workalong_01_fft_SOLUTION.html">Work-along: Working with the FFT</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../12_spectral_analysis/12_workalong_02_filter_SOLUTION.html">Work-along: Simple filtering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../13_geospatial_intro/13_workalong01_california_earthquakes_SOLUTION.html">Workalong: Finding Earthquakes in California</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../13_geospatial_intro/13_workalong02_geospatial_plotting_SOLUTION.html">Workalong: Plotting geospatial data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14_geospatial_continued/14_IN_snow_trends_SOLUTION.html">Exercise: Trends in IN Snow</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/lessons/04_digging_further_into_data_wrangling/04_estimating_building_height_SOLUTION.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Exercise: Estimating Building Height with Pressure</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimating-height">Estimating height</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-collection-process">Data collection process</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thoughts-about-the-data-file">Thoughts about the data file</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploratory-data-analysis">Exploratory data analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimation-by-numerical-integration">Estimation by numerical integration</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/04_digging_further_into_data_wrangling/04_estimating_building_height.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
+<section class="tex2jax_ignore mathjax_ignore" id="exercise-estimating-building-height-with-pressure">
+<h1>Exercise: Estimating Building Height with Pressure<a class="headerlink" href="#exercise-estimating-building-height-with-pressure" title="Link to this heading">#</a></h1>
+<p>This exercise aims to build on your knowledge of the big-four data science libraries to use Kestrel atmospheric measurement devices to estimate the height difference between the ground floor and sixth floor of the Geology building.</p>
+<section id="background">
+<h2>Background<a class="headerlink" href="#background" title="Link to this heading">#</a></h2>
+<p>Air pressure monotonically decreases with height in the atmosphere.  This is simply due to the fact that <em>air pressure is a measure of the weight of everything above</em>.  So higher up in the atmosphere there is less atmosphere (weight) above, and pressure decreases.</p>
+<p>One of the basic principles of fluid dynamics is that a <em>pressure gradient</em>–a change in pressure over some distance–exerts a net force on the fluid that, in the absence of other forces, would cause the fluid to move.  So why then does the atmosphere not flow away to space in response to this pressure gradient?</p>
+<p>To a very good approximation, the atmosphere is in <em>hydrostatic balance</em>, meaning that the vertical pressure gradient is balanced by the force of gravity on the air; gravity effectively nullifies the vertical pressure gradient force.  This leads to one of the most essential equations in atmospheric science:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{\partial p}{\partial z} = -\rho g\]</div>
+<p>where <span class="math notranslate nohighlight">\(p\)</span> is the atmospheric pressure, <span class="math notranslate nohighlight">\(z\)</span> is height away from the surface, <span class="math notranslate nohighlight">\(\rho\)</span> is air density, and <span class="math notranslate nohighlight">\(g\)</span> is the gravitational acceleration (we’ll use <span class="math notranslate nohighlight">\(g \approx 9.806~\text{m s}^{-2}\)</span> here).</p>
+<p>If we combine this with the ideal gas law (written in a form that is convenient for atmospheric gasses, where <span class="math notranslate nohighlight">\(R_d \approx 287~\text{J kg}^{-1}\text{K}^{-1}\)</span> represents a constant for air with the composition of Earth’s atmosphere), we get a differential equation for pressure.</p>
+<div class="math notranslate nohighlight">
+\[\text{Ideal gas law: }~p = \rho R_d T \to \]</div>
+<div class="math notranslate nohighlight">
+\[ \frac{\partial p}{\partial z} = - \frac{p g}{R_d T} \]</div>
+<p>We can approximate the derivatives in this equation using finite differences: <span class="math notranslate nohighlight">\(\partial p/\partial z \to \Delta p / \Delta z\)</span>, where <span class="math notranslate nohighlight">\(\Delta\)</span> represents a (presumably small) difference between two pressure or height measurements.  We can then use this to solve for the change in height as a function of changes in pressure:</p>
+<div class="math notranslate nohighlight">
+\[ \Delta z \approx - \frac{R_d T}{g} \frac{\Delta p}{p}\]</div>
+</section>
+<section id="estimating-height">
+<h2>Estimating height<a class="headerlink" href="#estimating-height" title="Link to this heading">#</a></h2>
+<p>Now imagine that we have a device that records pressure and temperature every second or so.  If you take that device and walk up a set of stairs, the recorded pressure will drop a bit for every second that you’re ascending.  A pair of measurements taken at consecutive times can be used to estimate <span class="math notranslate nohighlight">\(\Delta p\)</span>, and the average of the two measurements can be used to estimate <span class="math notranslate nohighlight">\(p\)</span> and <span class="math notranslate nohighlight">\(T\)</span> over tha same time frame.  These values can be plugged in to the above formula to estimate the change in height between the two measurements.  The sum of all the changes in height then gives an estimate of the total change in height; we will have numerically integrated the differential equation that comes from combining hydrostatic balance and the ideal gas law.</p>
+<section id="instructions">
+<h3>Instructions<a class="headerlink" href="#instructions" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>form groups of two or three</p></li>
+<li><p>acquaint yourself with the Kestrel measuring devices, and pair it to at least one of your phones using <a class="reference external" href="https://kestrelinstruments.com/link-connectivity">Kestrel Link</a></p></li>
+<li><p>ensure that you can record measurements and export them to csv</p></li>
+<li><p>take the kestrel device down to the ground floor of the Geology building; go to the lobby</p></li>
+<li><p>start recording</p></li>
+<li><p>either walk up the stairwell, or take the elevator, up to the 7th floor (you can only access this floor from the western stairwell)</p></li>
+<li><p>end recording</p></li>
+<li><p>export the data to a CSV file and add it to your course git folder (into a folder for lesson 04)</p></li>
+<li><p>estimate the difference in height between the two floors using the method above (<em>hint</em>: you should use <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, and you should be able to make a new column for the calculation of <span class="math notranslate nohighlight">\(\Delta p\)</span> and <span class="math notranslate nohighlight">\(\Delta z\)</span> for each measurement, and then use the <code class="docutils literal notranslate"><span class="pre">.sum()</span></code> method)</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If for some reason you need a data file to work with, here is the one used in the solution: <a class="reference external" href="https://raw.githubusercontent.com/taobrienlbl/advanced_earth_science_data_analysis/refs/heads/fall_2025_iub/content/lessons/04_digging_further_into_data_wrangling/WEATHER_-_2414781_Sep_15_2023_2_56_14_PM.csv">WEATHER_-_2414781_Sep_15_2023_2_56_14_PM.csv</a></p>
+</div>
+</section>
+</section>
+<section id="data-collection-process">
+<h2>Data collection process<a class="headerlink" href="#data-collection-process" title="Link to this heading">#</a></h2>
+<p>I paired the kestrel device, 2414781, with my iphone, walked down to the first floor, started recording on the Kestrel Link app, then walked slowly up to the 7th floor while recording.  I waited for about 20 seconds on the 7th floor before I finished recording.  I then saved the recording session and exported it to a CSV file that I uploaded to Google Drive and then copied locally here: <code class="docutils literal notranslate"><span class="pre">WEATHER_-_2414781_Sep_15_2023_2_56_14_PM.csv</span></code>.</p>
+</section>
+<section id="thoughts-about-the-data-file">
+<h2>Thoughts about the data file<a class="headerlink" href="#thoughts-about-the-data-file" title="Link to this heading">#</a></h2>
+<p>Inspection of the data file shows that it has 5 rows of what appear to be header data, e.g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Device Name,WEATHER - 2414781
+Device Model,5500L
+Serial Number,2414781
+FORMATTED DATE_TIME,Temperature,Wet Bulb Temp,Relative Humidity,Barometric Pressure,Altitude,Station Pressure,Wind Speed,Heat Index,Dew Point,Density Altitude,Crosswind,Headwind,Compass Magnetic Direction,Compass True Direction,Wind Chill
+yyyy-MM-dd hh:mm:ss a,°C,°C,%,mb,m,mb,km/h,°C,°C,m,km/h,km/h,Deg,Deg,°C,Data Type,Record name,Start time,Duration (H:M:S),Location description,Location address,Location coordinates,Notes
+2023-09-15 02:53:19 PM,21.0,14.9,52.8,992.0,176,992.0,0.0,20.5,11.0,487,--,--,--,--,21.0,session,&quot;Session - Sep 15, 2023 2:53:18 PM&quot;,2023-09-15 02:53:18 PM 2:53:18 PM,00:02:58,,,,Enter Notes
+2023-09-15 02:53:24 PM,21.1,14.9,52.5,992.2,173,992.3,1.2,20.4,11.0,484,--,--,--,--,21.0,session,&quot;Session - Sep 15, 2023 2:53:18 PM&quot;,2023-09-15 02:53:18 PM 2:53:18 PM,00:02:58,,,,Enter Notes
+...
+</pre></div>
+</div>
+<p>For the purposes of this analysis, I don’t really care about the first three rows.  The fourth row, index 3, appears to have good column names, so I’ll try to use that for the header.  The fifth row (index 4) has the units of the data.  While I would like to include the units, I’ll just make note here that the temperatures are in Celsius and the pressures are in mb (hPa), so I’ll have to convert before plugging in to the hydrostatic equation.</p>
+<p>n.b. when playing around with opening the file, I found that the number of columns in the header row didn’t match the actual number of data columns.  I used the <code class="docutils literal notranslate"><span class="pre">usecols</span></code> argument to force usage of only the first 16 columns, which contain the data I want.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; Read the data file. &quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="c1"># set the file name</span>
+<span class="n">data_file</span> <span class="o">=</span> <span class="s2">&quot;WEATHER_-_2414781_Sep_15_2023_2_56_14_PM.csv&quot;</span>
+
+<span class="c1"># read the data file</span>
+<span class="n">kestrel_pd</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data_file</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">skiprows</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="n">usecols</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">16</span><span class="p">),</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="c1"># show part of the data frame</span>
+<span class="n">kestrel_pd</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1896736/1879942115.py:8: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  kestrel_pd = pd.read_csv(data_file, header = 0, skiprows = [0,1,2,4], usecols=range(0,16), parse_dates=[0])
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>FORMATTED DATE_TIME</th>
+      <th>Temperature</th>
+      <th>Wet Bulb Temp</th>
+      <th>Relative Humidity</th>
+      <th>Barometric Pressure</th>
+      <th>Altitude</th>
+      <th>Station Pressure</th>
+      <th>Wind Speed</th>
+      <th>Heat Index</th>
+      <th>Dew Point</th>
+      <th>Density Altitude</th>
+      <th>Crosswind</th>
+      <th>Headwind</th>
+      <th>Compass Magnetic Direction</th>
+      <th>Compass True Direction</th>
+      <th>Wind Chill</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2023-09-15 14:53:19</td>
+      <td>21.0</td>
+      <td>14.9</td>
+      <td>52.8</td>
+      <td>992.0</td>
+      <td>176</td>
+      <td>992.0</td>
+      <td>0.0</td>
+      <td>20.5</td>
+      <td>11.0</td>
+      <td>487</td>
+      <td>--</td>
+      <td>--</td>
+      <td>--</td>
+      <td>--</td>
+      <td>21.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2023-09-15 14:53:24</td>
+      <td>21.1</td>
+      <td>14.9</td>
+      <td>52.5</td>
+      <td>992.2</td>
+      <td>173</td>
+      <td>992.3</td>
+      <td>1.2</td>
+      <td>20.4</td>
+      <td>11.0</td>
+      <td>484</td>
+      <td>--</td>
+      <td>--</td>
+      <td>--</td>
+      <td>--</td>
+      <td>21.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2023-09-15 14:53:29</td>
+      <td>21.2</td>
+      <td>14.9</td>
+      <td>51.4</td>
+      <td>991.7</td>
+      <td>178</td>
+      <td>991.8</td>
+      <td>0.0</td>
+      <td>20.7</td>
+      <td>10.8</td>
+      <td>493</td>
+      <td>--</td>
+      <td>--</td>
+      <td>--</td>
+      <td>--</td>
+      <td>21.2</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2023-09-15 14:53:34</td>
+      <td>21.3</td>
+      <td>14.9</td>
+      <td>50.5</td>
+      <td>991.7</td>
+      <td>178</td>
+      <td>991.8</td>
+      <td>0.0</td>
+      <td>20.7</td>
+      <td>10.6</td>
+      <td>496</td>
+      <td>--</td>
+      <td>--</td>
+      <td>--</td>
+      <td>--</td>
+      <td>21.2</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2023-09-15 14:53:39</td>
+      <td>21.3</td>
+      <td>14.9</td>
+      <td>50.6</td>
+      <td>991.7</td>
+      <td>178</td>
+      <td>991.8</td>
+      <td>0.0</td>
+      <td>20.7</td>
+      <td>10.6</td>
+      <td>495</td>
+      <td>--</td>
+      <td>--</td>
+      <td>--</td>
+      <td>--</td>
+      <td>21.2</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="exploratory-data-analysis">
+<h2>Exploratory data analysis<a class="headerlink" href="#exploratory-data-analysis" title="Link to this heading">#</a></h2>
+<p>Before attempting the height estimate, I want to just look at the data in the form of plots.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="n">kestrel_pd</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s2">&quot;FORMATTED DATE_TIME&quot;</span><span class="p">,</span> <span class="s2">&quot;Temperature&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">kestrel_pd</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s2">&quot;FORMATTED DATE_TIME&quot;</span><span class="p">,</span> <span class="s2">&quot;Station Pressure&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/7e4e28609c1e8ec5da4e42c4e2a15976382f42657ebb8eb2150b091e84c27ac8.png" src="../../_images/7e4e28609c1e8ec5da4e42c4e2a15976382f42657ebb8eb2150b091e84c27ac8.png" />
+<img alt="../../_images/e84661f4deacdf886625229cdcc4fafa1a254e5d47a63f51e846d9062d13b508.png" src="../../_images/e84661f4deacdf886625229cdcc4fafa1a254e5d47a63f51e846d9062d13b508.png" />
+</div>
+</div>
+<p>It looks like I started recording around 2:53pm (9/15/2023) according to the plots, which seems about right; I ascended the stairwell in about three minutes.  Pressure steadily (approximately linearly) decreased as I ascended, as expected.  The temperature rose by about 0.7 C, which makes sense given that the air in the stairwell probably isn’t well mixed and that warm air probably rises to the top of the stairwell.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; Show statistics of the various columns. &quot;&quot;&quot;</span>
+<span class="n">kestrel_pd</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>FORMATTED DATE_TIME</th>
+      <th>Temperature</th>
+      <th>Wet Bulb Temp</th>
+      <th>Relative Humidity</th>
+      <th>Barometric Pressure</th>
+      <th>Altitude</th>
+      <th>Station Pressure</th>
+      <th>Wind Speed</th>
+      <th>Heat Index</th>
+      <th>Dew Point</th>
+      <th>Density Altitude</th>
+      <th>Wind Chill</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>36</td>
+      <td>36.000000</td>
+      <td>36.000000</td>
+      <td>36.000000</td>
+      <td>36.000000</td>
+      <td>36.000000</td>
+      <td>36.000000</td>
+      <td>36.000000</td>
+      <td>36.000000</td>
+      <td>36.000000</td>
+      <td>36.000000</td>
+      <td>36.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>2023-09-15 14:54:46.500000</td>
+      <td>21.361111</td>
+      <td>15.611111</td>
+      <td>55.605556</td>
+      <td>990.625000</td>
+      <td>187.527778</td>
+      <td>990.669444</td>
+      <td>0.519444</td>
+      <td>21.052778</td>
+      <td>12.047222</td>
+      <td>515.638889</td>
+      <td>21.330556</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>2023-09-15 14:53:19</td>
+      <td>21.000000</td>
+      <td>14.800000</td>
+      <td>48.500000</td>
+      <td>989.200000</td>
+      <td>173.000000</td>
+      <td>989.200000</td>
+      <td>0.000000</td>
+      <td>20.400000</td>
+      <td>10.300000</td>
+      <td>484.000000</td>
+      <td>21.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>2023-09-15 14:54:02.750000128</td>
+      <td>21.200000</td>
+      <td>14.900000</td>
+      <td>50.475000</td>
+      <td>989.850000</td>
+      <td>180.000000</td>
+      <td>989.850000</td>
+      <td>0.000000</td>
+      <td>20.800000</td>
+      <td>10.775000</td>
+      <td>497.750000</td>
+      <td>21.200000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>2023-09-15 14:54:46.500000</td>
+      <td>21.400000</td>
+      <td>15.250000</td>
+      <td>53.500000</td>
+      <td>990.700000</td>
+      <td>187.500000</td>
+      <td>990.700000</td>
+      <td>0.000000</td>
+      <td>21.100000</td>
+      <td>11.550000</td>
+      <td>521.000000</td>
+      <td>21.300000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>2023-09-15 14:55:30.249999872</td>
+      <td>21.500000</td>
+      <td>16.200000</td>
+      <td>59.700000</td>
+      <td>991.500000</td>
+      <td>194.250000</td>
+      <td>991.500000</td>
+      <td>1.300000</td>
+      <td>21.200000</td>
+      <td>13.200000</td>
+      <td>528.000000</td>
+      <td>21.500000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>2023-09-15 14:56:14</td>
+      <td>21.700000</td>
+      <td>17.700000</td>
+      <td>70.500000</td>
+      <td>992.200000</td>
+      <td>200.000000</td>
+      <td>992.300000</td>
+      <td>2.300000</td>
+      <td>21.700000</td>
+      <td>15.800000</td>
+      <td>538.000000</td>
+      <td>21.700000</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>NaN</td>
+      <td>0.187125</td>
+      <td>0.888266</td>
+      <td>6.532116</td>
+      <td>0.911945</td>
+      <td>7.926398</td>
+      <td>0.920813</td>
+      <td>0.723017</td>
+      <td>0.311206</td>
+      <td>1.674257</td>
+      <td>15.840550</td>
+      <td>0.186424</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>In looking at the summary, it occurs to me that I could estimate the building height simply by using the min and max pressure recorded.  From a calculus standpoint, this would be reasonable, considering that the plot above shows that the pressure change is approximately linear; the finite difference approximation is valid.  I’ll try that before doing the numerical integration.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; Estimate building height using the min/max pressure &quot;&quot;&quot;</span>
+<span class="c1"># set constants</span>
+<span class="n">Rd</span> <span class="o">=</span> <span class="mi">287</span> <span class="c1"># J/kg/K</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mf">9.806</span> <span class="c1"># m/s/s</span>
+<span class="n">T</span> <span class="o">=</span> <span class="n">kestrel_pd</span><span class="p">[</span><span class="s1">&#39;Temperature&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="c1"># C</span>
+<span class="n">P</span> <span class="o">=</span> <span class="n">kestrel_pd</span><span class="p">[</span><span class="s1">&#39;Station Pressure&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="c1"># hPa</span>
+<span class="n">Pmin</span> <span class="o">=</span> <span class="n">kestrel_pd</span><span class="p">[</span><span class="s1">&#39;Station Pressure&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="c1"># hPa</span>
+<span class="n">Pmax</span> <span class="o">=</span> <span class="n">kestrel_pd</span><span class="p">[</span><span class="s1">&#39;Station Pressure&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="c1"># hPa</span>
+
+<span class="c1"># convert to MKS</span>
+<span class="n">T</span> <span class="o">=</span> <span class="n">T</span> <span class="o">+</span> <span class="mf">273.15</span>
+<span class="n">P</span> <span class="o">=</span> <span class="n">P</span> <span class="o">*</span> <span class="mi">100</span>
+<span class="n">Pmin</span> <span class="o">=</span> <span class="n">Pmin</span> <span class="o">*</span> <span class="mi">100</span>
+<span class="n">Pmax</span> <span class="o">=</span> <span class="n">Pmax</span> <span class="o">*</span> <span class="mi">100</span>
+
+<span class="c1"># calculate the change in height</span>
+<span class="n">dP</span> <span class="o">=</span> <span class="n">Pmin</span> <span class="o">-</span> <span class="n">Pmax</span>
+<span class="n">dz</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">Rd</span><span class="o">*</span><span class="n">T</span><span class="o">/</span><span class="n">g</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">dP</span><span class="o">/</span><span class="n">P</span><span class="p">)</span>
+
+<span class="n">m_to_ft</span> <span class="o">=</span> <span class="mf">3.2808399</span> <span class="c1"># ft/m</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The building height is </span><span class="si">{</span><span class="n">dz</span><span class="si">:</span><span class="s2">2.2f</span><span class="si">}</span><span class="s2"> m, or </span><span class="si">{</span><span class="n">dz</span><span class="o">*</span><span class="n">m_to_ft</span><span class="si">:</span><span class="s2">2.2f</span><span class="si">}</span><span class="s2"> ft&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The building height is 26.97 m, or 88.49 ft
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="estimation-by-numerical-integration">
+<h2>Estimation by numerical integration<a class="headerlink" href="#estimation-by-numerical-integration" title="Link to this heading">#</a></h2>
+<p>The above shows that, by a simple method, I estimate the building height at about 88.5 ft, which seems reasonable; the typical height between floors in US buildings is somewhere between 10-15 ft.  This seems to imply that floors have slightly more than 12 ft between them.</p>
+<p>Now I’m going to estimate the building height by examining the changes in height between measurements.</p>
+<p>I’ll use the <code class="docutils literal notranslate"><span class="pre">pandas.diff()</span></code> method to do this.  Note that pandas sets the first dP value to NaN, so I need to decide how to set it; I’ll simply set it to zero.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; Estimate dp &quot;&quot;&quot;</span>
+
+<span class="c1"># calculate the change in pressure between measurements</span>
+<span class="n">kestrel_pd</span><span class="p">[</span><span class="s1">&#39;dP&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kestrel_pd</span><span class="p">[</span><span class="s1">&#39;Station Pressure&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span> <span class="c1"># Pa</span>
+
+<span class="c1"># set the first value to zero (instead of NaN)</span>
+<span class="n">kestrel_pd</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;dP&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># show the first part of the new dP column</span>
+<span class="n">kestrel_pd</span><span class="p">[</span><span class="s1">&#39;dP&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     0.0
+1    30.0
+2   -50.0
+3     0.0
+4     0.0
+Name: dP, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>We also need to average station pressure between consecutive values in order to be consistent with the finite difference.  I’ll use the <code class="docutils literal notranslate"><span class="pre">pandas.shift</span></code> method to accomplish this.  We also need to deal with a NaN value in the first row.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># calculate the average pressure between adjacent measurements</span>
+<span class="n">kestrel_pd</span><span class="p">[</span><span class="s1">&#39;Pavg&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="n">kestrel_pd</span><span class="p">[</span><span class="s1">&#39;Station Pressure&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="n">kestrel_pd</span><span class="p">[</span><span class="s1">&#39;Station Pressure&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="o">*</span><span class="mi">100</span>
+<span class="n">kestrel_pd</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;Pavg&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kestrel_pd</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;Pavg&#39;</span><span class="p">]</span> <span class="c1"># set the first value to the first actual value</span>
+<span class="n">kestrel_pd</span><span class="p">[</span><span class="s1">&#39;Pavg&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    99215.0
+1    99215.0
+2    99205.0
+3    99180.0
+4    99180.0
+Name: Pavg, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; Calculate the changes in height. &quot;&quot;&quot;</span>
+<span class="c1"># calculate using the hypsometric relationship, also converting temperature to K on the fly</span>
+<span class="n">kestrel_pd</span><span class="p">[</span><span class="s1">&#39;dz&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">Rd</span><span class="o">*</span><span class="p">(</span><span class="n">kestrel_pd</span><span class="p">[</span><span class="s1">&#39;Temperature&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mf">273.15</span><span class="p">)</span><span class="o">/</span><span class="n">g</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">kestrel_pd</span><span class="p">[</span><span class="s1">&#39;dP&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">kestrel_pd</span><span class="p">[</span><span class="s1">&#39;Pavg&#39;</span><span class="p">])</span> <span class="c1"># m</span>
+<span class="c1"># show the first few rows of height change</span>
+<span class="n">kestrel_pd</span><span class="p">[</span><span class="s1">&#39;dz&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0   -0.000000
+1   -2.604056
+2    4.342007
+3   -0.000000
+4   -0.000000
+Name: dz, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; Estimate the relative height of each measurement &quot;&quot;&quot;</span>
+
+<span class="c1"># estimated height is the cumulative sum of height changes</span>
+<span class="n">kestrel_pd</span><span class="p">[</span><span class="s1">&#39;z&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kestrel_pd</span><span class="p">[</span><span class="s1">&#39;dz&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span>
+
+<span class="c1"># plot height as a function of time</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">kestrel_pd</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s1">&#39;FORMATTED DATE_TIME&#39;</span><span class="p">,</span> <span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Height [m]&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/85711d469b2238d315043f39e0cde864c6098b008049b8c101855e213796dea7.png" src="../../_images/85711d469b2238d315043f39e0cde864c6098b008049b8c101855e213796dea7.png" />
+</div>
+</div>
+<p>The above plot shows that my estimated height, relative to the ground floor, steadily increased with time, which is consistent with my walking up the stairwell during that time.  The maximum height is estimated to be just under 25 m, whereas the height from the simple estimation method is nearly 27 m.  So there is clearly error in one or the other estimation methods.  Regardless, the two methods are roughly consistent.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./lessons/04_digging_further_into_data_wrangling"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../03_data_science_modules/03_winter_temperature_enso_SOLUTION.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Work-along: El Nino and IN Winter Temperatures</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../05_multidimensional_arrays_also_plotting/05_multidimensional_array_exercise_SOLUTION.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Workalong &amp; Exercise: Multidimensional Arrays</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimating-height">Estimating height</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-collection-process">Data collection process</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thoughts-about-the-data-file">Thoughts about the data file</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploratory-data-analysis">Exploratory data analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimation-by-numerical-integration">Estimation by numerical integration</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Travis A. O'Brien
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <script>
+// Force refresh when navigating back to page from cache
+window.addEventListener('pageshow', function(event) {
+  if (event.persisted) {
+    window.location.reload();
+  }
+});
+// Add timestamp to force browser refresh
+document.addEventListener('DOMContentLoaded', function() {
+  var links = document.querySelectorAll('link[rel="stylesheet"]');
+  links.forEach(function(link) {
+    if (!link.href.includes('?v=')) {
+      link.href += '?v=' + new Date().getTime();
+    }
+  });
+  // Also add cache-busting to images
+  var images = document.querySelectorAll('img');
+  images.forEach(function(img) {
+    if (img.src && !img.src.includes('?v=')) {
+      img.src += '?v=' + new Date().getTime();
+    }
+  });
+});
+</script>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

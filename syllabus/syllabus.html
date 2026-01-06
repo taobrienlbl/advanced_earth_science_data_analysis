@@ -1,0 +1,853 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Syllabus &#8212; Advanced Earth Science Data Analysis</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/header.css?v=415f224a" />
+    <link rel="stylesheet" type="text/css" href="../_static/cache-buster.css?v=5532fd1c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'syllabus/syllabus';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Fundamentals through examples" href="../lessons/01_fundamentals/01_fundamentals.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/dall_e_2023-08-22_16_41_13_an_impressionist.png" class="logo__image only-light" alt="Advanced Earth Science Data Analysis - Home"/>
+    <script>document.write(`<img src="../_static/dall_e_2023-08-22_16_41_13_an_impressionist.png" class="logo__image only-dark" alt="Advanced Earth Science Data Analysis - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Earth Science Data Analysis: Fundamentals</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lessons/01_fundamentals/01_fundamentals.html">Fundamentals through examples</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/01_fundamentals/01a_sound_from_data.html">Sound from Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/01_fundamentals/01b_madhava_pi_calculation.html">Madhava-Leibniz π calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/01_fundamentals/01c_calculating_e.html">Exercise: calculating e</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/01_fundamentals/01d_trig_fucntion.html">Creating trig functions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lessons/02_modules_vscode_git/02_modules_vscode_git.html">Modules, VSCode, and Git</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/02_modules_vscode_git/02_last_class_refresher.html">Warmup: fundamentals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/02_modules_vscode_git/02_download_install.html">Download and Install Python and VSCode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/02_modules_vscode_git/02_new_module.html">Exercise: Creating a module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/02_modules_vscode_git/02_git_workalong.html">Git workalong</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/02_modules_vscode_git/02_looking_ahead.html">Exercise: looking ahead</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lessons/03_data_science_modules/03_data_science_modules.html">Data Science Modules</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/03_data_science_modules/03_install_big_four.html">Install the <code class="docutils literal notranslate"><span class="pre">big_four</span></code> conda environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/03_data_science_modules/03_warmup.html">Warmup: git, vscode, and fundamentals revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/03_data_science_modules/03_big_four_lecture_demo.html">Big Four python Data Science Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/03_data_science_modules/03_winter_temperature_enso.html">Work-along: El Nino and IN Winter Temperatures</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lessons/04_digging_further_into_data_wrangling/04_digging_further_into_data_wrangling.html">Digging Further Into Data Wrangling</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/04_digging_further_into_data_wrangling/04_estimating_building_height.html">Exercise: Estimating Building Height with Pressure</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Earth Science Data Analysis: HPC</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lessons/05_multidimensional_arrays_also_plotting/05_multidimensional_arrays_also_plotting.html">Multidimensional Arrays + Plotting</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/05_multidimensional_arrays_also_plotting/05_setup_git_vscode_on_red.html">Set up GitHub and VS Code on RED Desktop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/05_multidimensional_arrays_also_plotting/05_warmup.html">WARMUP | Data Wrangling</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../lessons/05_multidimensional_arrays_also_plotting/05_multidimensional_array_lecture_notes.html">Work-along: Multidimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/05_multidimensional_arrays_also_plotting/05_multidimensional_array_exercise.html">Workalong &amp; Exercise: Multidimensional Arrays</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lessons/06_advanced_plotting/06_advanced_plotting.html">Advanced Plotting</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/06_advanced_plotting/06_workalong01_advanced_plotting.html">Work-along: Advanced Plotting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/06_advanced_plotting/06_python_environments.html">Work-along: Installing a new Python environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/06_advanced_plotting/06_workalong02_mapping.html">Work-along: Mapping</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lessons/07_parallelization_intro/07_parallelization_intro.html">Intro to Parallelization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/07_parallelization_intro/07_warmup.html">WARMUP | Advanced Plotting &amp; Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/07_parallelization_intro/07_parallelization_overview.html">Parallelization Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/07_parallelization_intro/07_workalong_mpi4py_intro.html">Work-along: Basic parallelization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/07_parallelization_intro/07_exercise.html">Exercise: Animating the weather in parallel</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lessons/08_parallelization_continued/08_parallelization_continued.html">Parallelization Continued</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/08_parallelization_continued/08_workalong_01_simplempi.html">Work-along: Using <code class="docutils literal notranslate"><span class="pre">simplempi</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/08_parallelization_continued/08_collective_communications.html"><em>Collective communications</em> with MPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/08_parallelization_continued/08_workalong_02_parallel_pi.html">Workalong: Madhava pi calculation in parallel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/08_parallelization_continued/08_final_project_work.html">Final Project Work</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lessons/09_machine_learning_intro/09_machine_learning_intro.html">Machine Learning Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/09_machine_learning_intro/09_installing_pytorch.html">Installing pytorch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/09_machine_learning_intro/09_machine_learning_lecture.html">A practical intro to machine learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/09_machine_learning_intro/09_workalong_machine_learning_basics.html">Work-along: Machine Learning Basics</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lessons/10_machine_learning_continued/10_machine_learning_continued.html">Machine Learning Continued</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/10_machine_learning_continued/10_workalong_intro_to_classes.html">Work-along: Intro to <em>classes</em> in Python</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lessons/11_machine_learning_finale/11_machine_learning_finale.html">Machine Learning Finale</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/11_machine_learning_finale/11_apply_ml_to_data.html">Apply ML to Real Data</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lessons/12_spectral_analysis/12_spectral_analysis.html">Spectral Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/12_spectral_analysis/12_fourier_transform_lecture.html">Fourier Transform Lecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/12_spectral_analysis/12_workalong_01_fft.html">Work-along: Working with the FFT</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../lessons/12_spectral_analysis/12_workalong_02_filter.html">Work-along: Simple filtering</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lessons/13_geospatial_intro/13_geospatial_intro.html">Introduction to Geospatial Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/13_geospatial_intro/13_workalong01_california_earthquakes.html">Workalong: Finding Earthquakes in California</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/13_geospatial_intro/13_workalong02_geospatial_plotting.html">Workalong: Plotting geospatial data</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../lessons/14_geospatial_continued/14_geospatial_continued.html">Geospatial Continued</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/14_geospatial_continued/14_IN_snow_trends.html">Exercise: Trends in IN Snow</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../assignments/01a_homework.html">Homework 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assignments/01b_homework.html">Initial Idea for Final Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assignments/02_homework.html">Homework 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assignments/03_homework.html">Homework 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assignments/04a_homework.html">Homework 4a: Chapter 7 Self-Test Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assignments/04b_homework.html">Homework 4b: Get set up with RED Desktop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assignments/05_homework.html">Homework 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assignments/07_homework.html">Homework 7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assignments/08a_homework.html">Homework 08</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assignments/08b_final_project_proposal.html">Final Project Proposal</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Solutions</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../solutions/solutions.html">Exercise solutions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/01_fundamentals/01b_madhava_pi_calculation_SOLUTION.html">Madhava-Leibniz π calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/01_fundamentals/01c_calculating_e_SOLUTION.html">Exercise: calculating e</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/01_fundamentals/01d_trig_fucntion_SOLUTION.html">Creating trig functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/02_modules_vscode_git/02_last_class_refresher_SOLUTION.html">Warmup: fundamentals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/03_data_science_modules/03_warmup_SOLUTION.html">Warmup: git, vscode, and fundamentals revisited</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../lessons/03_data_science_modules/03_winter_temperature_enso_SOLUTION.html">Work-along: El Nino and IN Winter Temperatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/04_digging_further_into_data_wrangling/04_estimating_building_height_SOLUTION.html">Exercise: Estimating Building Height with Pressure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/05_multidimensional_arrays_also_plotting/05_multidimensional_array_exercise_SOLUTION.html">Workalong &amp; Exercise: Multidimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/05_multidimensional_arrays_also_plotting/05_warmup_SOLUTION.html">Warmup: Data Wrangling</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../lessons/06_advanced_plotting/06_workalong01_advanced_plotting_SOLUTION.html">Work-along: Advanced Plotting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/06_advanced_plotting/06_workalong02_mapping_SOLUTION.html">Work-along: Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/07_parallelization_intro/07_warmup_SOLUTION.html">WARMUP | Advanced Plotting &amp; Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/07_parallelization_intro/07_workalong_mpi4py_intro_SOLUTION.html">Work-along: Basic parallelization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/07_parallelization_intro/07_exercise_SOLUTION.html">Exercise: Animating the weather in parallel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/08_parallelization_continued/08_workalong_02_parallel_pi_SOLUTION.html">Exercise: Madhava pi calculation in parallel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/09_machine_learning_intro/09_workalong_machine_learning_basics_SOLUTION.html">Work-along: Machine Learning Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/10_machine_learning_continued/10_workalong_intro_to_classes_SOLUTION.html">Work-along: Intro to <em>classes</em> in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/12_spectral_analysis/12_workalong_01_fft_SOLUTION.html">Work-along: Working with the FFT</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../lessons/12_spectral_analysis/12_workalong_02_filter_SOLUTION.html">Work-along: Simple filtering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/13_geospatial_intro/13_workalong01_california_earthquakes_SOLUTION.html">Workalong: Finding Earthquakes in California</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/13_geospatial_intro/13_workalong02_geospatial_plotting_SOLUTION.html">Workalong: Plotting geospatial data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lessons/14_geospatial_continued/14_IN_snow_trends_SOLUTION.html">Exercise: Trends in IN Snow</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/syllabus/syllabus.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Syllabus</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-this-course">What is this course?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-will-i-learn">What will I learn?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-will-i-learn">How will I learn?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#who-is-teaching-it-and-how-can-i-reach-them">Who is teaching it and how can I reach them?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-will-i-be-graded">How will I be graded?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#active-participation-in-lab-sessions">Active participation in lab sessions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weekly-homework-assignments">Weekly homework assignments</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#final-project">Final project</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-are-assignments-submitted">How are assignments submitted?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-will-i-know-how-im-doing-in-this-course">How will I know how I’m doing in this course?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-about-late-work">What about late work?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-the-prerequisites">What are the prerequisites?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-materials-do-i-need-for-this-course">What materials do I need for this course?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-python">Why Python?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-expected-of-me">What is expected of me?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-if-i-need-accommodations">What if I need accommodations?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-grading-policy">What is the grading policy?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#are-there-any-class-policies">Are there any class policies?</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="syllabus">
+<h1>Syllabus<a class="headerlink" href="#syllabus" title="Link to this heading">#</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>URL to this page: <a class="reference external" href="https://go.iu.edu/8uwq">https://go.iu.edu/8uwq</a></p>
+</div>
+<p>Main course website: <a class="reference external" href="https://obrienta.pages.iu.edu/courses/adv_eart_sci_data_analysis_fall_2025/">https://obrienta.pages.iu.edu</a></p>
+<p>Course github site: <a class="github reference external" href="https://github.com/taobrienlbl/advanced_earth_science_data_analysis">taobrienlbl/advanced_earth_science_data_analysis</a></p>
+<p>Fall 2025 Student Hours (M,Tu,W,Th): <a class="reference external" href="https://outlook.office.com/bookwithme/user/720d05499372402eb10295f8a632eee6&#64;iu.edu/meetingtype/SVRwCe7HMUGxuT6WGxi68g2?anonymous&amp;amp;ismsaljsauthenabled&amp;amp;ep=mLinkFromTile">Book time</a></p>
+<section id="what-is-this-course">
+<h2>What is this course?<a class="headerlink" href="#what-is-this-course" title="Link to this heading">#</a></h2>
+<p>“Advanced Data Analysis for Earth Science” is a graduate-level programming and data analysis course aimed at giving students in environment-related disciplines–like Geology, Atmospheric Science, Physical Geography, Environmental Science, etc.–the technical skills necessary to do high-quality science.</p>
+</section>
+<section id="what-will-i-learn">
+<h2>What will I learn?<a class="headerlink" href="#what-will-i-learn" title="Link to this heading">#</a></h2>
+<p>The main goal of the course is that you leave the course with a strong understanding of how to do rigorous, reproducible, and high-quality programming and data analysis in support of research.  This involves developing a combination of technical skills and programming habits.</p>
+<p>Specifically, you will be able to:</p>
+<ol class="arabic simple">
+<li><p>summarize fundamental programming concepts and how to apply them with Python</p></li>
+<li><p>implement common environmental data analysis tasks, such as reading and writing data, computing basic statistics, curve fitting, and spectral analysis</p></li>
+<li><p>apply machine learning libraries to real data</p></li>
+<li><p>parallelize <em>embarrassingly parallel</em> data processing tasks</p></li>
+<li><p>generate informative publication-quality plots</p></li>
+<li><p>write code in a modular, reusable way</p></li>
+<li><p>design and employ unit tests to minimize the chances that buggy data makes its way into peer-reviewed publications</p></li>
+<li><p>utilize version-control software to maintain research code libraries</p></li>
+<li><p>write data analysis code both in scripts and in Jupyter Notebooks</p></li>
+</ol>
+<p>Note: while the above may sound like a lot for one course, the last four items are topics that will be interwoven through every class.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Week</p></th>
+<th class="head"><p>Lesson</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>01</p></td>
+<td><p><a class="reference internal" href="../lessons/01_fundamentals/01_fundamentals.html"><span class="std std-doc">Fundamentals through examples</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>02</p></td>
+<td><p><a class="reference internal" href="../lessons/02_modules_vscode_git/02_modules_vscode_git.html"><span class="std std-doc">Modules, VSCode, and Git</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>03</p></td>
+<td><p><a class="reference internal" href="../lessons/03_data_science_modules/03_data_science_modules.html"><span class="std std-doc">Data Science Modules</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>04</p></td>
+<td><p><a class="reference internal" href="../lessons/04_digging_further_into_data_wrangling/04_digging_further_into_data_wrangling.html"><span class="std std-doc">Digging Further Into Data Wrangling</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>05</p></td>
+<td><p><a class="reference internal" href="../lessons/05_multidimensional_arrays_also_plotting/05_multidimensional_arrays_also_plotting.html"><span class="std std-doc">Multidimensional Arrays + Plotting</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>06</p></td>
+<td><p><a class="reference internal" href="../lessons/06_advanced_plotting/06_advanced_plotting.html"><span class="std std-doc">Advanced Plotting</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>07</p></td>
+<td><p><a class="reference internal" href="../lessons/07_parallelization_intro/07_parallelization_intro.html"><span class="std std-doc">Intro to Parallelization</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>08</p></td>
+<td><p><a class="reference internal" href="../lessons/08_parallelization_continued/08_parallelization_continued.html"><span class="std std-doc">Parallelization Continued</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>09</p></td>
+<td><p><a class="reference internal" href="../lessons/09_machine_learning_intro/09_machine_learning_intro.html"><span class="std std-doc">Machine Learning Introduction</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p><a class="reference internal" href="../lessons/10_machine_learning_continued/10_machine_learning_continued.html"><span class="std std-doc">Machine Learning Continued</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td><p><a class="reference internal" href="../lessons/11_machine_learning_finale/11_machine_learning_finale.html"><span class="std std-doc">Machine Learning Finale</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>12</p></td>
+<td><p><a class="reference internal" href="../lessons/12_spectral_analysis/12_spectral_analysis.html"><span class="std std-doc">Spectral Analysis</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>13</p></td>
+<td><p><a class="reference internal" href="../lessons/13_geospatial_intro/13_geospatial_intro.html"><span class="std std-doc">Introduction to Geospatial Analysis</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>14</p></td>
+<td><p><a class="reference internal" href="../lessons/14_geospatial_continued/14_geospatial_continued.html"><span class="std std-doc">Geospatial Continued</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="how-will-i-learn">
+<h2>How will I learn?<a class="headerlink" href="#how-will-i-learn" title="Link to this heading">#</a></h2>
+<p>This is a lab-based course, in which you will do a combination of in-class exercises to reinforce concepts and also work to apply concepts learned in class to a final data analysis project (ideally one that is related to your own research!). The class will be one three-hour lab session each week, which will include a small amount of lecture and live demonstration time.</p>
+<p>Learning will be reinforced by weekly readings and/or videos.  There will also be weekly homework assignments that (a) prompt you to summarize the weekly readings/videos, and (b) have you apply concepts from class to real data (in most cases this will be your own research data, but I will provide alternatives if that turns out not to be practical).</p>
+</section>
+<section id="who-is-teaching-it-and-how-can-i-reach-them">
+<h2>Who is teaching it and how can I reach them?<a class="headerlink" href="#who-is-teaching-it-and-how-can-i-reach-them" title="Link to this heading">#</a></h2>
+<p>Prof. Travis A. O’Brien (he/him/his) - I’m a scientist who leads a group of undergraduate, graduate, and postdoctoral researchers focused on understanding what controls year-to-year variability in extreme weather and how this is being affected by climate change (see <a class="reference external" href="https://scholar.google.com/citations?user=LcMrbQYAAAAJ&amp;amp;hl=en">my Google Scholar page</a>). I have been programming in general since 1995 and programming in the sciences since 2005, learning many programming languages along the way: BASIC, C, C++, Fortran, Perl, NCL, Matlab/Octave, BASH, HTML, LaTeX (believe it or not, LaTeX is <a class="reference external" href="https://en.wikipedia.org/wiki/Turing_completeness">Turing complete</a>!), Javascript, Julia, and of course Python.  If it is not obvious from that list, I love programming–it’s sort of meditative for me, and it’s something I do as a hobby in addition to what I do for work.  Along the way, I have written a Python package that is used in numerous fields (see <a class="reference external" href="https://github.com/LBL-EESA/fastkde">fastKDE</a>) and contributed to other software pacakges (see <a class="reference external" href="https://github.com/taobrienlbl">my github page</a>)</p>
+<p>See the link at the top to schedule student hours with me. And in general, if my office door is open, you’re welcome to drop by to chat any time: Geology 4038.</p>
+</section>
+<section id="how-will-i-be-graded">
+<h2>How will I be graded?<a class="headerlink" href="#how-will-i-be-graded" title="Link to this heading">#</a></h2>
+<p>There will be three primary areas that contribute to your grade:</p>
+<ul class="simple">
+<li><p>(40%) active participation in lab sessions</p></li>
+<li><p>(40%) weekly homework assignments</p></li>
+<li><p>(20%) final project</p></li>
+</ul>
+<section id="active-participation-in-lab-sessions">
+<h3>Active participation in lab sessions<a class="headerlink" href="#active-participation-in-lab-sessions" title="Link to this heading">#</a></h3>
+<p>One of the primary ways that I will assess your learning is through direct interactions with you in weekly lab sessions. In general, I’ll assign full points for each day that you attend and actively participate in the lab: as long as you’re making a clear attempt to learn the material.  I may deduct points for a given day if it seems that substantial time was spent not engaged in learning for the course (e.g., if you’re doing homework for another class, etc.).</p>
+<p>If for some reason you are unable to attend lab on a given day, reach out to me in advance and we will work out an alternative.</p>
+</section>
+<section id="weekly-homework-assignments">
+<h3>Weekly homework assignments<a class="headerlink" href="#weekly-homework-assignments" title="Link to this heading">#</a></h3>
+<p>Weekly homework assignments will generally have two parts: (1) a reading summary, and (2) application of new concepts to real data and code.  The homework assignments will always be distributed with a rubric, so the basis for assigning a grade will be clear.</p>
+<p>The assignments will have a clearly-stated set of objectives for you to meet: e.g., “generate a multipanel figure containing a contour plot and a timeseries”, or “create a git repository and push at least two commits”. The rubric will be based on assessing the extent to which those objectives are met.</p>
+<p>In some instances, I may also request peer review, which will also count for points in the homework category.</p>
+</section>
+<section id="final-project">
+<span id="id1"></span><h3>Final project<a class="headerlink" href="#final-project" title="Link to this heading">#</a></h3>
+<p>The final project will consist of research code and Jupyter notebooks in a git repository, along with a well-written ‘README’ file that orients the viewer to the contents of the repository.  Specific requirements for the final project will be given later in the course, but the general goal of the project is to (a) demonstrate that concepts in the course have been applied in your research, and (b) demonstrate that all of the learning goals of the course (see “what will I learn?”) have been met.  A rubric will be provided when the final project is assigned, and peer reviews may be requested.</p>
+<p>The final project will be due no later than the end-time of the final exam that would be scheduled for this class, and it will be due no earlier than midnight of the Sunday before finals week.</p>
+</section>
+<section id="how-are-assignments-submitted">
+<h3>How are assignments submitted?<a class="headerlink" href="#how-are-assignments-submitted" title="Link to this heading">#</a></h3>
+<p>Specific submission instructions will be provided for each assignment; (I’ll typically use Canvas).</p>
+<p>In-class discussion exercises will be collected and evaluated in class.</p>
+</section>
+<section id="how-will-i-know-how-im-doing-in-this-course">
+<h3>How will I know how I’m doing in this course?<a class="headerlink" href="#how-will-i-know-how-im-doing-in-this-course" title="Link to this heading">#</a></h3>
+<p>Grades will usually be posted in Canvas within two weeks of the due date. Since Canvas keeps track of all of your grades, you should always be able to calculate your current grade in the course. If you need assistance, please contact me.</p>
+</section>
+<section id="what-about-late-work">
+<h3>What about late work?<a class="headerlink" href="#what-about-late-work" title="Link to this heading">#</a></h3>
+<p>All late assignments will be subject to a 40% penalty unless arrangements are made in advance of the due date: the grade for late assignments will therefore be calculated as 0.6 times the actual grade given.  Assignments turned in after the last day of the semester will not be counted unless arrangements have been made for an incomplete, consistent with <a class="reference external" href="https://bulletins.iu.edu/iu/gradschool/2024-2025/policies/grading.shtml">IU policies on incompletes</a>.</p>
+</section>
+</section>
+<section id="what-are-the-prerequisites">
+<h2>What are the prerequisites?<a class="headerlink" href="#what-are-the-prerequisites" title="Link to this heading">#</a></h2>
+<p>This course has no formal prerequisites, though it would probably be best if you have at least some programming experience (even if, for example, its just that you used matlab in an engineering course once): this will be a fast-paced course, and it may be difficult to keep up if this is the first time you’ve done any programming.  Reach out to me if you have any concerns.</p>
+</section>
+<section id="what-materials-do-i-need-for-this-course">
+<h2>What materials do I need for this course?<a class="headerlink" href="#what-materials-do-i-need-for-this-course" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(^*\)</span> A laptop, for use in lab</p></li>
+<li><p>the course textbook: <a class="reference external" href="https://www.cambridge.org/highereducation/books/an-introduction-to-python-programming-for-scientists-and-engineers/271C02A02E8B775066316E92A68E187A#overview">An Introduction to Python Programming for Scientists and Engineers</a>, ISBN 9781108701129 or 9781108571531 (digital)</p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(^*\)</span> if you don’t have a laptop, reach out to me and we will figure something out.</p>
+</section>
+<section id="why-python">
+<h2>Why Python?<a class="headerlink" href="#why-python" title="Link to this heading">#</a></h2>
+<p><em>Why Python and not [Lisp, Fortran, Matlab, C++, Julia, etc.]?</em> There are a number of reasons I’m choosing Python as the language for this class:</p>
+<ol class="arabic simple">
+<li><p>It is free</p></li>
+<li><p>It is used by many scientists and engineers</p></li>
+<li><p>It could help you get a data scientist job later on</p></li>
+<li><p>There is an enormous community of people who offer code–for free–that you can easily make use of</p></li>
+<li><p>Once you know one programming language, you can pick up another pretty easily, so why not start here?</p></li>
+<li><p>I have about 12 years of experience with Python on a nearly daily basis</p></li>
+<li><p>It can be used as a ‘glue’ language - e.g., making use of external code written in Fortran, C/C++, R, Julia, and probably some others I’m not immediately thinking of.</p></li>
+</ol>
+</section>
+<section id="what-is-expected-of-me">
+<h2>What is expected of me?<a class="headerlink" href="#what-is-expected-of-me" title="Link to this heading">#</a></h2>
+<p>In this class, communication and consistent effort are absolutely important.</p>
+<p><strong>Communication:</strong> Please keep me informed if you are facing any challenges, if something about the class is not working well for you, if you have questions, if you want to talk about your career, etc. The pandemic continues to be challenging, and I welcome (and urge) you to contact me at any time. My preferred mode of contact is canvas e-mail, and I’m generally very fast to respond.  I’ll work with you to set up a time for a meeting.</p>
+<p><strong>Consistency:</strong> Doing well in this class requires consistently engaging in the class: doing homework assignments, attending labs, engaging in discussions, etc.  The readings and homework assignments are generally moderate, but they’re frequent and can really add up.  If you start to fall behind, don’t worry: I want to make sure you can succeed in this class. Reach out to me and we can work on a plan to get back on track.</p>
+<p><strong>Effort:</strong> This class will require consistent effort.  You should   anticipate needing to spend at 6–8 hours <span class="math notranslate nohighlight">\(^*\)</span> each week in addition to lecture.</p>
+<p><span class="math notranslate nohighlight">\(^*\)</span> If you are finding that you’re consistently needing to spend more than 6–8 hours each week on work outside lecture time, please let me know!</p>
+</section>
+<section id="what-if-i-need-accommodations">
+<h2>What if I need accommodations?<a class="headerlink" href="#what-if-i-need-accommodations" title="Link to this heading">#</a></h2>
+<p>Every attempt will be made to accommodate students with disabilities (e.g. mental health, learning, chronic health, physical, hearing, vision, neurological, etc.). You must have established your eligibility for support services through the appropriate office that services students with disabilities. Note that services are confidential, may take time to put in place, and are forward moving. Captions and alternate media for print materials may take three or more weeks to get produced. Please contact the Accessible Educational Services (AES) at 812-855-7578 or <a class="reference external" href="mailto:iubaes&#37;&#52;&#48;iu&#46;edu">iubaes<span>&#64;</span>iu<span>&#46;</span>edu</a> as soon as possible if accommodations are needed. The office is located in Eigenmann Hall #001 (1900 E. 10th St). Walk-ins are welcome, 8 a.m. to 5 p.m. Monday through Friday. You can also locate a variety of campus resources for students and visitors who need assistance at <a class="reference external" href="https://studentlife.indiana.edu/care-advocacy/iub-aes/index.html">https://studentlife.indiana.edu/care-advocacy/iub-aes/index.html</a>.</p>
+</section>
+<section id="what-is-the-grading-policy">
+<h2>What is the grading policy?<a class="headerlink" href="#what-is-the-grading-policy" title="Link to this heading">#</a></h2>
+<p>The official breakdown of percentages is given in “How will I be graded?” and the following details the policy for how a final grade will be assigned. It is written in great detail so that there is no question about how/when grades are assigned, augmented, or reduced.  At my discretion, there may be exceptions to the following policies to accommodate extenuating circumstances, but exceptions will only be granted if they are requested before a given assignment is due.</p>
+<p>During the semester, I may consider modify the basis of the grading for the course, but I will only do so after talking with you as a class, allowing some form of anonymous input (e.g., a google form), and holding a formal and unanimous vote.  If I seek to change the grading basis, it will only be to benefit you in some way, so it is important to me that I have your input to make sure that any change is in fact beneficial.</p>
+<p><strong>Final Grade</strong></p>
+<p>The final grade for the course will be the sum of percentages from each of the above categories, with any extra credit applied.  No individual assignment or exam will be curved.  At the end of the course, and at my discretion, the grading scale may be adjusted (only downward) such that the threshold for receiving a given grade is lowered. The grading scale will not be shifted to the detriment of any student.  Percentages will be rounded prior to assigning grades. The following table provides the highest thresholds that will be applied to achieve a given letter grade for the course:</p>
+<p>98-100% A+</p>
+<p>93-97% A</p>
+<p>90-92% A-</p>
+<p>87-89% B+</p>
+<p>83-86% B</p>
+<p>80-82% B-</p>
+<p>77-79% C+</p>
+<p>73-76% C</p>
+<p>70-72% C-</p>
+<p>67-69% D+</p>
+<p>63-66% D</p>
+<p>60-62% D-</p>
+<p>0-59% F</p>
+</section>
+<section id="are-there-any-class-policies">
+<h2>Are there any class policies?<a class="headerlink" href="#are-there-any-class-policies" title="Link to this heading">#</a></h2>
+<p>Students are expected to adhere to the IU <a class="reference external" href="https://studentcode.iu.edu/responsibilities/academic-misconduct.html">Code of Student Rights, Responsibilities, and Conduct</a>. Any work in this course that is deemed to be a product of academic dishonesty will receive an automatic 0, and I will refer any involved students to the Office of Student Conduct.  The following outlines some of the course-specific policies regarding academic honesty.</p>
+<p>Academic Integrity: Academic misconduct is defined as any activity that tends to undermine the academic integrity of the institution and includes: cheating, fabrication, plagiarism, interference, violation of course rules and facilitating academic dishonesty. When you submit an assignment with your name on it, you are signifying that the work contained therein is yours, unless otherwise cited or referenced. Any ideas or materials taken from another source for either written or oral use must be fully acknowledged. Sharing or receiving information about the content of assignments via apps such as GroupMe constitutes academic misconduct. In addition, posting answers to quizzes/exams or assignments or downloading/copying them from online sources is considered academic misconduct. All suspected violations of the Code will be reported to the Dean of Students (Office of Student Conduct) and handled according to University policies. Sanctions for academic misconduct may include a failing grade on the assignment, reduction in your final course grade, and a failing grade in the course, among other possibilities. If you are unsure about the expectations for completing an assignment or taking a test or exam, be sure to seek clarification from your instructor in advance.</p>
+<p>Homework: Students are strongly encouraged to work in groups on homework assignments, however all work that is turned in must be entirely the student’s own.  Specifically, I draw the ethical/unethical line for homework assignments at direct copying of assignments. If I find that answers from two or more homework assignments are implausibly identical, all assignments involved will receive an automatic 0 and the student(s) will be referred to the Office of Student Conduct.</p>
+<p>Written Assignments: The same policies for homework assignments apply to any course projects.  In addition, plagarism should be strictly avoided.  Students should be sure to cite any sources used and to quote any text (paraphrased or direct quoted) that is not the student’s own.  Students should consult with me if uncertain about what constitutes <a class="reference external" href="https://tedfrick.sitehost.iu.edu/plagiarism/index2.html">plagiarism</a>. If a written assignment is found to be plagiarized in any way, that assignment will receive an automatic 0 and the student(s) will be referred to the Office of Student Conduct.</p>
+<p>Note selling: Several commercial services have approached students regarding access to class notes/study guides/exams. Providing instructor’s notes/study guides or uploading course assignments to these sites in exchange for access to materials for other courses is not permitted. Violations of this policy will be reported to the Dean of Students as academic misconduct (violation of course rules). Sanctions for academic misconduct may include a failing grade on the assignment for which the notes/study guides or assignments are being uploaded, a reduction in your final course grade, or a failing grade in the course, among other possibilities. Additionally, you should know that selling a faculty member’s notes/study guides individually or on behalf of one of these services using IU email or via Canvas may also constitute a violation of IU information technology and IU intellectual property policies; additional consequences may result.</p>
+<p>Online course materials: The faculty member teaching this course holds the exclusive right to distribute, modify, post, and reproduce course materials, including all written materials, study guides, lectures, assignments, exercises, and exams. Some of the course content may be downloadable for students who may only have intermittent access to the internet, but you should not distribute, post, or alter the faculty member’s intellectual property. While you are permitted to take notes on the online materials and lectures posted for this course for your personal use, you are not permitted to re-post in another forum, distribute, or reproduce content from this course without the express written permission of the faculty member. Online class or discussion sessions should not be recorded individually by students and recordings of class sessions should reposted or distributed in any other forum. Violations of this course rule will be reported to the appropriate university offices and officials, including to the Dean of Students as academic misconduct.</p>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./syllabus"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="right-next"
+       href="../lessons/01_fundamentals/01_fundamentals.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Fundamentals through examples</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-this-course">What is this course?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-will-i-learn">What will I learn?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-will-i-learn">How will I learn?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#who-is-teaching-it-and-how-can-i-reach-them">Who is teaching it and how can I reach them?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-will-i-be-graded">How will I be graded?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#active-participation-in-lab-sessions">Active participation in lab sessions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weekly-homework-assignments">Weekly homework assignments</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#final-project">Final project</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-are-assignments-submitted">How are assignments submitted?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-will-i-know-how-im-doing-in-this-course">How will I know how I’m doing in this course?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-about-late-work">What about late work?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-the-prerequisites">What are the prerequisites?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-materials-do-i-need-for-this-course">What materials do I need for this course?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-python">Why Python?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-expected-of-me">What is expected of me?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-if-i-need-accommodations">What if I need accommodations?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-grading-policy">What is the grading policy?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#are-there-any-class-policies">Are there any class policies?</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Travis A. O'Brien
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <script>
+// Force refresh when navigating back to page from cache
+window.addEventListener('pageshow', function(event) {
+  if (event.persisted) {
+    window.location.reload();
+  }
+});
+// Add timestamp to force browser refresh
+document.addEventListener('DOMContentLoaded', function() {
+  var links = document.querySelectorAll('link[rel="stylesheet"]');
+  links.forEach(function(link) {
+    if (!link.href.includes('?v=')) {
+      link.href += '?v=' + new Date().getTime();
+    }
+  });
+  // Also add cache-busting to images
+  var images = document.querySelectorAll('img');
+  images.forEach(function(img) {
+    if (img.src && !img.src.includes('?v=')) {
+      img.src += '?v=' + new Date().getTime();
+    }
+  });
+});
+</script>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

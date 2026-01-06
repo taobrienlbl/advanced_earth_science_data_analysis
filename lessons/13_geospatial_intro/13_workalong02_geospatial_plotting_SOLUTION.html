@@ -1,0 +1,1257 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Workalong: Plotting geospatial data &#8212; Advanced Earth Science Data Analysis</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/header.css?v=415f224a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/cache-buster.css?v=5532fd1c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lessons/13_geospatial_intro/13_workalong02_geospatial_plotting_SOLUTION';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Exercise: Trends in IN Snow" href="../14_geospatial_continued/14_IN_snow_trends_SOLUTION.html" />
+    <link rel="prev" title="Workalong: Finding Earthquakes in California" href="13_workalong01_california_earthquakes_SOLUTION.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../syllabus/syllabus.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/dall_e_2023-08-22_16_41_13_an_impressionist.png" class="logo__image only-light" alt="Advanced Earth Science Data Analysis - Home"/>
+    <script>document.write(`<img src="../../_static/dall_e_2023-08-22_16_41_13_an_impressionist.png" class="logo__image only-dark" alt="Advanced Earth Science Data Analysis - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Earth Science Data Analysis: Fundamentals</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../01_fundamentals/01_fundamentals.html">Fundamentals through examples</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../01_fundamentals/01a_sound_from_data.html">Sound from Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01_fundamentals/01b_madhava_pi_calculation.html">Madhava-Leibniz π calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01_fundamentals/01c_calculating_e.html">Exercise: calculating e</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01_fundamentals/01d_trig_fucntion.html">Creating trig functions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../02_modules_vscode_git/02_modules_vscode_git.html">Modules, VSCode, and Git</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../02_modules_vscode_git/02_last_class_refresher.html">Warmup: fundamentals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02_modules_vscode_git/02_download_install.html">Download and Install Python and VSCode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02_modules_vscode_git/02_new_module.html">Exercise: Creating a module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02_modules_vscode_git/02_git_workalong.html">Git workalong</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02_modules_vscode_git/02_looking_ahead.html">Exercise: looking ahead</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../03_data_science_modules/03_data_science_modules.html">Data Science Modules</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../03_data_science_modules/03_install_big_four.html">Install the <code class="docutils literal notranslate"><span class="pre">big_four</span></code> conda environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03_data_science_modules/03_warmup.html">Warmup: git, vscode, and fundamentals revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03_data_science_modules/03_big_four_lecture_demo.html">Big Four python Data Science Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03_data_science_modules/03_winter_temperature_enso.html">Work-along: El Nino and IN Winter Temperatures</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../04_digging_further_into_data_wrangling/04_digging_further_into_data_wrangling.html">Digging Further Into Data Wrangling</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../04_digging_further_into_data_wrangling/04_estimating_building_height.html">Exercise: Estimating Building Height with Pressure</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Earth Science Data Analysis: HPC</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../05_multidimensional_arrays_also_plotting/05_multidimensional_arrays_also_plotting.html">Multidimensional Arrays + Plotting</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../05_multidimensional_arrays_also_plotting/05_setup_git_vscode_on_red.html">Set up GitHub and VS Code on RED Desktop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../05_multidimensional_arrays_also_plotting/05_warmup.html">WARMUP | Data Wrangling</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../05_multidimensional_arrays_also_plotting/05_multidimensional_array_lecture_notes.html">Work-along: Multidimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../05_multidimensional_arrays_also_plotting/05_multidimensional_array_exercise.html">Workalong &amp; Exercise: Multidimensional Arrays</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../06_advanced_plotting/06_advanced_plotting.html">Advanced Plotting</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../06_advanced_plotting/06_workalong01_advanced_plotting.html">Work-along: Advanced Plotting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../06_advanced_plotting/06_python_environments.html">Work-along: Installing a new Python environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../06_advanced_plotting/06_workalong02_mapping.html">Work-along: Mapping</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../07_parallelization_intro/07_parallelization_intro.html">Intro to Parallelization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../07_parallelization_intro/07_warmup.html">WARMUP | Advanced Plotting &amp; Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_parallelization_intro/07_parallelization_overview.html">Parallelization Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_parallelization_intro/07_workalong_mpi4py_intro.html">Work-along: Basic parallelization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_parallelization_intro/07_exercise.html">Exercise: Animating the weather in parallel</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../08_parallelization_continued/08_parallelization_continued.html">Parallelization Continued</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../08_parallelization_continued/08_workalong_01_simplempi.html">Work-along: Using <code class="docutils literal notranslate"><span class="pre">simplempi</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../08_parallelization_continued/08_collective_communications.html"><em>Collective communications</em> with MPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../08_parallelization_continued/08_workalong_02_parallel_pi.html">Workalong: Madhava pi calculation in parallel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../08_parallelization_continued/08_final_project_work.html">Final Project Work</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../09_machine_learning_intro/09_machine_learning_intro.html">Machine Learning Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../09_machine_learning_intro/09_installing_pytorch.html">Installing pytorch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../09_machine_learning_intro/09_machine_learning_lecture.html">A practical intro to machine learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../09_machine_learning_intro/09_workalong_machine_learning_basics.html">Work-along: Machine Learning Basics</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../10_machine_learning_continued/10_machine_learning_continued.html">Machine Learning Continued</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../10_machine_learning_continued/10_workalong_intro_to_classes.html">Work-along: Intro to <em>classes</em> in Python</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../11_machine_learning_finale/11_machine_learning_finale.html">Machine Learning Finale</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../11_machine_learning_finale/11_apply_ml_to_data.html">Apply ML to Real Data</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../12_spectral_analysis/12_spectral_analysis.html">Spectral Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../12_spectral_analysis/12_fourier_transform_lecture.html">Fourier Transform Lecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../12_spectral_analysis/12_workalong_01_fft.html">Work-along: Working with the FFT</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../12_spectral_analysis/12_workalong_02_filter.html">Work-along: Simple filtering</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="13_geospatial_intro.html">Introduction to Geospatial Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="13_workalong01_california_earthquakes.html">Workalong: Finding Earthquakes in California</a></li>
+<li class="toctree-l2"><a class="reference internal" href="13_workalong02_geospatial_plotting.html">Workalong: Plotting geospatial data</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../14_geospatial_continued/14_geospatial_continued.html">Geospatial Continued</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../14_geospatial_continued/14_IN_snow_trends.html">Exercise: Trends in IN Snow</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/01a_homework.html">Homework 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/01b_homework.html">Initial Idea for Final Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/02_homework.html">Homework 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/03_homework.html">Homework 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/04a_homework.html">Homework 4a: Chapter 7 Self-Test Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/04b_homework.html">Homework 4b: Get set up with RED Desktop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/05_homework.html">Homework 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/07_homework.html">Homework 7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/08a_homework.html">Homework 08</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/08b_final_project_proposal.html">Final Project Proposal</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Solutions</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../solutions/solutions.html">Exercise solutions</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../01_fundamentals/01b_madhava_pi_calculation_SOLUTION.html">Madhava-Leibniz π calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01_fundamentals/01c_calculating_e_SOLUTION.html">Exercise: calculating e</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01_fundamentals/01d_trig_fucntion_SOLUTION.html">Creating trig functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02_modules_vscode_git/02_last_class_refresher_SOLUTION.html">Warmup: fundamentals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03_data_science_modules/03_warmup_SOLUTION.html">Warmup: git, vscode, and fundamentals revisited</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../03_data_science_modules/03_winter_temperature_enso_SOLUTION.html">Work-along: El Nino and IN Winter Temperatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../04_digging_further_into_data_wrangling/04_estimating_building_height_SOLUTION.html">Exercise: Estimating Building Height with Pressure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../05_multidimensional_arrays_also_plotting/05_multidimensional_array_exercise_SOLUTION.html">Workalong &amp; Exercise: Multidimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../05_multidimensional_arrays_also_plotting/05_warmup_SOLUTION.html">Warmup: Data Wrangling</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../06_advanced_plotting/06_workalong01_advanced_plotting_SOLUTION.html">Work-along: Advanced Plotting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../06_advanced_plotting/06_workalong02_mapping_SOLUTION.html">Work-along: Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_parallelization_intro/07_warmup_SOLUTION.html">WARMUP | Advanced Plotting &amp; Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_parallelization_intro/07_workalong_mpi4py_intro_SOLUTION.html">Work-along: Basic parallelization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_parallelization_intro/07_exercise_SOLUTION.html">Exercise: Animating the weather in parallel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../08_parallelization_continued/08_workalong_02_parallel_pi_SOLUTION.html">Exercise: Madhava pi calculation in parallel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../09_machine_learning_intro/09_workalong_machine_learning_basics_SOLUTION.html">Work-along: Machine Learning Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../10_machine_learning_continued/10_workalong_intro_to_classes_SOLUTION.html">Work-along: Intro to <em>classes</em> in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../12_spectral_analysis/12_workalong_01_fft_SOLUTION.html">Work-along: Working with the FFT</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../12_spectral_analysis/12_workalong_02_filter_SOLUTION.html">Work-along: Simple filtering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="13_workalong01_california_earthquakes_SOLUTION.html">Workalong: Finding Earthquakes in California</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Workalong: Plotting geospatial data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14_geospatial_continued/14_IN_snow_trends_SOLUTION.html">Exercise: Trends in IN Snow</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/lessons/13_geospatial_intro/13_workalong02_geospatial_plotting_SOLUTION.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Workalong: Plotting geospatial data</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-rioxarray">Installing <code class="docutils literal notranslate"><span class="pre">rioxarray</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workalong">Workalong</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="workalong-plotting-geospatial-data">
+<h1>Workalong: Plotting geospatial data<a class="headerlink" href="#workalong-plotting-geospatial-data" title="Link to this heading">#</a></h1>
+<p>This workalong shows how to use <code class="docutils literal notranslate"><span class="pre">rioxarray</span></code> to read a raster file (a GeoTIFF in this case) to add topography to our plot.  It also shows some tricks for getting good-looking topo plots.</p>
+<section id="installing-rioxarray">
+<h2>Installing <code class="docutils literal notranslate"><span class="pre">rioxarray</span></code><a class="headerlink" href="#installing-rioxarray" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Open a terminal</p></li>
+<li><p>Load conda <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">conda</span></code></p></li>
+<li><p>Load your environment: <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">/N/slate/$USER/conda_envs/easg690</span></code></p></li>
+<li><p>Install rioxarray: <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">--solver</span> <span class="pre">libmamba</span> <span class="pre">rioxarray</span></code></p></li>
+</ol>
+</section>
+<section id="workalong">
+<h2>Workalong<a class="headerlink" href="#workalong" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; Import libraries &quot;&quot;&quot;</span>
+
+<span class="c1"># tell PROJ where to find the data files</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyproj</span><span class="w"> </span><span class="kn">import</span> <span class="n">datadir</span>
+<span class="n">datadir</span><span class="o">.</span><span class="n">set_data_dir</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;/N/slate/</span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;USER&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/conda_envs/easg690/share/proj&quot;</span><span class="p">)</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">geopandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gpd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">mpl</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">rioxarray</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">cartopy</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">cmocean</span>
+
+<span class="n">mpl</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;seaborn-v0_8-poster&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; Load the earthquake data from the earlier exercise. &quot;&quot;&quot;</span>
+<span class="n">data_file</span> <span class="o">=</span> <span class="s2">&quot;ca_earthquakes.shp.zip&quot;</span>
+
+<span class="c1"># Load the data into a GeoDataFrame</span>
+<span class="n">ca_earthquakes_gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">data_file</span><span class="p">)</span>
+<span class="n">ca_earthquakes_gdf</span><span class="o">.</span><span class="n">plot</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/70a4db00db469e121deb009c1a852f261d4f375045728e639bfcbc2f3d44495d.png" src="../../_images/70a4db00db469e121deb009c1a852f261d4f375045728e639bfcbc2f3d44495d.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; Load the topo / bathymetry data. &quot;&quot;&quot;</span>
+
+<span class="c1"># set the filepath</span>
+<span class="n">topo_bathy_path</span> <span class="o">=</span> <span class="s2">&quot;https://github.com/taobrienlbl/advanced_earth_science_data_analysis/raw/09188e9e6a0cf230f8473c0ae95d2e1b9079df3a/lessons/13_geospatial_intro/data/western_us_topo_bathy_subset.tiff&quot;</span>
+
+<span class="c1"># Load the data with rasterio</span>
+<span class="n">topo_bathy_rxr</span> <span class="o">=</span> <span class="n">rioxarray</span><span class="o">.</span><span class="n">open_rasterio</span><span class="p">(</span><span class="n">topo_bathy_path</span><span class="p">)</span>
+<span class="n">topo_bathy_rxr</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base rgba(0, 0, 0, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, white)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 15))
+  );
+}
+
+html[theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"],
+body.vscode-dark {
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base, rgba(255, 255, 255, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, #111111)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 15))
+  );
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 0 20px 0 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: inline-block;
+  opacity: 0;
+  height: 0;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+  border: 2px solid transparent !important;
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:focus + label {
+  border: 2px solid var(--xr-font-color0) !important;
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: "►";
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: "▼";
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: "(";
+}
+
+.xr-dim-list:after {
+  content: ")";
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ",";
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  border-color: var(--xr-background-color-row-odd);
+  margin-bottom: 0;
+  padding-top: 2px;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+  border-color: var(--xr-background-color-row-even);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  border-top: 2px dotted var(--xr-background-color);
+  padding-bottom: 20px !important;
+  padding-top: 10px !important;
+}
+
+.xr-var-attrs-in + label,
+.xr-var-data-in + label,
+.xr-index-data-in + label {
+  padding: 0 1px;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-data > pre,
+.xr-index-data > pre,
+.xr-var-data > table > tbody > tr {
+  background-color: transparent !important;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.xr-var-attrs-in:checked + label > .xr-icon-file-text2,
+.xr-var-data-in:checked + label > .xr-icon-database,
+.xr-index-data-in:checked + label > .xr-icon-database {
+  color: var(--xr-font-color0);
+  filter: drop-shadow(1px 1px 5px var(--xr-font-color2));
+  stroke-width: 0.8px;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.DataArray (band: 1, y: 673, x: 703)&gt; Size: 2MB
+[473119 values with dtype=float32]
+Coordinates:
+  * band         (band) int64 8B 1
+  * x            (x) float64 6kB -126.6 -126.5 -126.5 ... -114.9 -114.9 -114.9
+  * y            (y) float64 5kB 43.81 43.79 43.78 43.76 ... 32.64 32.63 32.61
+    spatial_ref  int64 8B 0
+Attributes:
+    DataType:         Generic
+    AREA_OR_POINT:    Area
+    SourceBandIndex:  0
+    scale_factor:     1.0
+    add_offset:       0.0</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'></div><ul class='xr-dim-list'><li><span class='xr-has-index'>band</span>: 1</li><li><span class='xr-has-index'>y</span>: 673</li><li><span class='xr-has-index'>x</span>: 703</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-5345f7b1-bf3f-4be2-bb8e-3161b641d2e2' class='xr-array-in' type='checkbox' checked><label for='section-5345f7b1-bf3f-4be2-bb8e-3161b641d2e2' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>...</span></div><div class='xr-array-data'><pre>[473119 values with dtype=float32]</pre></div></div></li><li class='xr-section-item'><input id='section-3bed5b65-53a1-4114-a8af-a14e75ef2177' class='xr-section-summary-in' type='checkbox'  checked><label for='section-3bed5b65-53a1-4114-a8af-a14e75ef2177' class='xr-section-summary' >Coordinates: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>band</span></div><div class='xr-var-dims'>(band)</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>1</div><input id='attrs-0bdae651-4f7d-4fa7-a604-85f0c4d761fc' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-0bdae651-4f7d-4fa7-a604-85f0c4d761fc' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-90d20bb7-577b-481a-bff4-028d73327f01' class='xr-var-data-in' type='checkbox'><label for='data-90d20bb7-577b-481a-bff4-028d73327f01' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([1])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>x</span></div><div class='xr-var-dims'>(x)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-126.6 -126.5 ... -114.9 -114.9</div><input id='attrs-5abf7038-d83f-4e69-8638-cf2f3656ea23' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-5abf7038-d83f-4e69-8638-cf2f3656ea23' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-bcbce27a-5ae4-479a-aff1-609d1a563fa1' class='xr-var-data-in' type='checkbox'><label for='data-bcbce27a-5ae4-479a-aff1-609d1a563fa1' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([-126.558337, -126.54167 , -126.525003, ..., -114.891667, -114.875   ,
+       -114.858333], shape=(703,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>y</span></div><div class='xr-var-dims'>(y)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>43.81 43.79 43.78 ... 32.63 32.61</div><input id='attrs-e466bf8e-35cd-437e-9930-52667194169c' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-e466bf8e-35cd-437e-9930-52667194169c' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-a8cb3b75-7147-44b7-80e5-0b9d8baeb8a2' class='xr-var-data-in' type='checkbox'><label for='data-a8cb3b75-7147-44b7-80e5-0b9d8baeb8a2' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([43.808337, 43.79167 , 43.775003, ..., 32.641667, 32.625   , 32.608333],
+      shape=(673,))</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>spatial_ref</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>int64</div><div class='xr-var-preview xr-preview'>0</div><input id='attrs-f7109898-bd03-45f9-95ae-cfab3bcb7245' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-f7109898-bd03-45f9-95ae-cfab3bcb7245' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f720dab5-23cd-42f8-96ce-76f177f98136' class='xr-var-data-in' type='checkbox'><label for='data-f720dab5-23cd-42f8-96ce-76f177f98136' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>crs_wkt :</span></dt><dd>GEOGCS[&quot;WGS 84&quot;,DATUM[&quot;WGS_1984&quot;,SPHEROID[&quot;WGS 84&quot;,6378137,298.257223563,AUTHORITY[&quot;EPSG&quot;,&quot;7030&quot;]],AUTHORITY[&quot;EPSG&quot;,&quot;6326&quot;]],PRIMEM[&quot;Greenwich&quot;,0,AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]],UNIT[&quot;degree&quot;,0.0174532925199433,AUTHORITY[&quot;EPSG&quot;,&quot;9122&quot;]],AXIS[&quot;Latitude&quot;,NORTH],AXIS[&quot;Longitude&quot;,EAST],AUTHORITY[&quot;EPSG&quot;,&quot;4326&quot;]]</dd><dt><span>semi_major_axis :</span></dt><dd>6378137.0</dd><dt><span>semi_minor_axis :</span></dt><dd>6356752.314245179</dd><dt><span>inverse_flattening :</span></dt><dd>298.257223563</dd><dt><span>reference_ellipsoid_name :</span></dt><dd>WGS 84</dd><dt><span>longitude_of_prime_meridian :</span></dt><dd>0.0</dd><dt><span>prime_meridian_name :</span></dt><dd>Greenwich</dd><dt><span>geographic_crs_name :</span></dt><dd>WGS 84</dd><dt><span>horizontal_datum_name :</span></dt><dd>World Geodetic System 1984</dd><dt><span>grid_mapping_name :</span></dt><dd>latitude_longitude</dd><dt><span>spatial_ref :</span></dt><dd>GEOGCS[&quot;WGS 84&quot;,DATUM[&quot;WGS_1984&quot;,SPHEROID[&quot;WGS 84&quot;,6378137,298.257223563,AUTHORITY[&quot;EPSG&quot;,&quot;7030&quot;]],AUTHORITY[&quot;EPSG&quot;,&quot;6326&quot;]],PRIMEM[&quot;Greenwich&quot;,0,AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]],UNIT[&quot;degree&quot;,0.0174532925199433,AUTHORITY[&quot;EPSG&quot;,&quot;9122&quot;]],AXIS[&quot;Latitude&quot;,NORTH],AXIS[&quot;Longitude&quot;,EAST],AUTHORITY[&quot;EPSG&quot;,&quot;4326&quot;]]</dd><dt><span>GeoTransform :</span></dt><dd>-126.56667007429421 0.016666671619613663 0.0 43.81667 0.0 -0.01666667161961366</dd></dl></div><div class='xr-var-data'><pre>array(0)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-d0b0d3ba-4c24-4b48-b6e1-cf8a6c9250b9' class='xr-section-summary-in' type='checkbox'  ><label for='section-d0b0d3ba-4c24-4b48-b6e1-cf8a6c9250b9' class='xr-section-summary' >Indexes: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>band</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-d1555e19-88e1-44c8-a751-6351c56abbef' class='xr-index-data-in' type='checkbox'/><label for='index-d1555e19-88e1-44c8-a751-6351c56abbef' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([1], dtype=&#x27;int64&#x27;, name=&#x27;band&#x27;))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>x</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-d208edf9-70db-4da2-8773-f778db6cbf92' class='xr-index-data-in' type='checkbox'/><label for='index-d208edf9-70db-4da2-8773-f778db6cbf92' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([ -126.5583367384844, -126.54167006686478, -126.52500339524518,
+       -126.50833672362556, -126.49167005200594, -126.47500338038633,
+       -126.45833670876672,  -126.4416700371471, -126.42500336552749,
+       -126.40833669390787,
+       ...
+       -115.00833330609213, -114.99166663447252,  -114.9749999628529,
+       -114.95833329123329, -114.94166661961367, -114.92499994799407,
+       -114.90833327637445, -114.89166660475483, -114.87499993313523,
+       -114.85833326151561],
+      dtype=&#x27;float64&#x27;, name=&#x27;x&#x27;, length=703))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>y</div></div><div class='xr-index-preview'>PandasIndex</div><input type='checkbox' disabled/><label></label><input id='index-22fabdfb-25e8-47c1-990a-4e4659c6c180' class='xr-index-data-in' type='checkbox'/><label for='index-22fabdfb-25e8-47c1-990a-4e4659c6c180' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([ 43.80833666419019,  43.79166999257058, 43.775003320950965,
+       43.758336649331355,  43.74166997771174,  43.72500330609213,
+        43.70833663447251,   43.6916699628529,  43.67500329123328,
+        43.65833661961367,
+       ...
+        32.75833338038633,  32.74166670876672,  32.72500003714711,
+       32.708333365527494, 32.691666693907884, 32.675000022288266,
+       32.658333350668656,  32.64166667904904,  32.62500000742943,
+        32.60833333580982],
+      dtype=&#x27;float64&#x27;, name=&#x27;y&#x27;, length=673))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-2063c5b5-0c33-47a1-b95d-0a74be7ed9fd' class='xr-section-summary-in' type='checkbox'  checked><label for='section-2063c5b5-0c33-47a1-b95d-0a74be7ed9fd' class='xr-section-summary' >Attributes: <span>(5)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>DataType :</span></dt><dd>Generic</dd><dt><span>AREA_OR_POINT :</span></dt><dd>Area</dd><dt><span>SourceBandIndex :</span></dt><dd>0</dd><dt><span>scale_factor :</span></dt><dd>1.0</dd><dt><span>add_offset :</span></dt><dd>0.0</dd></dl></div></li></ul></div></div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; Load the state boundary data. &quot;&quot;&quot;</span>
+<span class="n">ca_shapefile_path</span> <span class="o">=</span> <span class="s2">&quot;ca_inflated.shp.zip&quot;</span>
+<span class="n">ca_shapefile_gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">ca_shapefile_path</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; Generate a plot of earthquake locations on top of the topography / bathymetry data. &quot;&quot;&quot;</span>
+
+<span class="n">projection</span> <span class="o">=</span> <span class="n">cartopy</span><span class="o">.</span><span class="n">crs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(</span><span class="n">central_longitude</span><span class="o">=-</span><span class="mi">120</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span> <span class="n">subplot_kw</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;projection&quot;</span><span class="p">:</span> <span class="n">projection</span><span class="p">})</span>
+
+<span class="c1"># ****************</span>
+<span class="c1"># topo hillshade</span>
+<span class="c1"># ****************</span>
+<span class="c1"># set the light source for the hillshade</span>
+<span class="n">ls</span> <span class="o">=</span> <span class="n">mpl</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">LightSource</span><span class="p">(</span><span class="n">azdeg</span><span class="o">=</span><span class="mi">315</span><span class="p">,</span> <span class="n">altdeg</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+
+<span class="c1"># convert the topo data to this projection</span>
+<span class="n">ax_proj</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">projection</span><span class="o">.</span><span class="n">proj4_init</span>
+<span class="n">topo_bathy_rxr_proj</span> <span class="o">=</span> <span class="n">topo_bathy_rxr</span> <span class="c1">#.rio.reproject(ax_proj)</span>
+
+<span class="c1"># get the x and y grid spacing</span>
+<span class="n">dx</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">topo_bathy_rxr</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">topo_bathy_rxr</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">dy</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">topo_bathy_rxr</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">topo_bathy_rxr</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="c1"># convert the grid spacing from degrees to meters</span>
+<span class="n">rearth</span> <span class="o">=</span> <span class="mi">6371000</span>  <span class="c1"># in meters</span>
+<span class="n">dx_meters</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">dx</span><span class="p">)</span> <span class="o">*</span> <span class="n">rearth</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">topo_bathy_rxr</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">])))</span>
+<span class="n">dy_meters</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">dy</span><span class="p">)</span> <span class="o">*</span> <span class="n">rearth</span><span class="p">)</span>
+
+<span class="c1"># generate a blended hillshade</span>
+<span class="n">blend</span> <span class="o">=</span> <span class="n">ls</span><span class="o">.</span><span class="n">shade</span><span class="p">(</span>
+    <span class="n">topo_bathy_rxr_proj</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(),</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="n">cmocean</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">topo</span><span class="p">,</span>
+    <span class="n">vmin</span> <span class="o">=</span> <span class="o">-</span><span class="mi">3000</span><span class="p">,</span> <span class="n">vmax</span> <span class="o">=</span> <span class="mi">3000</span><span class="p">,</span>
+    <span class="n">blend_mode</span><span class="o">=</span><span class="s2">&quot;hsv&quot;</span><span class="p">,</span>
+    <span class="n">dx</span><span class="o">=</span><span class="n">dx_meters</span><span class="p">,</span> <span class="n">dy</span><span class="o">=</span><span class="n">dy_meters</span><span class="p">,</span>
+    <span class="n">vert_exag</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="p">)</span>
+
+<span class="c1"># plot the hillshade</span>
+<span class="n">left</span><span class="p">,</span> <span class="n">bottom</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">top</span> <span class="o">=</span> <span class="n">topo_bathy_rxr_proj</span><span class="o">.</span><span class="n">rio</span><span class="o">.</span><span class="n">bounds</span><span class="p">()</span>
+<span class="n">extent</span> <span class="o">=</span> <span class="p">[</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">bottom</span><span class="p">,</span> <span class="n">top</span><span class="p">]</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_extent</span><span class="p">(</span><span class="n">extent</span><span class="p">,</span> <span class="n">crs</span><span class="o">=</span><span class="n">cartopy</span><span class="o">.</span><span class="n">crs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">())</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">blend</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;Greys&quot;</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="n">extent</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">cartopy</span><span class="o">.</span><span class="n">crs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+
+<span class="c1"># ****************</span>
+<span class="c1"># earthquakes</span>
+<span class="c1"># ****************</span>
+<span class="c1"># convert the earthquake data to this projection</span>
+<span class="n">ca_earthquakes_gdf_proj</span> <span class="o">=</span> <span class="n">ca_earthquakes_gdf</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="n">ax_proj</span><span class="p">)</span>
+<span class="c1"># plot the earthquake locations with magnitude proportional to size</span>
+<span class="n">ca_earthquakes_gdf_proj</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span><span class="p">,</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span>
+    <span class="n">markersize</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">ca_earthquakes_gdf_proj</span><span class="o">.</span><span class="n">mag</span><span class="p">)</span><span class="o">/</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">zorder</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
+    <span class="p">)</span>
+
+<span class="c1"># create a legend for the marker sizes</span>
+<span class="c1"># set the marker sizes</span>
+<span class="n">sizes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="c1"># convert the sizes to the radii used in the plot</span>
+<span class="n">exp_sizes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">sizes</span><span class="p">)</span><span class="o">/</span><span class="mi">5</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">s</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sizes</span><span class="p">]</span>
+<span class="c1"># generate a plot that doesn&#39;t show any data; this is just so we can create a legend</span>
+<span class="n">handles</span> <span class="o">=</span> <span class="p">[</span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">([],[],</span> <span class="n">s</span><span class="o">=</span><span class="n">s</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">exp_sizes</span><span class="p">]</span>
+<span class="c1"># create the legend</span>
+<span class="n">leg</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Magnitude&quot;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper right&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="c1"># ****************</span>
+<span class="c1"># geographic features</span>
+<span class="c1"># ****************</span>
+<span class="c1"># gridlines</span>
+<span class="n">gl</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">gridlines</span><span class="p">(</span><span class="n">draw_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">(</span><span class="n">resolution</span><span class="o">=</span><span class="s2">&quot;10m&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+
+<span class="c1"># set the extent</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/fd25abba1c338195340b06a228d202be62f026fe434c45a12db2cfd7f1500c24.png" src="../../_images/fd25abba1c338195340b06a228d202be62f026fe434c45a12db2cfd7f1500c24.png" />
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./lessons/13_geospatial_intro"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="13_workalong01_california_earthquakes_SOLUTION.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Workalong: Finding Earthquakes in California</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../14_geospatial_continued/14_IN_snow_trends_SOLUTION.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Exercise: Trends in IN Snow</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-rioxarray">Installing <code class="docutils literal notranslate"><span class="pre">rioxarray</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workalong">Workalong</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Travis A. O'Brien
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <script>
+// Force refresh when navigating back to page from cache
+window.addEventListener('pageshow', function(event) {
+  if (event.persisted) {
+    window.location.reload();
+  }
+});
+// Add timestamp to force browser refresh
+document.addEventListener('DOMContentLoaded', function() {
+  var links = document.querySelectorAll('link[rel="stylesheet"]');
+  links.forEach(function(link) {
+    if (!link.href.includes('?v=')) {
+      link.href += '?v=' + new Date().getTime();
+    }
+  });
+  // Also add cache-busting to images
+  var images = document.querySelectorAll('img');
+  images.forEach(function(img) {
+    if (img.src && !img.src.includes('?v=')) {
+      img.src += '?v=' + new Date().getTime();
+    }
+  });
+});
+</script>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

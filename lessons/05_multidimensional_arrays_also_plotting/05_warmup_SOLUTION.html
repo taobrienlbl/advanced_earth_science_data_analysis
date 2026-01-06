@@ -1,0 +1,994 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Warmup: Data Wrangling &#8212; Advanced Earth Science Data Analysis</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/header.css?v=415f224a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/cache-buster.css?v=5532fd1c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lessons/05_multidimensional_arrays_also_plotting/05_warmup_SOLUTION';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Work-along: Advanced Plotting" href="../06_advanced_plotting/06_workalong01_advanced_plotting_SOLUTION.html" />
+    <link rel="prev" title="Workalong &amp; Exercise: Multidimensional Arrays" href="05_multidimensional_array_exercise_SOLUTION.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../syllabus/syllabus.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/dall_e_2023-08-22_16_41_13_an_impressionist.png" class="logo__image only-light" alt="Advanced Earth Science Data Analysis - Home"/>
+    <script>document.write(`<img src="../../_static/dall_e_2023-08-22_16_41_13_an_impressionist.png" class="logo__image only-dark" alt="Advanced Earth Science Data Analysis - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Earth Science Data Analysis: Fundamentals</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../01_fundamentals/01_fundamentals.html">Fundamentals through examples</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../01_fundamentals/01a_sound_from_data.html">Sound from Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01_fundamentals/01b_madhava_pi_calculation.html">Madhava-Leibniz π calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01_fundamentals/01c_calculating_e.html">Exercise: calculating e</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01_fundamentals/01d_trig_fucntion.html">Creating trig functions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../02_modules_vscode_git/02_modules_vscode_git.html">Modules, VSCode, and Git</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../02_modules_vscode_git/02_last_class_refresher.html">Warmup: fundamentals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02_modules_vscode_git/02_download_install.html">Download and Install Python and VSCode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02_modules_vscode_git/02_new_module.html">Exercise: Creating a module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02_modules_vscode_git/02_git_workalong.html">Git workalong</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02_modules_vscode_git/02_looking_ahead.html">Exercise: looking ahead</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../03_data_science_modules/03_data_science_modules.html">Data Science Modules</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../03_data_science_modules/03_install_big_four.html">Install the <code class="docutils literal notranslate"><span class="pre">big_four</span></code> conda environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03_data_science_modules/03_warmup.html">Warmup: git, vscode, and fundamentals revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03_data_science_modules/03_big_four_lecture_demo.html">Big Four python Data Science Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03_data_science_modules/03_winter_temperature_enso.html">Work-along: El Nino and IN Winter Temperatures</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../04_digging_further_into_data_wrangling/04_digging_further_into_data_wrangling.html">Digging Further Into Data Wrangling</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../04_digging_further_into_data_wrangling/04_estimating_building_height.html">Exercise: Estimating Building Height with Pressure</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Earth Science Data Analysis: HPC</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="05_multidimensional_arrays_also_plotting.html">Multidimensional Arrays + Plotting</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="05_setup_git_vscode_on_red.html">Set up GitHub and VS Code on RED Desktop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05_warmup.html">WARMUP | Data Wrangling</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="05_multidimensional_array_lecture_notes.html">Work-along: Multidimensional Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05_multidimensional_array_exercise.html">Workalong &amp; Exercise: Multidimensional Arrays</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../06_advanced_plotting/06_advanced_plotting.html">Advanced Plotting</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../06_advanced_plotting/06_workalong01_advanced_plotting.html">Work-along: Advanced Plotting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../06_advanced_plotting/06_python_environments.html">Work-along: Installing a new Python environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../06_advanced_plotting/06_workalong02_mapping.html">Work-along: Mapping</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../07_parallelization_intro/07_parallelization_intro.html">Intro to Parallelization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../07_parallelization_intro/07_warmup.html">WARMUP | Advanced Plotting &amp; Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_parallelization_intro/07_parallelization_overview.html">Parallelization Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_parallelization_intro/07_workalong_mpi4py_intro.html">Work-along: Basic parallelization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_parallelization_intro/07_exercise.html">Exercise: Animating the weather in parallel</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../08_parallelization_continued/08_parallelization_continued.html">Parallelization Continued</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../08_parallelization_continued/08_workalong_01_simplempi.html">Work-along: Using <code class="docutils literal notranslate"><span class="pre">simplempi</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../08_parallelization_continued/08_collective_communications.html"><em>Collective communications</em> with MPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../08_parallelization_continued/08_workalong_02_parallel_pi.html">Workalong: Madhava pi calculation in parallel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../08_parallelization_continued/08_final_project_work.html">Final Project Work</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../09_machine_learning_intro/09_machine_learning_intro.html">Machine Learning Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../09_machine_learning_intro/09_installing_pytorch.html">Installing pytorch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../09_machine_learning_intro/09_machine_learning_lecture.html">A practical intro to machine learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../09_machine_learning_intro/09_workalong_machine_learning_basics.html">Work-along: Machine Learning Basics</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../10_machine_learning_continued/10_machine_learning_continued.html">Machine Learning Continued</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../10_machine_learning_continued/10_workalong_intro_to_classes.html">Work-along: Intro to <em>classes</em> in Python</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../11_machine_learning_finale/11_machine_learning_finale.html">Machine Learning Finale</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../11_machine_learning_finale/11_apply_ml_to_data.html">Apply ML to Real Data</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../12_spectral_analysis/12_spectral_analysis.html">Spectral Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../12_spectral_analysis/12_fourier_transform_lecture.html">Fourier Transform Lecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../12_spectral_analysis/12_workalong_01_fft.html">Work-along: Working with the FFT</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../12_spectral_analysis/12_workalong_02_filter.html">Work-along: Simple filtering</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../13_geospatial_intro/13_geospatial_intro.html">Introduction to Geospatial Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../13_geospatial_intro/13_workalong01_california_earthquakes.html">Workalong: Finding Earthquakes in California</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../13_geospatial_intro/13_workalong02_geospatial_plotting.html">Workalong: Plotting geospatial data</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../14_geospatial_continued/14_geospatial_continued.html">Geospatial Continued</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../14_geospatial_continued/14_IN_snow_trends.html">Exercise: Trends in IN Snow</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/01a_homework.html">Homework 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/01b_homework.html">Initial Idea for Final Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/02_homework.html">Homework 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/03_homework.html">Homework 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/04a_homework.html">Homework 4a: Chapter 7 Self-Test Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/04b_homework.html">Homework 4b: Get set up with RED Desktop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/05_homework.html">Homework 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/07_homework.html">Homework 7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/08a_homework.html">Homework 08</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../assignments/08b_final_project_proposal.html">Final Project Proposal</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Solutions</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../solutions/solutions.html">Exercise solutions</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../01_fundamentals/01b_madhava_pi_calculation_SOLUTION.html">Madhava-Leibniz π calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01_fundamentals/01c_calculating_e_SOLUTION.html">Exercise: calculating e</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01_fundamentals/01d_trig_fucntion_SOLUTION.html">Creating trig functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02_modules_vscode_git/02_last_class_refresher_SOLUTION.html">Warmup: fundamentals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03_data_science_modules/03_warmup_SOLUTION.html">Warmup: git, vscode, and fundamentals revisited</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../03_data_science_modules/03_winter_temperature_enso_SOLUTION.html">Work-along: El Nino and IN Winter Temperatures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../04_digging_further_into_data_wrangling/04_estimating_building_height_SOLUTION.html">Exercise: Estimating Building Height with Pressure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05_multidimensional_array_exercise_SOLUTION.html">Workalong &amp; Exercise: Multidimensional Arrays</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Warmup: Data Wrangling</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../06_advanced_plotting/06_workalong01_advanced_plotting_SOLUTION.html">Work-along: Advanced Plotting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../06_advanced_plotting/06_workalong02_mapping_SOLUTION.html">Work-along: Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_parallelization_intro/07_warmup_SOLUTION.html">WARMUP | Advanced Plotting &amp; Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_parallelization_intro/07_workalong_mpi4py_intro_SOLUTION.html">Work-along: Basic parallelization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07_parallelization_intro/07_exercise_SOLUTION.html">Exercise: Animating the weather in parallel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../08_parallelization_continued/08_workalong_02_parallel_pi_SOLUTION.html">Exercise: Madhava pi calculation in parallel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../09_machine_learning_intro/09_workalong_machine_learning_basics_SOLUTION.html">Work-along: Machine Learning Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../10_machine_learning_continued/10_workalong_intro_to_classes_SOLUTION.html">Work-along: Intro to <em>classes</em> in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../12_spectral_analysis/12_workalong_01_fft_SOLUTION.html">Work-along: Working with the FFT</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../12_spectral_analysis/12_workalong_02_filter_SOLUTION.html">Work-along: Simple filtering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../13_geospatial_intro/13_workalong01_california_earthquakes_SOLUTION.html">Workalong: Finding Earthquakes in California</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../13_geospatial_intro/13_workalong02_geospatial_plotting_SOLUTION.html">Workalong: Plotting geospatial data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../14_geospatial_continued/14_IN_snow_trends_SOLUTION.html">Exercise: Trends in IN Snow</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/lessons/05_multidimensional_arrays_also_plotting/05_warmup_SOLUTION.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Warmup: Data Wrangling</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Warmup: Data Wrangling</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-the-file">Reading the file</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#averaging-and-counting-by-year">Averaging and counting by year</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-seasonal-cycle">BONUS: Seasonal cycle</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <a target="_blank" href="https://colab.research.google.com/github/taobrienlbl/advanced_earth_science_data_analysis/blob/fall_2025_iub/content/lessons/05_multidimensional_arrays_also_plotting/05_warmup_SOLUTION.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
+<section class="tex2jax_ignore mathjax_ignore" id="warmup-data-wrangling">
+<h1>Warmup: Data Wrangling<a class="headerlink" href="#warmup-data-wrangling" title="Link to this heading">#</a></h1>
+<p><strong>Goal</strong>: Plot a timeseries of the annual average number of magnitude 6 (or larger) earthquakes.</p>
+<p>In this warmup, you will demonstrate your proficiency in using <code class="docutils literal notranslate"><span class="pre">pandas</span></code> and <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> for scientific data analysis in a Jupyter notebook.  I am intentionally not providing much guidance in this exercise, leaving it to you to determine the best path to the goal.  That said, I do have some specific instructions:</p>
+<ul class="simple">
+<li><p>download <a class="reference external" href="https://raw.githubusercontent.com/taobrienlbl/advanced_earth_science_data_analysis/fall_2025_iub/content/lessons/05_multidimensional_arrays_also_plotting/data/usgs_major_earthquakes_1900-2023.csv">this CSV</a> file containing a dataset of all earthquakes greater than magnitude 6 that USGS has on record since 1900</p></li>
+<li><p>utilize Markdown cells extensively to document your thought process, including notes about the CSV file, its origin, etc.</p></li>
+<li><p>comment your code extensively</p></li>
+<li><p>use git to stage/commit/push this notebook to your course github repository once done (in a lesson 04 folder)</p></li>
+<li><p>bonus: if you still have time, also make a plot of # of earthquakes vs month (the seasonal cycle, if there is one)</p></li>
+</ul>
+<p>A note about the CSV file: I obtained it from <a class="reference external" href="https://earthquake.usgs.gov/earthquakes/map/?extent=-88.71618,-248.20313&amp;amp;extent=88.70033,336.79688&amp;amp;range=search&amp;amp;timeZone=utc&amp;amp;search=%7B%22name%22:%22Search%20Results%22,%22params%22:%7B%22starttime%22:%221900-01-01%2000:00:00%22,%22endtime%22:%222023-09-22%2023:59:59%22,%22minmagnitude%22:6,%22orderby%22:%22time%22%7D%7D">a USGS query for magnitude 6 or larger earthquakes globally since 1900</a> on Friday September 22, 2023 at 10:20am Eastern.  Though USGS ultimately was the source of the data, my search originated from an <a class="reference external" href="https://www.ngdc.noaa.gov/hazel/view/hazards/earthquake/search">NCEI website</a>.  (See the markdown source of this cell for the specific URLs; the USGS query URL contains the specific query parameters.)</p>
+<p>I used the CSV download option provided on the website, and the file was downloaded as <code class="docutils literal notranslate"><span class="pre">query.csv</span></code>; I renamed the file to <code class="docutils literal notranslate"><span class="pre">usgs_major_earthquakes_1900-2023.csv</span></code>.</p>
+<p>When I download data like this from a web source, I’ll often put it in a <code class="docutils literal notranslate"><span class="pre">data</span></code> folder somewhere and will place a <code class="docutils literal notranslate"><span class="pre">README</span></code> (or <code class="docutils literal notranslate"><span class="pre">README.md</span></code>) file in the <code class="docutils literal notranslate"><span class="pre">data</span></code> directory to give information about where I downloaded the data from and any citations that the data provider requests that I use.  I do this because I often come back to datasets like this later on and it isn’t always straightforward to find this information after the fact.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="solution">
+<h1>Solution<a class="headerlink" href="#solution" title="Link to this heading">#</a></h1>
+<section id="reading-the-file">
+<h2>Reading the file<a class="headerlink" href="#reading-the-file" title="Link to this heading">#</a></h2>
+<p>Examination of the CSV file shows the contents appear like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">time</span><span class="p">,</span><span class="n">latitude</span><span class="p">,</span><span class="n">longitude</span><span class="p">,</span><span class="n">depth</span><span class="p">,</span><span class="n">mag</span><span class="p">,</span><span class="n">magType</span><span class="p">,</span><span class="n">nst</span><span class="p">,</span><span class="n">gap</span><span class="p">,</span><span class="n">dmin</span><span class="p">,</span><span class="n">rms</span><span class="p">,</span><span class="n">net</span><span class="p">,</span><span class="nb">id</span><span class="p">,</span><span class="n">updated</span><span class="p">,</span><span class="n">place</span><span class="p">,</span><span class="nb">type</span><span class="p">,</span><span class="n">horizontalError</span><span class="p">,</span><span class="n">depthError</span><span class="p">,</span><span class="n">magError</span><span class="p">,</span><span class="n">magNst</span><span class="p">,</span><span class="n">status</span><span class="p">,</span><span class="n">locationSource</span><span class="p">,</span><span class="n">magSource</span>
+<span class="mi">2023</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">21</span><span class="n">T21</span><span class="p">:</span><span class="mi">11</span><span class="p">:</span><span class="mf">49.950</span><span class="n">Z</span><span class="p">,</span><span class="o">-</span><span class="mf">14.0039</span><span class="p">,</span><span class="mf">167.1898</span><span class="p">,</span><span class="mf">188.419</span><span class="p">,</span><span class="mf">6.1</span><span class="p">,</span><span class="n">mww</span><span class="p">,</span><span class="mi">76</span><span class="p">,</span><span class="mi">26</span><span class="p">,</span><span class="mf">7.076</span><span class="p">,</span><span class="mf">0.83</span><span class="p">,</span><span class="n">us</span><span class="p">,</span><span class="n">us7000kx7j</span><span class="p">,</span><span class="mi">2023</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">21</span><span class="n">T23</span><span class="p">:</span><span class="mi">17</span><span class="p">:</span><span class="mf">30.631</span><span class="n">Z</span><span class="p">,</span><span class="s2">&quot;41 km WSW of Sola, Vanuatu&quot;</span><span class="p">,</span><span class="n">earthquake</span><span class="p">,</span><span class="mf">8.86</span><span class="p">,</span><span class="mf">4.898</span><span class="p">,</span><span class="mf">0.054</span><span class="p">,</span><span class="mi">33</span><span class="p">,</span><span class="n">reviewed</span><span class="p">,</span><span class="n">us</span><span class="p">,</span><span class="n">us</span>
+<span class="mi">2023</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">20</span><span class="n">T14</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mf">58.609</span><span class="n">Z</span><span class="p">,</span><span class="o">-</span><span class="mf">4.5826</span><span class="p">,</span><span class="o">-</span><span class="mf">105.6493</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="n">mww</span><span class="p">,</span><span class="mi">110</span><span class="p">,</span><span class="mi">208</span><span class="p">,</span><span class="mf">15.828</span><span class="p">,</span><span class="mf">1.08</span><span class="p">,</span><span class="n">us</span><span class="p">,</span><span class="n">us7000kww3</span><span class="p">,</span><span class="mi">2023</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">21</span><span class="n">T21</span><span class="p">:</span><span class="mi">02</span><span class="p">:</span><span class="mf">41.950</span><span class="n">Z</span><span class="p">,</span><span class="s2">&quot;central East Pacific Rise&quot;</span><span class="p">,</span><span class="n">earthquake</span><span class="p">,</span><span class="mf">14.99</span><span class="p">,</span><span class="mf">1.952</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mi">38</span><span class="p">,</span><span class="n">reviewed</span><span class="p">,</span><span class="n">us</span><span class="p">,</span><span class="n">us</span>
+<span class="mi">2023</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">18</span><span class="n">T13</span><span class="p">:</span><span class="mi">21</span><span class="p">:</span><span class="mf">23.790</span><span class="n">Z</span><span class="p">,</span><span class="mf">26.4336</span><span class="p">,</span><span class="mf">125.3032</span><span class="p">,</span><span class="mf">183.483</span><span class="p">,</span><span class="mf">6.3</span><span class="p">,</span><span class="n">mww</span><span class="p">,</span><span class="mi">113</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span><span class="mf">2.262</span><span class="p">,</span><span class="mf">1.21</span><span class="p">,</span><span class="n">us</span><span class="p">,</span><span class="n">us7000kwg2</span><span class="p">,</span><span class="mi">2023</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">19</span><span class="n">T13</span><span class="p">:</span><span class="mi">29</span><span class="p">:</span><span class="mf">35.504</span><span class="n">Z</span><span class="p">,</span><span class="s2">&quot;180 km N of Hirara, Japan&quot;</span><span class="p">,</span><span class="n">earthquake</span><span class="p">,</span><span class="mf">6.53</span><span class="p">,</span><span class="mf">4.942</span><span class="p">,</span><span class="mf">0.044</span><span class="p">,</span><span class="mi">49</span><span class="p">,</span><span class="n">reviewed</span><span class="p">,</span><span class="n">us</span><span class="p">,</span><span class="n">us</span>
+</pre></div>
+</div>
+<p>The first line has a header that pandas should be able to use, and the first column appears to be in a date/time format that pandas should be able to parse.  I see that the third from last column, <code class="docutils literal notranslate"><span class="pre">status</span></code>, shows as <code class="docutils literal notranslate"><span class="pre">reviewed</span></code> for these entries, but perhaps there are entries that aren’t reviewed (not sure who’s doing the reviewing – I should probably read the documentation).  It might be worth considering a variant of this analysis that filters unreviewed entries if there are any.</p>
+<p>It looks like it should be straightforward to read this with pandas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; import libraries &quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; read the earthquake database &quot;&quot;&quot;</span>
+
+<span class="c1"># use pandas to read the dataset</span>
+<span class="n">usgs_pd</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
+    <span class="s2">&quot;data/usgs_major_earthquakes_1900-2023.csv&quot;</span><span class="p">,</span>
+    <span class="n">header</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+    <span class="p">)</span>
+
+<span class="c1"># show the top of the dataset</span>
+<span class="n">usgs_pd</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>time</th>
+      <th>latitude</th>
+      <th>longitude</th>
+      <th>depth</th>
+      <th>mag</th>
+      <th>magType</th>
+      <th>nst</th>
+      <th>gap</th>
+      <th>dmin</th>
+      <th>rms</th>
+      <th>...</th>
+      <th>updated</th>
+      <th>place</th>
+      <th>type</th>
+      <th>horizontalError</th>
+      <th>depthError</th>
+      <th>magError</th>
+      <th>magNst</th>
+      <th>status</th>
+      <th>locationSource</th>
+      <th>magSource</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2023-09-21 21:11:49.950000+00:00</td>
+      <td>-14.0039</td>
+      <td>167.1898</td>
+      <td>188.419</td>
+      <td>6.1</td>
+      <td>mww</td>
+      <td>76.0</td>
+      <td>26.0</td>
+      <td>7.076</td>
+      <td>0.83</td>
+      <td>...</td>
+      <td>2023-09-21T23:17:30.631Z</td>
+      <td>41 km WSW of Sola, Vanuatu</td>
+      <td>earthquake</td>
+      <td>8.86</td>
+      <td>4.898</td>
+      <td>0.054</td>
+      <td>33.0</td>
+      <td>reviewed</td>
+      <td>us</td>
+      <td>us</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2023-09-20 14:45:58.609000+00:00</td>
+      <td>-4.5826</td>
+      <td>-105.6493</td>
+      <td>10.000</td>
+      <td>6.0</td>
+      <td>mww</td>
+      <td>110.0</td>
+      <td>208.0</td>
+      <td>15.828</td>
+      <td>1.08</td>
+      <td>...</td>
+      <td>2023-09-21T21:02:41.950Z</td>
+      <td>central East Pacific Rise</td>
+      <td>earthquake</td>
+      <td>14.99</td>
+      <td>1.952</td>
+      <td>0.050</td>
+      <td>38.0</td>
+      <td>reviewed</td>
+      <td>us</td>
+      <td>us</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2023-09-18 13:21:23.790000+00:00</td>
+      <td>26.4336</td>
+      <td>125.3032</td>
+      <td>183.483</td>
+      <td>6.3</td>
+      <td>mww</td>
+      <td>113.0</td>
+      <td>35.0</td>
+      <td>2.262</td>
+      <td>1.21</td>
+      <td>...</td>
+      <td>2023-09-19T13:29:35.504Z</td>
+      <td>180 km N of Hirara, Japan</td>
+      <td>earthquake</td>
+      <td>6.53</td>
+      <td>4.942</td>
+      <td>0.044</td>
+      <td>49.0</td>
+      <td>reviewed</td>
+      <td>us</td>
+      <td>us</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2023-09-13 11:49:15.926000+00:00</td>
+      <td>-36.2201</td>
+      <td>-97.9378</td>
+      <td>10.000</td>
+      <td>6.1</td>
+      <td>mww</td>
+      <td>117.0</td>
+      <td>37.0</td>
+      <td>13.309</td>
+      <td>0.65</td>
+      <td>...</td>
+      <td>2023-09-14T11:52:11.466Z</td>
+      <td>West Chile Rise</td>
+      <td>earthquake</td>
+      <td>10.28</td>
+      <td>1.860</td>
+      <td>0.050</td>
+      <td>39.0</td>
+      <td>reviewed</td>
+      <td>us</td>
+      <td>us</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2023-09-12 11:03:18.873000+00:00</td>
+      <td>19.2687</td>
+      <td>121.2178</td>
+      <td>41.281</td>
+      <td>6.3</td>
+      <td>mww</td>
+      <td>133.0</td>
+      <td>21.0</td>
+      <td>4.049</td>
+      <td>0.96</td>
+      <td>...</td>
+      <td>2023-09-18T13:59:24.715Z</td>
+      <td>73 km N of Namuac, Philippines</td>
+      <td>earthquake</td>
+      <td>8.03</td>
+      <td>5.112</td>
+      <td>0.046</td>
+      <td>46.0</td>
+      <td>reviewed</td>
+      <td>us</td>
+      <td>us</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 22 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; Plot earthquake magnitude vs time. &quot;&quot;&quot;</span>
+
+<span class="c1"># make the figure</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="c1"># draw the plot</span>
+<span class="n">usgs_pd</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="s2">&quot;mag&quot;</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span><span class="p">,</span> <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span><span class="p">)</span>
+<span class="c1"># set labels</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Magnitude&quot;</span><span class="p">)</span>
+<span class="c1"># show the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/f367fc0a5af8c306dbf039498c43af2a6a3af443f3448a4ed5e05af6f2863a8e.png" src="../../_images/f367fc0a5af8c306dbf039498c43af2a6a3af443f3448a4ed5e05af6f2863a8e.png" />
+</div>
+</div>
+<p>A few things jump out:</p>
+<ol class="arabic simple">
+<li><p>there are very few earthquakes recorded before about 1910</p></li>
+<li><p>after about 1975, it looks like most earthquake magnitudes are given fixed values (guessing these are decimal values)</p></li>
+<li><p>there does not appear to be any obvious secular trend in the data</p></li>
+</ol>
+<p>The first point will definitely affect the annual averaging process before that point, so I might want to just plot 1910 onward.  I’m not sure whether the quantization of the magnitudes will have an effect on average earthquake magnitude,but it probably won’t matter for the count unless there are many 5.9-6.0 magnitude earthquakes that end up being counted as 6.0.</p>
+</section>
+<section id="averaging-and-counting-by-year">
+<h2>Averaging and counting by year<a class="headerlink" href="#averaging-and-counting-by-year" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; Generate average magnitudes and total counts for each year &quot;&quot;&quot;</span>
+
+<span class="c1"># get the year of each earthquake</span>
+<span class="n">earthquake_year</span> <span class="o">=</span> <span class="n">usgs_pd</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span>
+
+<span class="c1"># group by year</span>
+<span class="n">usgs_year_group</span> <span class="o">=</span> <span class="n">usgs_pd</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">earthquake_year</span><span class="p">)</span>
+
+<span class="c1"># get the number of counts in each year</span>
+<span class="n">usgs_year_counts</span> <span class="o">=</span> <span class="n">usgs_year_group</span><span class="p">[</span><span class="s1">&#39;mag&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+
+<span class="c1"># get the average magnitude in each year</span>
+<span class="n">usgs_year_mag</span> <span class="o">=</span> <span class="n">usgs_year_group</span><span class="p">[</span><span class="s1">&#39;mag&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; Plot the average magnitude and total counts vs time. &quot;&quot;&quot;</span>
+
+<span class="c1"># make the figure</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="c1"># draw the plot</span>
+<span class="n">l1</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">usgs_year_mag</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;C0&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Average Magnitude&#39;</span><span class="p">)</span>
+<span class="c1"># create a twin axis</span>
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span>
+<span class="c1"># draw the plot</span>
+<span class="n">l2</span> <span class="o">=</span> <span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">usgs_year_counts</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;C1&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;# M&gt;6 Earthquakes&#39;</span><span class="p">)</span>
+
+<span class="c1"># set labels</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Average Magnitude&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;# M&gt;6 Earthquakes&quot;</span><span class="p">)</span>
+
+<span class="c1"># set the color of the y-axis tick labels, ticks, and labels to match the line color</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="n">l1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_color</span><span class="p">())</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="n">l2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_color</span><span class="p">())</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">label</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="n">l1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_color</span><span class="p">())</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">label</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="n">l2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_color</span><span class="p">())</span>
+
+<span class="c1"># show the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/394f8fe7e424e8d2bef5c0c3a37da751f7e987b938b8a9aed4d3467e744dd8e4.png" src="../../_images/394f8fe7e424e8d2bef5c0c3a37da751f7e987b938b8a9aed4d3467e744dd8e4.png" />
+</div>
+</div>
+<p>So there is clearly weirdness before about 1910 as noted above, but there also appears to be some long-term trends in the data up until about 1945, and a long-term increase in the number of recorded earthquakes. My hypothesis is that seismometer sensitivity has increased over time, leading to an increase in the number of smaller earthquakes, and–since there is a powerlaw distribution of earthquakes–a systematically lower average.  If this hypothesis is true, then I would expect that PDFs of earthquake magnitude would show a systematic increase in smaller earthquakes.</p>
+</section>
+<section id="bonus-seasonal-cycle">
+<h2>BONUS: Seasonal cycle<a class="headerlink" href="#bonus-seasonal-cycle" title="Link to this heading">#</a></h2>
+<p>I’m curious if there is a seasonal cycle in the number of earthquakes.  Since there is a secular trend in earthquake counts, I’ll use more recent data for this: from 1980 onward.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; Plot the seasonal cycle &quot;&quot;&quot;</span>
+
+<span class="c1"># subset the data to only include 1980 to present</span>
+<span class="n">usgs_pd_recent</span> <span class="o">=</span> <span class="n">usgs_pd</span><span class="p">[</span><span class="n">usgs_pd</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span> <span class="o">&gt;=</span> <span class="mi">1980</span><span class="p">]</span>
+
+<span class="c1"># get the month of each earthquake</span>
+<span class="n">earthquake_month</span> <span class="o">=</span> <span class="n">usgs_pd_recent</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span>
+
+<span class="c1"># group by month</span>
+<span class="n">usgs_month_group</span> <span class="o">=</span> <span class="n">usgs_pd_recent</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">earthquake_month</span><span class="p">)</span>
+
+<span class="c1"># get the number of counts in each month</span>
+<span class="n">usgs_month_counts</span> <span class="o">=</span> <span class="n">usgs_month_group</span><span class="p">[</span><span class="s1">&#39;mag&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+
+<span class="c1"># get the average magnitude in each month</span>
+<span class="n">usgs_month_mag</span> <span class="o">=</span> <span class="n">usgs_month_group</span><span class="p">[</span><span class="s1">&#39;mag&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="c1"># make the figure</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="c1"># draw the plot</span>
+<span class="n">l1</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">usgs_month_mag</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;C0&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Average Magnitude&#39;</span><span class="p">)</span>
+<span class="c1"># create a twin axis</span>
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span>
+<span class="c1"># draw the plot</span>
+<span class="n">l2</span> <span class="o">=</span> <span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">usgs_month_counts</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;C1&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;# M&gt;6 Earthquakes&#39;</span><span class="p">)</span>
+
+<span class="c1"># set labels</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Average Magnitude&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;# M&gt;6 Earthquakes&quot;</span><span class="p">)</span>
+
+<span class="c1"># set the color of the y-axis tick labels, ticks, and labels to match the line color</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="n">l1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_color</span><span class="p">())</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="n">l2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_color</span><span class="p">())</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">label</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="n">l1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_color</span><span class="p">())</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">label</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="n">l2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_color</span><span class="p">())</span>
+
+<span class="c1"># label the x-axis as month names</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">13</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">([</span><span class="s1">&#39;Jan&#39;</span><span class="p">,</span><span class="s1">&#39;Feb&#39;</span><span class="p">,</span><span class="s1">&#39;Mar&#39;</span><span class="p">,</span><span class="s1">&#39;Apr&#39;</span><span class="p">,</span><span class="s1">&#39;May&#39;</span><span class="p">,</span><span class="s1">&#39;Jun&#39;</span><span class="p">,</span><span class="s1">&#39;Jul&#39;</span><span class="p">,</span><span class="s1">&#39;Aug&#39;</span><span class="p">,</span><span class="s1">&#39;Sep&#39;</span><span class="p">,</span><span class="s1">&#39;Oct&#39;</span><span class="p">,</span><span class="s1">&#39;Nov&#39;</span><span class="p">,</span><span class="s1">&#39;Dec&#39;</span><span class="p">])</span>
+
+<span class="c1"># show the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/7029b510025158aafa62f28f3d10647bff9a0c93aecc869fd9446b8139123268.png" src="../../_images/7029b510025158aafa62f28f3d10647bff9a0c93aecc869fd9446b8139123268.png" />
+</div>
+</div>
+<p>Huh…it does look like there might be some systematic seasonal variation in count, with more in boreal Spring and Fall.  Does the change in temperature associated with the seasons possibly cause variation in strain?</p>
+<p>n.b. a conversation with Dr. Kaj Johnson gives the likely reason.  Earthquakes tend to cluster, and there have been ~4 magnitude 9-ish earthquakes in this part of the record, two in Spring, two in Fall: followed by many magnitude 6s (b/c the earthquake magnitude PDF is power law).  Neat!</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./lessons/05_multidimensional_arrays_also_plotting"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="05_multidimensional_array_exercise_SOLUTION.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Workalong &amp; Exercise: Multidimensional Arrays</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../06_advanced_plotting/06_workalong01_advanced_plotting_SOLUTION.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Work-along: Advanced Plotting</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Warmup: Data Wrangling</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-the-file">Reading the file</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#averaging-and-counting-by-year">Averaging and counting by year</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-seasonal-cycle">BONUS: Seasonal cycle</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Travis A. O'Brien
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <script>
+// Force refresh when navigating back to page from cache
+window.addEventListener('pageshow', function(event) {
+  if (event.persisted) {
+    window.location.reload();
+  }
+});
+// Add timestamp to force browser refresh
+document.addEventListener('DOMContentLoaded', function() {
+  var links = document.querySelectorAll('link[rel="stylesheet"]');
+  links.forEach(function(link) {
+    if (!link.href.includes('?v=')) {
+      link.href += '?v=' + new Date().getTime();
+    }
+  });
+  // Also add cache-busting to images
+  var images = document.querySelectorAll('img');
+  images.forEach(function(img) {
+    if (img.src && !img.src.includes('?v=')) {
+      img.src += '?v=' + new Date().getTime();
+    }
+  });
+});
+</script>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
