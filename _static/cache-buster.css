@@ -1,0 +1,13 @@
+/* Cache-busting CSS file for Jupyter Book */
+/* This file helps ensure fresh content is loaded */
+
+/* Add a subtle indicator that shows when the page was last updated */
+.jupyter-book-header::after {
+    content: "Last updated: Auto-refresh enabled";
+    font-size: 0.7em;
+    color: #666;
+    margin-left: 10px;
+}
+
+/* Force image refresh by adding timestamp parameters via JavaScript */
+/* CSS cannot control HTTP cache headers, but we handle this in JS */

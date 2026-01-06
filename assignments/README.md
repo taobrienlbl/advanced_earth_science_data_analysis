@@ -1,1 +1,0 @@
-**Note:** most homework assignments are created directly in Canvas.  This directory contains assignments that are easier to write in markdown than in Canvas.
